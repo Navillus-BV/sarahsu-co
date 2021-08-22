@@ -1,0 +1,46 @@
+---
+  import Hummingbird from './Hummingbird.astro'
+
+  interface Props {
+    title: string
+  }
+
+  const { title } = Astro.props as Props
+---
+
+<section>
+  <h2 class="h3">
+    <Hummingbird width='8rem' height='8rem' theme='muted' />
+    {title}
+  </h2>
+
+  <main>
+    <slot />
+  </main>
+</section>
+
+<style lang="scss">
+  h2 {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    margin-bottom: var(--spacer-md);
+  }
+
+  h2 :global(svg) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%) scaleX(-1);
+    z-index: -1;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main :global(> *:not(:last-child)) {
+    margin-bottom: var(--spacer-md);
+  }
+</style>

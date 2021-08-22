@@ -1,6 +1,8 @@
 ---
 import Layout from './Base.astro'
 
+import Card from '../components/Card.astro'
+import CardBlock from '../components/CardBlock.astro'
 import HeroBlock from '../components/HeroBlock.astro'
 import ImageBlock from '../components/ImageBlock.astro'
 import TextBlock from '../components/TextBlock.astro'
@@ -23,40 +25,62 @@ import TextBlock from '../components/TextBlock.astro'
       alt: 'The word stuck spelled in Scrabble tiles',
       src: Astro.resolve('../assets/stuck.png')
     }}>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
 
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
-        <li>Lorem ipsum dolor sit amet, consectetur.</li>
-      </ul>
-    </ImageBlock>
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+    </ul>
+  </ImageBlock>
 
-    <TextBlock
-      title='One line about the solution'
-      subtitle='Invitation to do something together'
-      cta={{
-        title: 'see services and pricing',
-        url: '/services'
-      }}>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </TextBlock>
+  <TextBlock
+    title='One line about the solution'
+    subtitle='Invitation to do something together'
+    cta={{
+      title: 'see services and pricing',
+      url: '/services'
+    }}>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+  </TextBlock>
 
-    <ImageBlock
-      title='One line about what I do.'
-      subtitle="Hi, I'm Sarah"
-      subtitleIcon
+  <ImageBlock
+    title='One line about what I do.'
+    subtitle="Hi, I'm Sarah"
+    subtitleIcon
+    image={{
+      alt: 'Sarah Sullivan',
+      src: Astro.resolve('../assets/sarah.jpg')
+    }}
+    cta={{
+      title: 'more about me',
+      url: '/about'
+    }}>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+  </ImageBlock>
+
+  <CardBlock title='No cookie-cutter conversations...'>
+    <Card
+      title='Sarah Sullivan'
+      subtitle='Co-founder, Navillus B.V.'
       image={{
-        alt: 'Sarah Sullivan',
+        alt: "Sarah Sullivan",
         src: Astro.resolve('../assets/sarah.jpg')
-      }}
-      cta={{
-        title: 'more about me',
-        url: '/about'
       }}>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </ImageBlock>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </Card>
+
+    <Card
+      title='Sarah Sullivan'
+      subtitle='Co-founder, Navillus B.V.'
+      image={{
+        alt: "Sarah Sullivan",
+        src: Astro.resolve('../assets/sarah.jpg')
+      }}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </Card>
+  </CardBlock>
 </Layout>

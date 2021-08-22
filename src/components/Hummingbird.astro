@@ -3,7 +3,7 @@ interface Props {
   width: string
   height: string
   opacity: number
-  theme: "primary" | "gradient" | "secondary"
+  theme: "primary" | "gradient" | "secondary" | "muted"
 }
 
 const { width, height, opacity = 1, theme = "primary", direction = "left" } = Astro.props as Props
@@ -12,7 +12,9 @@ const fill = theme === "primary"
   ? "var(--chisel-primary)"
   : theme === "gradient"
     ? "url(#linear)"
-    : "var(--chisel-neutral-50)"
+    : theme === "muted"
+      ? "var(--chisel-neutral-300)"
+      : "var(--chisel-neutral-50)"
 ---
 
 <svg viewBox="0 0 227 176" width={width} height={height} fill="none" xmlns="http://www.w3.org/2000/svg">
