@@ -123,6 +123,12 @@ h6,
   margin-bottom: 8rem;
 }
 
+@media screen and (max-width: 415px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 640px) {
   .container {
     grid-template-columns: 1fr calc(100% - 4rem) 1fr;
