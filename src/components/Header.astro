@@ -21,6 +21,16 @@ const { pathname } = Astro.props as Props
     <label role="button" for="menubtn" class="button">
       <span></span>
     </label>
+
+    <nav>
+      <ul>
+        {navigation.main.map(({ title, href }) => (
+          <li>
+            <a href={href}>{title}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -34,7 +44,9 @@ const { pathname } = Astro.props as Props
   }
 
   .header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 'brand . menu' 'nav nav nav';
     align-items: center;
     justify-content: space-between;
     padding: var(--spacer-sm) 0;
@@ -45,6 +57,7 @@ const { pathname } = Astro.props as Props
   }
 
   [rel=home] {
+    grid-area: brand;
     position: relative;
     color: var(--chisel-primary);
   }
@@ -58,6 +71,7 @@ const { pathname } = Astro.props as Props
   }
 
   label[for=menubtn] {
+    grid-area: menu;
     position: relative;
     display: flex;
     align-items: center;
@@ -105,5 +119,25 @@ const { pathname } = Astro.props as Props
     & span:after {
       transform: translateY(calc(.5em - 2px));
     }
+  }
+
+  nav {
+    display: none;
+    grid-area: nav;
+
+    & ul {
+      list-style: none;
+      text-align: center;
+    }
+    
+    & a {
+      display: block;
+      font-size: var(--chisel-h5);
+      padding: var(--spacer-tiny) 0;
+    }
+  }
+
+  #menubtn:checked ~ nav {
+    display: block;
   }
 </style>
