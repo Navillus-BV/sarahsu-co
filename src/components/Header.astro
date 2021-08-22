@@ -134,10 +134,41 @@ const { pathname } = Astro.props as Props
       display: block;
       font-size: var(--chisel-h5);
       padding: var(--spacer-tiny) 0;
+      text-transform: uppercase;
     }
   }
 
   #menubtn:checked ~ nav {
     display: block;
+  }
+
+  @media screen and (min-width: 640px) {
+    #menubtn, label[for=menubtn] {
+      display: none;
+    }
+
+    .header {
+      grid-template-areas: 'brand . nav';
+    }
+
+    nav {
+      display: block;
+
+      & ul {
+        display: flex;
+        padding: 0;
+      }
+
+      & a {
+        font-size: var(--chisel-p);
+        padding: var(--spacer-xs);
+      }
+    }
+  }
+
+  @media screen and (min-width: 979px) {
+    nav a {
+      padding: var(--spacer-xs) var(--spacer-sm);
+    }
   }
 </style>
