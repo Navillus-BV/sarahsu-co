@@ -66,11 +66,20 @@
 
 :focus-visible {
   outline: 3px solid var(--chisel-secondary);
-  outline-offset: var(--spacer-tiny);
 }
 
 a {
   color: inherit;
+}
+
+button,
+.button {
+  &:hover,
+  &:active {
+    background-color: var(--chisel-neutral-50);
+    border-color: var(--chisel-primary);
+    color: var(--chisel-primary);
+  }
 }
 
 h1,
@@ -133,8 +142,23 @@ h6,
   }
 
   .container {
-    grid-template-columns: 1fr min(100% - 6rem, 1440px) 1fr;
+    grid-template-columns: 1fr min(100% - 6rem, 1200px) 1fr;
     column-gap: 3rem;
     row-gap: 10rem;
+  }
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    text-align: start;
   }
 }

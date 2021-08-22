@@ -22,7 +22,7 @@ import Hummingbird from './Hummingbird.astro'
     margin-top: var(--spacer-sm);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 'name' 'email' 'submit';
+    grid-template-areas: 'name' 'email' 'submit' 'note';
   }
 
   input {
@@ -47,18 +47,29 @@ import Hummingbird from './Hummingbird.astro'
   button {
     grid-area: submit;
     border-radius: 0;
-    margin: var(--spacer-sm) 0;
+    font-size: 1rem;
   }
 
   small {
+    grid-area: note;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: var(--spacer-xs);
     align-items: center;
     text-align: start;
+    margin-top: var(--spacer-sm);
   }
 
   small :global(svg) {
     transform: scaleX(-1);
+  }
+
+  @media screen and (min-width: 979px) {
+    form {
+      margin: var(--spacer-md) auto 0;
+      max-width: 640px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'name email' 'submit submit' 'note note';
+    }
   }
 </style>

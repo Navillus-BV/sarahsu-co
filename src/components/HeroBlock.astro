@@ -57,8 +57,8 @@ const { title, cta } = Astro.props as Props
     aspect-ratio: 1;
     border-radius: 999px;
     margin: 0 auto;
-    max-width: 640px;
-    max-height: 640px;
+    max-width: 500px;
+    max-height: 500px;
     filter: var(--drop-shadow-lg);
     font-size: var(--chisel-h5);
   }
@@ -68,8 +68,13 @@ const { title, cta } = Astro.props as Props
       grid-template-columns: 1fr 1fr;
     }
 
-    h1 {
-      text-align: start;
+    main {
+      max-width: 640px;
+      max-height: 640px;
+    }
+
+    a.button {
+      margin-top: var(--spacer-sm);
     }
   }
 </style>

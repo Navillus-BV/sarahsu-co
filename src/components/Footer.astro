@@ -43,6 +43,11 @@ const { main, legal } = navigation
     row-gap: 0;
   }
 
+  .container section {
+    margin: 0;
+    padding: var(--spacer-lg) 0;
+  }
+
   div {
     display: flex;
     justify-content: center;
@@ -69,5 +74,11 @@ const { main, legal } = navigation
     top: 50%;
     left: 50%;
     transform: translate(-50%, -45%) scaleX(-1);
+  }
+
+  @media screen and (min-width: 640px) {
+    div a {
+      font-size: var(--chisel-p);
+    }
   }
 </style>
