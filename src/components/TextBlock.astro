@@ -33,6 +33,7 @@ const { title, subtitle, cta } = Astro.props as Props
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   section :global(svg) {
@@ -42,10 +43,10 @@ const { title, subtitle, cta } = Astro.props as Props
 
   h2, h3 {
     margin: 0;
-    text-align: center;
   }
 
   h3 {
+    margin-top: var(--spacer-xs);
     font-size: 1rem;
     font-family: var(--font-family-base);
     font-weight: 400;

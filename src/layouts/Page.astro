@@ -18,10 +18,10 @@ import TextBlock from '../components/TextBlock.astro'
 
   <ImageBlock
     muted
-    title="One line about the problem."
+    title='One line about the problem.'
     image={{
-      alt: "The word stuck spelled in Scrabble tiles",
-      src: Astro.resolve("../assets/stuck.png")
+      alt: 'The word stuck spelled in Scrabble tiles',
+      src: Astro.resolve('../assets/stuck.png')
     }}>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
@@ -34,13 +34,29 @@ import TextBlock from '../components/TextBlock.astro'
     </ImageBlock>
 
     <TextBlock
-      title="One line about the solution"
-      subtitle="Invitation to do something together"
+      title='One line about the solution'
+      subtitle='Invitation to do something together'
       cta={{
-        title: "see services and pricing",
-        url: "/services"
+        title: 'see services and pricing',
+        url: '/services'
       }}>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </TextBlock>
+
+    <ImageBlock
+      title='One line about what I do.'
+      subtitle="Hi, I'm Sarah"
+      subtitleIcon
+      image={{
+        alt: 'Sarah Sullivan',
+        src: Astro.resolve('../assets/sarah.jpg')
+      }}
+      cta={{
+        title: 'more about me',
+        url: '/about'
+      }}>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </ImageBlock>
 </Layout>

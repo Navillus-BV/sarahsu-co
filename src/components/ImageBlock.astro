@@ -38,6 +38,10 @@ const { title, subtitle, subtitleIcon, image, cta, muted } = Astro.props as Prop
     ))}
 
     <slot />
+
+    {cta && (
+      <a class="button" href={cta.url}>{cta.title}</a>
+    )}
   </main>
 </section>
 
@@ -45,6 +49,7 @@ const { title, subtitle, subtitleIcon, image, cta, muted } = Astro.props as Prop
   section {
     display: grid;
     grid-template-rows: 1fr 1fr auto;
+    text-align: center;
   }
 
   section > * {
@@ -57,6 +62,8 @@ const { title, subtitle, subtitleIcon, image, cta, muted } = Astro.props as Prop
     max-width: 300px;
     justify-self: center;
     filter: var(--drop-shadow-lg);
+    aspect-ratio: 1;
+    border-radius: 999px;
   }
 
   .bg {
@@ -99,7 +106,26 @@ const { title, subtitle, subtitleIcon, image, cta, muted } = Astro.props as Prop
     }
   }
 
+  .h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-weight: 400;
+    font-family: var(--font-family-base);
+    text-transform: uppercase;
+  }
+
   .h5 :global(svg) {
     margin-left: var(--spacer-sm);
+    margin-right: calc(-3rem - var(--spacer-sm));
+  }
+
+  h3 {
+    margin: var(--spacer-sm) 0 var(--spacer-md);
+  }
+
+  a.button {
+    margin-top: var(--spacer-sm);
   }
 </style>
