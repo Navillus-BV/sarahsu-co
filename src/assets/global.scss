@@ -1,5 +1,4 @@
 @use 'chisel.css/dist/chisel.css';
-@use '@fontsource/leckerli-one/scss/mixins' as LeckerliOne;
 @use '@fontsource/montserrat/scss/mixins' as Montserrat;
 
 @include Montserrat.fontFace(
