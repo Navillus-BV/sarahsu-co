@@ -2,6 +2,7 @@
 import Layout from './Base.astro'
 
 import HeroBlock from '../components/HeroBlock.astro'
+import ImageBlock from '../components/ImageBlock.astro'
 ---
 
 <Layout pathname={Astro.request.url.pathname}>
@@ -13,4 +14,21 @@ import HeroBlock from '../components/HeroBlock.astro'
     }}>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </HeroBlock>
+
+  <ImageBlock
+    muted
+    title="One line about the problem."
+    image={{
+      alt: "The word stuck spelled in Scrabble tiles",
+      src: Astro.resolve("../assets/stuck.png")
+    }}>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+      <li>Lorem ipsum dolor sit amet, consectetur.</li>
+    </ul>
+    </ImageBlock>
 </Layout>
