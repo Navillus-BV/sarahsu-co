@@ -1,5 +1,6 @@
 ---
 import site from '../data/site.json'
+import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import MainHead from '../components/MainHead.astro'
 
@@ -40,6 +41,8 @@ const {
     <main class="container" id="main">
       <slot />
     </main>
+
+    <Footer />
   </body>
 </html>
 

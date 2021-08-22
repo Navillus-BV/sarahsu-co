@@ -1,0 +1,73 @@
+---
+import Hummingbird from './Hummingbird.astro'
+import navigation from '../data/navigation.json'
+import site from '../data/site.json'
+
+const year = new Date().getFullYear()
+
+const { main, legal } = navigation
+---
+
+<footer class="container">
+  <section>
+    <div>
+      {main.map(({ title, href }) => (
+        <a href={href}>{title}</a>
+      ))}
+    </div>
+
+    <div>
+      {legal.map(({ title, href }) => (
+        <a href={href}>{title}</a>
+      ))}
+    </div>
+
+    <a href='/' alt={site.title} rel="home">
+      <Hummingbird width="5rem" height="5rem" theme="secondary" opacity=".5" />
+      {site.title}
+    </a>
+
+    <small>
+      © Copyright {year} {site.name}. All rights reserved.
+    </small>
+  </section>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--chisel-primary);
+    color: var(--chisel-neutral-50);
+    text-align: center;
+    margin-top: var(--container-row-gap);
+    padding: var(--container-gap) 0;
+    row-gap: 0;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
+
+  div a {
+    font-size: var(--chisel-h6);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: var(--spacer-xs);
+  }
+
+  [rel=home] {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    font-size: var(--chisel-h3);
+    font-family: var(--font-family-display);
+    padding: var(--spacer-md) 0 var(--spacer-sm);
+  }
+
+  [rel=home] :global(svg) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%) scaleX(-1);
+  }
+</style>
