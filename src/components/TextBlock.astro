@@ -1,0 +1,58 @@
+---
+import Hummingbird from './Hummingbird.astro'
+
+interface Props {
+  title: string
+  subtitle: string
+  cta: {
+    title: string
+    url: string
+  }
+}
+
+const { title, subtitle, cta } = Astro.props as Props
+---
+
+<section>
+  <h2 class="h3">{title}</h2>
+  {subtitle && (
+    <h3>{subtitle}</h3>
+  )}
+
+  <Hummingbird width="6rem" height="6rem" theme="gradient" opacity="0.5" />
+
+  <slot />
+
+  {cta && (
+    <a class="button" href={cta.url}>{cta.title}</a>
+  )}
+</section>
+
+<style lang="scss">
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section :global(svg) {
+    transform: scaleX(-1);
+    margin: var(--spacer-sm) 0;
+  }
+
+  h2, h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .button {
+    margin-top: var(--spacer-sm);
+  }
+</style>

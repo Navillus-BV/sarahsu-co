@@ -3,6 +3,7 @@ import Layout from './Base.astro'
 
 import HeroBlock from '../components/HeroBlock.astro'
 import ImageBlock from '../components/ImageBlock.astro'
+import TextBlock from '../components/TextBlock.astro'
 ---
 
 <Layout pathname={Astro.request.url.pathname}>
@@ -22,13 +23,24 @@ import ImageBlock from '../components/ImageBlock.astro'
       alt: "The word stuck spelled in Scrabble tiles",
       src: Astro.resolve("../assets/stuck.png")
     }}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
 
-    <ul>
-      <li>Lorem ipsum dolor sit amet, consectetur.</li>
-      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
-      <li>Lorem ipsum dolor sit amet, consectetur.</li>
-    </ul>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+        <li>Lorem ipsum dolor sit amet, consectetur.</li>
+      </ul>
     </ImageBlock>
+
+    <TextBlock
+      title="One line about the solution"
+      subtitle="Invitation to do something together"
+      cta={{
+        title: "see services and pricing",
+        url: "/services"
+      }}>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </TextBlock>
 </Layout>
