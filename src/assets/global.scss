@@ -64,6 +64,15 @@
   --spacer-xl: 6rem;
 }
 
+:focus-visible {
+  outline: 3px solid var(--chisel-secondary);
+  outline-offset: var(--spacer-tiny);
+}
+
+a {
+  color: inherit;
+}
+
 h1,
 .h1,
 h2,
