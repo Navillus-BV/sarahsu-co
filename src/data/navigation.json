@@ -1,0 +1,34 @@
+{
+    "main": [
+        {
+            "title": "home",
+            "href": "/"
+        },
+        {
+            "title": "about",
+            "href": "/about"
+        },
+        {
+            "title": "services",
+            "href": "/services"
+        },
+        {
+            "title": "extras",
+            "href": "/extras"
+        },
+        {
+            "title": "contact",
+            "href": "/contact"
+        }
+    ],
+    "legal": [
+        {
+            "title": "privacy policy",
+            "href": "/privacy"
+        },
+        {
+            "title": "terms & conditions",
+            "href": "/terms"
+        }
+    ]
+}

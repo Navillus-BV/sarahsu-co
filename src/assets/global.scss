@@ -1,0 +1,57 @@
+@use 'chisel.css/dist/chisel.css';
+@use '@fontsource/leckerli-one/scss/mixins' as LeckerliOne;
+@use '@fontsource/montserrat/scss/mixins' as Montserrat;
+
+@include LeckerliOne.fontFace(
+  $weight: 400,
+  $display: fallback,
+  $fontDir: "/@fontsource/leckerli-one/files"
+);
+
+@include Montserrat.fontFace(
+  $weight: 500,
+  $display: fallback,
+  $fontDir: "/@fontsource/montserrat/files"
+);
+
+:root {
+  /* Chisel overrides */
+  --chisel-primary: #7030a0;
+  --chisel-primary-light: #7030a080;
+
+  --font-family-base: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-family-display: "Leckerli One", Georgia, Times, serif;
+
+  --width-prose: 65ch;
+
+  --rainbow-gradient: linear-gradient(
+    to right,
+    rgb(255, 148, 141),
+    rgb(255, 160, 87),
+    rgb(255, 207, 60),
+    rgb(128, 191, 60),
+    rgb(68, 192, 155),
+    rgb(42, 153, 181),
+    rgb(71, 100, 170),
+    rgb(87, 105, 190),
+    rgb(119, 115, 192),
+    rgb(184, 152, 208)
+  );
+  --rainbow-gradient-light: linear-gradient(
+    to right,
+    rgba(255, 148, 141, 0.3),
+    rgba(255, 160, 87, 0.3),
+    rgba(255, 207, 60, 0.3),
+    rgba(128, 191, 60, 0.3),
+    rgba(68, 192, 155, 0.3),
+    rgba(42, 153, 181, 0.3),
+    rgba(71, 100, 170, 0.3),
+    rgba(87, 105, 190, 0.3),
+    rgba(119, 115, 192, 0.3),
+    rgba(184, 152, 208, 0.3)
+  );
+  --drop-shadow: drop-shadow(0 0 3px rgb(0, 0, 0, 0.5));
+  --drop-shadow-lg: drop-shadow(0 0 6px rgb(0, 0, 0, 0.67));
+}
