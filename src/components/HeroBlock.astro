@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string
+  cta: {
+    title: string
+    href: string
+  }
+}
+
+const { title, cta } = Astro.props as Props
+---
+
+<section class='full-bleed'>
+  <div class='container'>
+    <h1>{title}</h1>
+
+    <main>
+      <slot />
+
+      {cta && (
+        <a class='button' href={cta.href}>{cta.title}</a>
+      )}
+    </main>
+  </div>
+</section>
+
+<style lang='scss'>
+  section {
+    background: var(--rainbow-gradient);
+    color: var(--chisel-neutral-50);
+  }
+
+  .container {
+    row-gap: var(--spacer-md);
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacer-sm);
+    margin: 0 auto;
+    background-color: var(--chisel-neutral-50);
+    color: var(--chisel-neutral-900);
+    aspect-ratio: 1;
+    border-radius: 999px;
+    max-width: 414px;
+    max-height: 414px;
+    filter: var(--drop-shadow-lg);
+  }
+</style>

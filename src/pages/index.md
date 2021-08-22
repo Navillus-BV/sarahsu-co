@@ -1,3 +1,3 @@
 ---
-layout: "../layouts/Base.astro"
+layout: "../layouts/Page.astro"
 ---

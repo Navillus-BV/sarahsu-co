@@ -1,0 +1,16 @@
+---
+import Layout from './Base.astro'
+
+import HeroBlock from '../components/HeroBlock.astro'
+---
+
+<Layout pathname={Astro.request.url.pathname}>
+  <HeroBlock
+    title='Need a little inspiration?'
+    cta={{
+      title: 'How I can help',
+      url: '/services'
+    }}>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </HeroBlock>
+</Layout>
