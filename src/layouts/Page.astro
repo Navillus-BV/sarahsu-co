@@ -5,6 +5,7 @@ import Card from '../components/Card.astro'
 import CardBlock from '../components/CardBlock.astro'
 import HeroBlock from '../components/HeroBlock.astro'
 import ImageBlock from '../components/ImageBlock.astro'
+import NewsletterForm from '../components/NewsletterForm.astro'
 import TextBlock from '../components/TextBlock.astro'
 ---
 
@@ -67,7 +68,7 @@ import TextBlock from '../components/TextBlock.astro'
       title='Sarah Sullivan'
       subtitle='Co-founder, Navillus B.V.'
       image={{
-        alt: "Sarah Sullivan",
+        alt: 'Sarah Sullivan',
         src: Astro.resolve('../assets/sarah.jpg')
       }}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -77,10 +78,23 @@ import TextBlock from '../components/TextBlock.astro'
       title='Sarah Sullivan'
       subtitle='Co-founder, Navillus B.V.'
       image={{
-        alt: "Sarah Sullivan",
+        alt: 'Sarah Sullivan',
         src: Astro.resolve('../assets/sarah.jpg')
       }}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </Card>
   </CardBlock>
+
+  <ImageBlock
+    title='Title for the download'
+    subtitle='Free download'
+    image={{
+      alt: 'Books on a library shelf',
+      src: Astro.resolve('../assets/library.jpg')
+    }}>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+
+    <NewsletterForm />
+  </ImageBlock>
 </Layout>

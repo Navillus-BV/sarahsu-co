@@ -1,0 +1,64 @@
+---
+import Hummingbird from './Hummingbird.astro'
+---
+
+<form>
+  <label class='sr-only' for='name'>Your first name</label>
+  <input type='text' name='name' id='name' placeholder='Your first name' required />
+
+  <label class='sr-only' for='email'>Your email address</label>
+  <input type='email' name='email' id='email' placeholder='Your email' required />
+
+  <button type='submit'>Get it now</button>
+
+  <small>
+    <Hummingbird width='2.5rem' height='2.5rem' theme='secondary' />
+    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span>
+  </small>
+</form>
+
+<style lang='scss'>
+  form {
+    margin-top: var(--spacer-sm);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'name' 'email' 'submit';
+  }
+
+  input {
+    background-color: var(--chisel-neutral-50);
+    color: var(--chisel-neutral-900);
+    border: 2px solid var(--chisel-primary);
+    border-radius: 0;
+
+    &:not(:last-child) {
+      border-bottom-width: 0;
+    }
+  }
+
+  [type=text] {
+    grid-area: name;
+  }
+
+  [type=email] {
+    grid-area: email;
+  }
+
+  button {
+    grid-area: submit;
+    border-radius: 0;
+    margin: var(--spacer-sm) 0;
+  }
+
+  small {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--spacer-xs);
+    align-items: center;
+    text-align: start;
+  }
+
+  small :global(svg) {
+    transform: scaleX(-1);
+  }
+</style>
