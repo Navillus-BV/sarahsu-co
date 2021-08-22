@@ -21,7 +21,9 @@ const { title, subtitle, cta } = Astro.props as Props
 
   <Hummingbird width="6rem" height="6rem" theme="gradient" opacity="0.5" />
 
-  <slot />
+  <main>
+    <slot />
+  </main>
 
   {cta && (
     <a class="button" href={cta.url}>{cta.title}</a>
@@ -51,6 +53,10 @@ const { title, subtitle, cta } = Astro.props as Props
     font-family: var(--font-family-base);
     font-weight: 400;
     text-transform: uppercase;
+  }
+
+  main {
+    max-width: var(--width-prose);
   }
 
   .button {
