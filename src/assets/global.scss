@@ -98,7 +98,7 @@ h6,
   display: grid;
   grid-template-columns: 1fr calc(100% - 3rem) 1fr;
   column-gap: 1.5rem;
-  row-gap: 4rem;
+  row-gap: 8rem;
 }
 
 .container > * {
@@ -110,12 +110,34 @@ h6,
   grid-column: 1 / -1;
 }
 
-section {
-  padding: var(--spacer-md) 0;
+.container > section:last-child {
+  margin-bottom: 8rem;
 }
 
 @media screen and (max-width: 640px) {
   :root {
     font-size: 14px;
+  }
+
+  .container {
+    grid-template-columns: 1fr calc(100% - 4rem) 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 979px) {
+  :root {
+    --chisel-h1: 4.209rem;
+    --chisel-h2: 3.157rem;
+    --chisel-h3: 2.369rem;
+    --chisel-h4: 1.777rem;
+    --chisel-h5: 1.333rem;
+    --chisel-h6: 0.75rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr calc(100% - 6rem) 1fr;
+    column-gap: 3rem;
+    row-gap: 10rem;
   }
 }

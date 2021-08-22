@@ -12,30 +12,36 @@ const { title, cta } = Astro.props as Props
 
 <section class='full-bleed'>
   <div class='container'>
-    <h1>{title}</h1>
+    <div class='wrapper'>
+      <h1>{title}</h1>
 
-    <main>
-      <slot />
+      <main>
+        <slot />
 
-      {cta && (
-        <a class='button' href={cta.href}>{cta.title}</a>
-      )}
-    </main>
+        {cta && (
+          <a class='button' href={cta.href}>{cta.title}</a>
+        )}
+      </main>
+    </div>
   </div>
 </section>
 
 <style lang='scss'>
   section {
+    padding: var(--spacer-md) 0;
     background: var(--rainbow-gradient);
     color: var(--chisel-neutral-50);
   }
 
-  .container {
-    row-gap: var(--spacer-md);
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h1 {
     margin-bottom: 0;
+    margin-bottom: var(--spacer-md);
   }
 
   main {
@@ -45,7 +51,6 @@ const { title, cta } = Astro.props as Props
     justify-content: center;
     text-align: center;
     padding: var(--spacer-sm);
-    margin: 0 auto;
     background-color: var(--chisel-neutral-50);
     color: var(--chisel-neutral-900);
     aspect-ratio: 1;
@@ -53,5 +58,16 @@ const { title, cta } = Astro.props as Props
     max-width: 414px;
     max-height: 414px;
     filter: var(--drop-shadow-lg);
+  }
+
+  @media screen and (min-width: 979px) {
+    .wrapper {
+      flex-direction: row;
+    }
+
+    h1 {
+      margin: 0 var(--spacer-md) 0 0;
+      text-align: start;
+    }
   }
 </style>
