@@ -38,9 +38,20 @@
   main {
     display: flex;
     flex-direction: column;
+
+    & :global(> *:not(:last-child)) {
+      margin-bottom: var(--spacer-md);
+    }
   }
 
-  main :global(> *:not(:last-child)) {
-    margin-bottom: var(--spacer-md);
+  @media screen and (min-width: 640px) {
+    main {
+      flex-direction: row;
+
+      & :global(> *:not(:last-child)) {
+        margin-bottom: 0;
+        margin-right: var(--spacer-sm);
+      }
+    }
   }
 </style>

@@ -34,9 +34,10 @@ const { title, cta } = Astro.props as Props
   }
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
+    justify-content: center;
   }
 
   h1 {
@@ -50,23 +51,24 @@ const { title, cta } = Astro.props as Props
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: var(--spacer-sm);
+    padding: var(--spacer-md);
     background-color: var(--chisel-neutral-50);
     color: var(--chisel-neutral-900);
     aspect-ratio: 1;
     border-radius: 999px;
-    max-width: 414px;
-    max-height: 414px;
+    margin: 0 auto;
+    max-width: 640px;
+    max-height: 640px;
     filter: var(--drop-shadow-lg);
+    font-size: var(--chisel-h5);
   }
 
   @media screen and (min-width: 979px) {
     .wrapper {
-      flex-direction: row;
+      grid-template-columns: 1fr 1fr;
     }
 
     h1 {
-      margin: 0 var(--spacer-md) 0 0;
       text-align: start;
     }
   }
