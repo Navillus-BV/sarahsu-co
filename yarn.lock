@@ -301,11 +301,6 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@fontsource/leckerli-one@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/leckerli-one/-/leckerli-one-4.5.0.tgz#237dcc1169169e5e7ff25cf38882af394a014ca3"
-  integrity sha512-7BJwmQJFYGL9pAFNYOLnTQ4k9yyK5CX3PwVSOQuKGcbLOp4nqdMAb8uFeS8w1NKiZSoudhsww2H9DcADJGuzOw==
-
 "@fontsource/montserrat@^4.5.1":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.1.tgz#64a33ffdb77bbc63484c0321710bed272cc5b16f"

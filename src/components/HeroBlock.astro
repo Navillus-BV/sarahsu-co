@@ -60,7 +60,6 @@ const { title, cta } = Astro.props as Props
     max-width: 500px;
     max-height: 500px;
     filter: var(--drop-shadow-lg);
-    font-size: var(--chisel-h5);
   }
 
   @media screen and (min-width: 979px) {
@@ -71,6 +70,10 @@ const { title, cta } = Astro.props as Props
     main {
       max-width: 640px;
       max-height: 640px;
+    }
+
+    main *:not(.button) {
+      font-size; var(--chisel-h5);
     }
 
     a.button {

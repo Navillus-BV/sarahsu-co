@@ -2,17 +2,17 @@
 @use '@fontsource/leckerli-one/scss/mixins' as LeckerliOne;
 @use '@fontsource/montserrat/scss/mixins' as Montserrat;
 
-@include LeckerliOne.fontFace(
-  $weight: 400,
-  $display: fallback,
-  $fontDir: "/@fontsource/leckerli-one/files"
-);
-
 @include Montserrat.fontFace(
   $weight: 500,
   $display: fallback,
   $fontDir: "/@fontsource/montserrat/files"
 );
+
+@font-face {
+  font-family: Modern Love;
+  src: url("/webfonts/Fontspring-DEMO-modernlove-regular.otf")
+    format("opentype");
+}
 
 :root {
   /* Chisel overrides */
@@ -22,7 +22,7 @@
   --font-family-base: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --font-family-display: "Leckerli One", Georgia, Times, serif;
+  --font-family-display: Modern Love, Georgia, Times, serif;
 
   --width-prose: 60ch;
 

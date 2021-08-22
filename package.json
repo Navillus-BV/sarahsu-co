@@ -11,7 +11,6 @@
     "astro": "^0.19.1"
   },
   "dependencies": {
-    "@fontsource/leckerli-one": "^4.5.0",
     "@fontsource/montserrat": "^4.5.1",
     "chisel.css": "^0.6.1"
   }
