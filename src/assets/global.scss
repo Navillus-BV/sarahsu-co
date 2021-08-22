@@ -54,4 +54,44 @@
   );
   --drop-shadow: drop-shadow(0 0 3px rgb(0, 0, 0, 0.5));
   --drop-shadow-lg: drop-shadow(0 0 6px rgb(0, 0, 0, 0.67));
+
+  /* Spacer Sizes */
+  --spacer-tiny: 0.25rem;
+  --spacer-xs: 0.5rem;
+  --spacer-sm: 1rem;
+  --spacer-md: 2.5rem;
+  --spacer-lg: 4rem;
+  --spacer-xl: 6rem;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 700;
+  font-family: var(--font-family-display);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr calc(100% - 2rem) 1fr;
+  column-gap: 1rem;
+  row-gap: 4rem;
+}
+
+.container > * {
+  grid-column: 2;
+}
+
+.container > .full-bleed {
+  width: 100%;
+  grid-column: 1 / -1;
 }

@@ -1,0 +1,39 @@
+---
+interface Props {
+  width: string
+  height: string
+  opacity: number
+  theme: "primary" | "gradient" | "secondary"
+}
+
+const { width, height, opacity = 1, theme = "primary", direction = "left" } = Astro.props as Props
+
+const fill = theme === "primary"
+  ? "var(--chisel-primary)"
+  : theme === "gradient"
+    ? "url(#linear)"
+    : "var(--chisel-neutral-50)"
+---
+
+<svg viewBox="0 0 227 176" width={width} height={height} fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear" x1="100%" y1="50%" x2="0%" y2="50%">
+      <stop offset="0%" stop-color="rgb(255, 148, 141)" />
+      <stop offset="11%" stop-color="rgb(255, 160, 87)" />
+      <stop offset="23%" stop-color="rgb(255, 207, 60)" />
+      <stop offset="34%" stop-color="rgb(128, 191, 60)" />
+      <stop offset="45%" stop-color="rgb(68, 192, 155)" />
+      <stop offset="56%" stop-color="rgb(42, 153, 181)" />
+      <stop offset="67%" stop-color="rgb(71, 100, 170)" />
+      <stop offset="78%" stop-color="rgb(87, 105, 190)" />
+      <stop offset="89%" stop-color="rgb(119, 115, 192)" />
+      <stop offset="100%" stop-color="rgb(184, 152, 208)" />
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M0.500006 51.5C0.940214 49.299 33.9351 51.7486 41.8209 52.3661C42.7974 52.4425 43.8283 51.8382 44.608 51.2454C46.3766 49.9008 50.9208 47.7865 62.5 46.5C76.7847 44.9128 92.0141 60.0151 97.6924 66.3171C98.7361 67.4754 100.708 67.1823 101.358 65.7651C112.019 42.5248 158.981 -26.4965 157.5 12C155.942 52.5 150.5 41.9877 131 59C117.475 70.7998 113.331 76.0931 112.061 78.229C111.631 78.9519 112.026 79.6913 112.817 79.9787L115.524 80.9631C116.39 81.2782 117.335 80.9863 117.885 80.2465C133.875 58.751 205.646 15.253 213 28C219.825 39.8297 166.615 92.2342 156.98 101.574C156.165 102.363 156.141 103.622 156.954 104.414C167.113 114.296 227.017 172.712 226 175C224.889 177.5 168 151.5 157.5 149C147 146.5 107.5 148 77.5 123C51.0123 100.927 44.0134 69.1094 42.7377 61.9618C42.5816 61.0871 41.9203 60.4111 41.0425 60.2735C33.5844 59.1046 0.0555694 53.7221 0.500006 51.5Z"
+    fill={fill}
+    fill-opacity={opacity}
+  />
+</svg>

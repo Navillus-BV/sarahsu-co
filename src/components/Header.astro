@@ -1,0 +1,109 @@
+---
+import Hummingbird from './Hummingbird.astro'
+import navigation from '../data/navigation.json'
+import site from '../data/site.json'
+
+interface Props {
+  pathname: string
+}
+
+const { pathname } = Astro.props as Props
+---
+
+<header class='container'>
+  <div class='header'>
+    <a href='/' class='h5' rel='home'>
+      <Hummingbird width='3.5rem' height='3.5rem' opacity='.3' />
+      {site.title}
+    </a>
+
+    <input type="checkbox" id="menubtn" class="sr-only" />
+    <label role="button" for="menubtn" class="button">
+      <span></span>
+    </label>
+  </div>
+</header>
+
+<style lang='scss'>
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--chisel-neutral-50);
+    z-index: 100;
+    filter: var(--drop-shadow);
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacer-sm) 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  [rel=home] {
+    position: relative;
+    color: var(--chisel-primary);
+  }
+
+  [rel=home] :global(svg) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%) scaleX(-1);
+    z-index: -1;
+  }
+
+  label[for=menubtn] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--spacer-md);
+    width: var(--spacer-md);
+    border-radius: 999px;
+    padding: 0;
+    margin: 0;
+    background: var(--chisel-neutral-50);
+    border-color: transparent;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background: var(--rainbow-gradient);
+      margin: -4px;
+      filter: var(--drop-shadow);
+    }
+
+    & span {
+      width: 67%;
+      height: 1px;
+      background: var(--chisel-primary);
+    }
+
+    & span:before, & span:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: var(--chisel-primary);
+    }
+
+    & span:before {
+      transform: translateY(-.5em);
+    }
+
+    & span:after {
+      transform: translateY(calc(.5em - 2px));
+    }
+  }
+</style>
