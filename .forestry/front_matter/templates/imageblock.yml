@@ -1,4 +1,45 @@
 ---
 label: ImageBlock
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+- name: subtitleIcon
+  type: boolean
+  label: Subtitle Icon
+  description: Whether or not to show the hummingbird icon next to the subtitle
+  default: false
+- name: flipped
+  type: boolean
+  label: Image Right
+  description: If enabled, the image will be shown on the right of the screen on desktop.
+- name: muted
+  type: boolean
+  label: Muted theme
+  description: If enabled, the image block will use the light gray theme
+- name: image
+  type: field_group
+  config: {}
+  fields:
+  - name: src
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+    default: "../assets/images/library.jpg"
+  - name: alt
+    type: text
+    config:
+      required: true
+    label: Alternate Text
+    description: Description of what is in the image. This is helpful for accessibility
+      but is not visible displayed on the page
+  label: Image
