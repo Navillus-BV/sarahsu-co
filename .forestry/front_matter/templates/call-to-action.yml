@@ -8,3 +8,10 @@ fields:
     required: true
   label: Text
   default: Learn More
+- name: url
+  type: text
+  config:
+    required: false
+  label: url
+  description: Where should this call to action link to? Make sure to use a relative
+    URL like "/about"
