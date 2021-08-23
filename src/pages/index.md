@@ -11,6 +11,12 @@ blocks:
   title: Need a little inspiration?
   content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.
+- template: imageblock
+  image:
+    src: "../assets/images/stuck.png"
+    alt: The word stuck spelled in Scrabble tiles
+  title: One line about the problem.
+  muted: true
 - template: textblock
   text: see services and pricing
   title: One line about the solution
