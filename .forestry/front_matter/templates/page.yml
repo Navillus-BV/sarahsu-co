@@ -26,5 +26,3 @@ fields:
     min: 
     max: 
   label: Content Blocks
-pages:
-- src/pages/about.md
