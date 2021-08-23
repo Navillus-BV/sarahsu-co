@@ -57,6 +57,13 @@ blocks:
   title: No cookie-cutter solutions...
   cards:
   - image:
+      alt: Sarah Sullivan
+      src: "../assets/images/sarah.jpg"
+    title: Sarah Sullivan
+    subtitle: Co-founder, Navillus B.V.
+    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+  - image:
       src: "../assets/images/sarah.jpg"
       alt: Sarah Sullivan
     title: Sarah Sullivan
