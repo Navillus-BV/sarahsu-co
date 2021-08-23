@@ -19,9 +19,9 @@ fields:
   label: Image
 - name: blocks
   type: blocks
-  label: Content Blocks
   template_types:
   - textblock
   config:
-    min: 1
+    min: 
     max: 
+  label: Content Blocks
