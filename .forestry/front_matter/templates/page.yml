@@ -21,6 +21,7 @@ fields:
   type: blocks
   template_types:
   - heroblock
+  - imageblock
   - textblock
   config:
     min: 
