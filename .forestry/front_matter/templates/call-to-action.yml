@@ -15,3 +15,4 @@ fields:
   label: url
   description: Where should this call to action link to? Make sure to use a relative
     URL like "/about"
+  default: "/about"
