@@ -39,5 +39,16 @@ blocks:
   cta:
     text: see services and pricing
     url: "/services"
+- template: imageblock
+  image:
+    src: "../assets/images/sarah.jpg"
+    alt: Sarah Sullivan
+  title: One line about what I do.
+  subtitle: Hi, I'm Sarah
+  subtitleIcon: true
+  content: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
 
 ---
