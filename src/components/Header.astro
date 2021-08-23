@@ -13,7 +13,7 @@ const { pathname } = Astro.props as Props
 <header class='container'>
   <div class='header'>
     <a href='/' class='h5' rel='home'>
-      <Hummingbird width='3.5rem' height='3.5rem' opacity='.3' />
+      <Hummingbird width='2.5em' height='2.5em' opacity='.3' />
       {site.title}
     </a>
 
@@ -128,6 +128,7 @@ const { pathname } = Astro.props as Props
     & ul {
       list-style: none;
       text-align: center;
+      margin: 0;
     }
     
     & a {
@@ -161,14 +162,26 @@ const { pathname } = Astro.props as Props
 
       & a {
         font-size: var(--chisel-p);
-        padding: var(--spacer-xs);
+        padding: var(--spacer-sm);
+
+        &:last-child {
+          padding-right: 0;
+        }
       }
     }
   }
 
   @media screen and (min-width: 979px) {
+    [rel=home] {
+      font-size: var(--chisel-h4);
+    }
+
     nav a {
-      padding: var(--spacer-xs) var(--spacer-sm);
+      padding: var(--spacer-sm) var(--spacer-md);
+      
+      &:last-child {
+        padding-right: 0;
+      }
     }
   }
 </style>

@@ -27,7 +27,7 @@ const { title, subtitle, subtitleIcon, image, cta, flipped, muted } = Astro.prop
 
   <main>
     {(title || subtitle) && (
-      <h2 class={subtitle ? 'h5' : 'h3'}>
+      <h2 class={clsx({ h5: subtitle })}>
         {subtitle || title}
         {subtitle && subtitleIcon && (
           <Hummingbird width='3rem' height='3rem' theme='secondary' />
@@ -36,7 +36,7 @@ const { title, subtitle, subtitleIcon, image, cta, flipped, muted } = Astro.prop
     )}
 
     {(title && subtitle && (
-      <h3>{title}</h3>
+      <h3 class='h2'>{title}</h3>
     ))}
 
     <slot />
