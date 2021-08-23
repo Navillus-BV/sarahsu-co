@@ -1,4 +1,34 @@
 ---
 label: HeroBlock
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
+- name: cta
+  type: field_group
+  config: {}
+  fields:
+  - name: text
+    type: text
+    config:
+      required: true
+    label: Text
+  - name: url
+    type: text
+    config:
+      required: true
+    label: URL
+    default: "/about"
+  label: Call to Action
