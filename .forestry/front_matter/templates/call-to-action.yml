@@ -1,4 +1,10 @@
 ---
 label: Call to Action
 hide_body: true
-fields: []
+fields:
+- name: text
+  type: text
+  config:
+    required: true
+  label: Text
+  default: Learn More
