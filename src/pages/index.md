@@ -8,5 +8,6 @@ blocks:
   text: see services and pricing
   title: One line about the solution
   subtitle: Invitation to do something together
+  url: "/services"
 
 ---
