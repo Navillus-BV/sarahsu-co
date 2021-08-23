@@ -19,3 +19,5 @@ fields:
   config: {}
   template: call-to-action
   label: Call to Action
+pages:
+- src/data/blocks/one-line-about-the-solution.md
