@@ -1,4 +1,27 @@
 ---
 label: Page
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: description
+  type: text
+  config:
+    required: true
+  label: Description
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+- name: blocks
+  type: blocks
+  label: Content Blocks
+  template_types:
+  - textblock
+  config:
+    min: 1
+    max: 
