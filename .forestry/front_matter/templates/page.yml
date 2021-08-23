@@ -23,6 +23,7 @@ fields:
   - heroblock
   - imageblock
   - textblock
+  - cardblock
   config:
     min: 
     max: 
