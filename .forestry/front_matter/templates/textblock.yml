@@ -14,11 +14,6 @@ fields:
   config:
     required: false
   label: Subtitle
-- name: cta
-  type: include
-  config: {}
-  template: call-to-action
-  label: Call to Action
 - name: content
   type: textarea
   default: ''
@@ -28,3 +23,18 @@ fields:
     schema:
       format: markdown
   label: Content
+- name: cta
+  type: field_group
+  config: {}
+  fields:
+  - name: text
+    type: text
+    config:
+      required: true
+    label: Text
+  - name: page
+    type: include
+    config: {}
+    template: page
+    label: Page
+  label: Call to Action
