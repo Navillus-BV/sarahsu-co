@@ -19,3 +19,12 @@ fields:
   config: {}
   template: call-to-action
   label: Call to Action
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
