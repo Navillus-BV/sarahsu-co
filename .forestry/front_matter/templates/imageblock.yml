@@ -26,15 +26,6 @@ fields:
   type: boolean
   label: Muted theme
   description: If enabled, the image block will use the light gray theme
-- name: content
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Content
 - name: image
   type: field_group
   config: {}
@@ -53,3 +44,12 @@ fields:
     description: Description of what is in the image. This is helpful for accessibility
       but is not visible displayed on the page
   label: Image
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
