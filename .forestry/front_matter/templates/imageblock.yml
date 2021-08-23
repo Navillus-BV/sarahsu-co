@@ -53,3 +53,18 @@ fields:
     schema:
       format: markdown
   label: Content
+- name: cta
+  type: field_group
+  config: {}
+  fields:
+  - name: text
+    type: text
+    config:
+      required: false
+    label: Text
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  label: Call to Action
