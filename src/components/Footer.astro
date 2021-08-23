@@ -33,7 +33,7 @@ const { main, legal } = navigation
   </section>
 </footer>
 
-<style>
+<style lang='scss'>
   footer {
     background-color: var(--chisel-primary);
     color: var(--chisel-neutral-50);
@@ -53,15 +53,16 @@ const { main, legal } = navigation
     justify-content: center;
   }
 
-  a:hover, a:active {
-    color: var(--chisel-neutral-300);
-  }
-
   div a {
     font-size: var(--chisel-h6);
     text-decoration: none;
     text-transform: uppercase;
     padding: var(--spacer-xs);
+
+    &:hover, &:active {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 
   [rel=home] {

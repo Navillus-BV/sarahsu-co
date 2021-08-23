@@ -1,4 +1,5 @@
 ---
+import clsx from 'clsx'
 import Hummingbird from './Hummingbird.astro'
 
 interface Props {
@@ -13,13 +14,14 @@ interface Props {
     title: string
     href: string
   }
+  flipped: boolean
   muted: boolean
 }
 
-const { title, subtitle, subtitleIcon, image, cta, muted } = Astro.props as Props
+const { title, subtitle, subtitleIcon, image, cta, flipped, muted } = Astro.props as Props
 ---
 
-<section class={muted && 'muted'}>
+<section class={clsx({ muted, flipped })}>
   <div class='bg'></div>
   <img alt={image.alt} src={image.src} />
 
@@ -139,6 +141,10 @@ const { title, subtitle, subtitleIcon, image, cta, muted } = Astro.props as Prop
     section {
       grid-template-rows: 1fr;
       grid-template-columns: auto auto 1fr;
+
+      &.flipped {
+        grid-template-columns: 1fr auto auto;
+      }
     }
 
     .bg {
@@ -154,6 +160,19 @@ const { title, subtitle, subtitleIcon, image, cta, muted } = Astro.props as Prop
     main {
       grid-row: 1;
       grid-column: 3 / -1;
+      margin: var(--spacer-md);
+    }
+
+    .flipped .bg {
+      grid-column: 1 / 3;
+    }
+
+    .flipped img {
+      grid-column: 2 / -1;
+    }
+
+    .flipped main {
+      grid-column: 1 / 2;
     }
   }
 </style>
