@@ -34,6 +34,8 @@ fields:
       config:
         required: true
       label: Alternate Text
+      description: Description of what is in the image. This is helpful for accessibility
+        but is not visible displayed on the page
     label: Image
   config:
     min: 
