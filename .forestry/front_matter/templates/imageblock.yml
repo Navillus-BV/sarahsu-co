@@ -26,6 +26,15 @@ fields:
   type: boolean
   label: Muted theme
   description: If enabled, the image block will use the light gray theme
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
 - name: image
   type: field_group
   config: {}
