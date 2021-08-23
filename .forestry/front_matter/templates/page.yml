@@ -21,9 +21,9 @@ fields:
   type: blocks
   template_types:
   - heroblock
+  - cardblock
   - imageblock
   - textblock
-  - cardblock
   config:
     min: 
     max: 
