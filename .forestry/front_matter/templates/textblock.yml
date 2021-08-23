@@ -13,3 +13,8 @@ fields:
   config:
     required: false
   label: Subtitle
+- name: cta
+  type: include
+  config: {}
+  template: call-to-action
+  label: Call to Action
