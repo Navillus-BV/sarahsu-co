@@ -32,9 +32,10 @@ fields:
     config:
       required: true
     label: Text
-  - name: page
-    type: include
-    config: {}
-    template: page
-    label: Page
+  - name: url
+    type: text
+    config:
+      required: true
+    label: URL
+    default: "/about"
   label: Call to Action
