@@ -1,20 +1,30 @@
 ---
 import Hummingbird from './Hummingbird.astro'
+
+interface Props {
+  data: CMS.Form
+}
+
+const { data } = Astro.props as Props
+const { fields, submitText, footnote } = data
 ---
 
 <form>
-  <label class='sr-only' for='name'>Your first name</label>
-  <input type='text' name='name' id='name' placeholder='Your first name' required />
+  {fields.map((field) => (
+    <>
+      <label class='sr-only' for={field.id}>{field.title}</label>
+      <input type={field.type} name={field.id} id={field.id} placeholder={field.placeholder} required={field.required} />
+    </>
+  ))}
 
-  <label class='sr-only' for='email'>Your email address</label>
-  <input type='email' name='email' id='email' placeholder='Your email' required />
+  <button type='submit'>{submitText}</button>
 
-  <button type='submit'>Get it now</button>
-
-  <small>
-    <Hummingbird width='2.5rem' height='2.5rem' theme='secondary' />
-    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span>
-  </small>
+  {footnote && (
+    <small>
+      <Hummingbird width='2.5rem' height='2.5rem' theme='secondary' />
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span>
+    </small>
+  )}
 </form>
 
 <style lang='scss'>

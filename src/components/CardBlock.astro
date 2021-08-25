@@ -1,11 +1,13 @@
 ---
+  import Card from './Card.astro'
   import Hummingbird from './Hummingbird.astro'
 
   interface Props {
-    title: string
+    data: CMS.CardBlock
   }
 
-  const { title } = Astro.props as Props
+  const { data } = Astro.props as Props
+  const { title, cards } = data
 ---
 
 <section>
@@ -15,7 +17,7 @@
   </h2>
 
   <main>
-    <slot />
+    {cards.map((card) => (<Card data={card} />))}
   </main>
 </section>
 

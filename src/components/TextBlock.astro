@@ -1,16 +1,15 @@
 ---
 import Hummingbird from './Hummingbird.astro'
+import { mdToHtml } from '../utils/markdown'
 
 interface Props {
-  title: string
-  subtitle: string
-  cta: {
-    title: string
-    url: string
-  }
+  data: CMS.TextBlock
 }
 
-const { title, subtitle, cta } = Astro.props as Props
+const { data } = Astro.props as Props
+const { title, subtitle, content, cta } = data
+
+const contentHtml = mdToHtml(content)
 ---
 
 <section>
@@ -22,11 +21,11 @@ const { title, subtitle, cta } = Astro.props as Props
   <Hummingbird width="6rem" height="6rem" theme="gradient" opacity="0.5" />
 
   <main>
-    <slot />
+    {contentHtml}
   </main>
 
   {cta && (
-    <a class="button" href={cta.url}>{cta.title}</a>
+    <a class="button" href={cta.url}>{cta.text}</a>
   )}
 </section>
 

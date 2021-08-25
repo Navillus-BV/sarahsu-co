@@ -1,25 +1,25 @@
 ---
+import { mdToHtml } from '../utils/markdown'
+
 interface Props {
-  image: {
-    alt: string
-    src: string
-  }
-  title: string
-  subtitle: string
+  data: CMS.Card
 }
 
-const { image, title, subtitle } = Astro.props as Props
+const { data } = Astro.props as Props
+const { image, title, subtitle, content } = data
+
+const contentHtml = mdToHtml(content)
 ---
 
 <article>
   <div class='bg'></div>
-  <img src={image.src} alt={image.alt} />
+  <img src={Astro.resolve(image.src)} alt={image.alt} />
 
   <main>
     <h3>{title}</h3>
     <p>{subtitle}</p>
 
-    <slot />
+    {contentHtml}
   </main>
 </article>
 
