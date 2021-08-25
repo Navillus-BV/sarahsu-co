@@ -1,29 +1,21 @@
 ---
 import clsx from 'clsx'
 import Hummingbird from './Hummingbird.astro'
+import { mdToHtml } from '../utils/markdown'
 
 interface Props {
-  title: string
-  subtitle: string | undefined
-  subtitleIcon: boolean
-  image: {
-    alt: string
-    src: string
-  }
-  cta: {
-    title: string
-    href: string
-  }
-  flipped: boolean
-  muted: boolean
+  data: CMS.ImageBlock
 }
 
-const { title, subtitle, subtitleIcon, image, cta, flipped, muted } = Astro.props as Props
+const { data } = Astro.props as Props
+const { title, subtitle, subtitleIcon, image, content, cta, flipped, muted } = data
+
+const contentHtml = mdToHtml(content)
 ---
 
 <section class={clsx({ muted, flipped })}>
   <div class='bg'></div>
-  <img alt={image.alt} src={image.src} />
+  <img alt={image.alt} src={Astro.resolve(image.src)} />
 
   <main>
     {(title || subtitle) && (
@@ -39,11 +31,11 @@ const { title, subtitle, subtitleIcon, image, cta, flipped, muted } = Astro.prop
       <h3 class='h2'>{title}</h3>
     ))}
 
-    <slot />
+    {contentHtml}
 
     {cta && (
       <footer>
-        <a class="button" href={cta.url}>{cta.title}</a>
+        <a class="button" href={cta.url}>{cta.text}</a>
       </footer>
     )}
   </main>

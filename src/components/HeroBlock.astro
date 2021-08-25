@@ -1,13 +1,14 @@
 ---
+import { mdToHtml } from '../utils/markdown'
+
 interface Props {
-  title: string
-  cta: {
-    title: string
-    href: string
-  }
+  data: CMS.HeroBlock
 }
 
-const { title, cta } = Astro.props as Props
+const { data } = Astro.props as Props
+const { title, cta, content } = data
+
+const contentHtml = mdToHtml(content)
 ---
 
 <section class='full-bleed'>
@@ -16,10 +17,10 @@ const { title, cta } = Astro.props as Props
       <h1>{title}</h1>
 
       <main>
-        <slot />
+        {contentHtml}
 
         {cta && (
-          <a class='button' href={cta.href}>{cta.title}</a>
+          <a class='button' href={cta.url}>{cta.text}</a>
         )}
       </main>
     </div>

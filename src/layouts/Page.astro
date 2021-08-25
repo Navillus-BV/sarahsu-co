@@ -7,84 +7,30 @@ import HeroBlock from '../components/HeroBlock.astro'
 import ImageBlock from '../components/ImageBlock.astro'
 import NewsletterForm from '../components/NewsletterForm.astro'
 import TextBlock from '../components/TextBlock.astro'
+
+interface Props {
+  content: Page
+}
+
+const { content } = Astro.props as Props;
+const { title, description, image, blocks } = content;
 ---
 
-<Layout pathname={Astro.request.url.pathname}>
-  <HeroBlock
-    title='Need a little inspiration?'
-    cta={{
-      title: 'How I can help',
-      url: '/services'
-    }}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </HeroBlock>
+<Layout title={title} description={description} image={image} pathname={Astro.request.url.pathname} canonicalURL={Astro.request.canonicalURL}>
+  {blocks.map(({ template, ...data }) => {
+    switch (template) {
+      case "cardblock":
+        return (<CardBlock data={data} />);
+      case "heroblock":
+        return (<HeroBlock data={data} />);
+      case "imageblock":
+        return (<ImageBlock data={data} />);
+      case "textblock":
+        return (<TextBlock data={data} />)
+    }
+  })}
 
-  <ImageBlock
-    muted
-    title='One line about the problem.'
-    image={{
-      alt: 'The word stuck spelled in Scrabble tiles',
-      src: Astro.resolve('../assets/images/stuck.png')
-    }}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-
-    <ul>
-      <li>Lorem ipsum dolor sit amet, consectetur.</li>
-      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
-      <li>Lorem ipsum dolor sit amet, consectetur.</li>
-    </ul>
-  </ImageBlock>
-
-  <TextBlock
-    title='One line about the solution'
-    subtitle='Invitation to do something together'
-    cta={{
-      title: 'see services and pricing',
-      url: '/services'
-    }}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-  </TextBlock>
-
-  <ImageBlock
-    title='One line about what I do.'
-    subtitle="Hi, I'm Sarah"
-    subtitleIcon
-    image={{
-      alt: 'Sarah Sullivan',
-      src: Astro.resolve('../assets/images/sarah.jpg')
-    }}
-    cta={{
-      title: 'more about me',
-      url: '/about'
-    }}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-  </ImageBlock>
-
-  <CardBlock title='No cookie-cutter conversations...'>
-    <Card
-      title='Sarah Sullivan'
-      subtitle='Co-founder, Navillus B.V.'
-      image={{
-        alt: 'Sarah Sullivan',
-        src: Astro.resolve('../assets/images/sarah.jpg')
-      }}>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </Card>
-
-    <Card
-      title='Sarah Sullivan'
-      subtitle='Co-founder, Navillus B.V.'
-      image={{
-        alt: 'Sarah Sullivan',
-        src: Astro.resolve('../assets/images/sarah.jpg')
-      }}>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </Card>
-  </CardBlock>
-
+<!--
   <ImageBlock
     title='Title for the download'
     subtitle='Free download'
@@ -97,5 +43,5 @@ import TextBlock from '../components/TextBlock.astro'
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
 
     <NewsletterForm />
-  </ImageBlock>
+  </ImageBlock>-->
 </Layout>
