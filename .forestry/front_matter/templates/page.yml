@@ -25,6 +25,7 @@ fields:
   - cardblock
   - imageblock
   - textblock
+  - newsletterblock
   config:
     min: 
     max: 
