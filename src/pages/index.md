@@ -73,7 +73,7 @@ blocks:
     src: "../assets/images/library.jpg"
     alt: Books on a library shelf
   form:
-    submitText: Submit
+    submitText: Get it now
     fields:
     - id: name
       title: Your first name
@@ -82,6 +82,8 @@ blocks:
       title: Your email address
       placeholder: Your email
       required: true
+    footnote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore.
   title: Title for the download
   subtitle: Free download
   flipped: true
