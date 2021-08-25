@@ -1,4 +1,49 @@
 ---
 label: NewsletterBlock
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+- name: subtitle_icon
+  type: boolean
+  label: Subtitle Icon
+  description: Whether or not to show the hummingbird icon next to the subtitle
+- name: flipped
+  type: boolean
+  label: Image Right
+  description: If enabled, the image will be shown on the right of the screen on desktop.<br>
+- name: image
+  type: field_group
+  config: {}
+  fields:
+  - name: src
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+    default: "../assets/images/library.jpg"
+  - name: alt
+    type: text
+    config:
+      required: false
+    label: Alternate Text
+    description: Description of what is in the image. This is helpful for accessibility
+      but is not visible on the page
+  label: Image
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
