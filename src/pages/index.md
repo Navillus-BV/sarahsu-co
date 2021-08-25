@@ -68,5 +68,23 @@ blocks:
     subtitle: Co-founder, Navillus B.V.
     content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
+- template: newsletterblock
+  image:
+    src: "../assets/images/library.jpg"
+    alt: Books on a library shelf
+  form:
+    submitText: Submit
+    fields:
+    - id: name
+      title: Your first name
+      placeholder: Your first name
+      required: true
+  title: Title for the download
+  subtitle: Free download
+  flipped: true
+  content: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
 
 ---
