@@ -79,6 +79,7 @@ blocks:
       title: Your first name
       required: true
       type: text
+      placeholder: Your first name
     - id: email
       title: Your email address
       placeholder: Your email
