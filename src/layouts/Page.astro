@@ -6,7 +6,6 @@ import CardBlock from '../components/CardBlock.astro'
 import HeroBlock from '../components/HeroBlock.astro'
 import ImageBlock from '../components/ImageBlock.astro'
 import NewsletterBlock from '../components/NewsletterBlock.astro'
-import NewsletterForm from '../components/NewsletterForm.astro'
 import TextBlock from '../components/TextBlock.astro'
 
 interface Props {
@@ -32,19 +31,4 @@ const { title, description, image, blocks } = content;
         return (<TextBlock data={data} />);
     }
   })}
-
-<!--
-  <ImageBlock
-    title='Title for the download'
-    subtitle='Free download'
-    flipped
-    image={{
-      alt: 'Books on a library shelf',
-      src: Astro.resolve('../assets/images/library.jpg')
-    }}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-
-    <NewsletterForm />
-  </ImageBlock>-->
 </Layout>

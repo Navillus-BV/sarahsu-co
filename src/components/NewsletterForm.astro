@@ -10,11 +10,12 @@ const { fields, submitText, footnote } = data
 ---
 
 <form>
-  <label class='sr-only' for='name'>Your first name</label>
-  <input type='text' name='name' id='name' placeholder='Your first name' required />
-
-  <label class='sr-only' for='email'>Your email address</label>
-  <input type='email' name='email' id='email' placeholder='Your email' required />
+  {fields.map((field) => (
+    <>
+      <label class='sr-only' for={field.id}>{field.title}</label>
+      <input type={field.type} name={field.id} id={field.id} placeholder={field.placeholder} required={field.required} />
+    </>
+  ))}
 
   <button type='submit'>{submitText}</button>
 
