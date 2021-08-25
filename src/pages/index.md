@@ -77,7 +77,10 @@ blocks:
     fields:
     - id: name
       title: Your first name
-      placeholder: Your first name
+      required: true
+    - id: email
+      title: Your email address
+      placeholder: Your email
       required: true
   title: Title for the download
   subtitle: Free download
