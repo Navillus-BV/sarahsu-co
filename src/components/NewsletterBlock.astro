@@ -1,0 +1,17 @@
+---
+import ImageBlock from './ImageBlock.astro'
+import NewsletterForm from './NewsletterForm.astro'
+
+interface Props {
+  data: CMS.NewsletterBlock
+}
+
+const { data } = Astro.props as Props
+const { title, subtitle, subtitleIcon, flipped, image, content, form } = data
+
+const imageBlockData = { title, subtitle, subtitleIcon, flipped, image, content }
+---
+
+<ImageBlock data={imageBlockData}>
+  <NewsletterForm data={form} />
+</ImageBlock>

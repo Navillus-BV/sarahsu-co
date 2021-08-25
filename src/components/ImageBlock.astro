@@ -32,6 +32,7 @@ const contentHtml = mdToHtml(content)
     ))}
 
     {contentHtml}
+    <slot />
 
     {cta && (
       <footer>
