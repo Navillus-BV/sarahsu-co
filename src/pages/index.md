@@ -78,10 +78,12 @@ blocks:
     - id: name
       title: Your first name
       required: true
+      type: text
     - id: email
       title: Your email address
       placeholder: Your email
       required: true
+      type: email
     footnote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore.
   title: Title for the download

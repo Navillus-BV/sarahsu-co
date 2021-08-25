@@ -81,6 +81,22 @@ fields:
       description: True if the field must be filled in before submitting the form,
         false if it is optional
       default: true
+    - name: type
+      type: select
+      default: text
+      config:
+        required: true
+        options:
+        - text
+        - email
+        - number
+        - date
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Input Type
     config:
       min: 1
       max: 4
