@@ -47,3 +47,55 @@ fields:
     schema:
       format: markdown
   label: Content
+- name: form
+  type: field_group
+  config: {}
+  fields:
+  - name: fields
+    type: field_group_list
+    fields:
+    - name: id
+      type: text
+      config:
+        required: true
+      label: ID
+      description: 'Unique identifier for the input field, ex: "name" or "email"'
+      default: name
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+      description: This is a description of the input field used for accessibility,
+        but currently it is not visible on the page.
+      default: Your first name
+    - name: placeholder
+      type: text
+      config:
+        required: false
+      label: Placeholder Text
+    - name: required
+      type: boolean
+      label: Required
+      description: True if the field must be filled in before submitting the form,
+        false if it is optional
+      default: true
+    config:
+      min: 1
+      max: 4
+      labelField: 
+    label: Input Fields
+  - name: submitText
+    type: text
+    config:
+      required: true
+    label: Submit Text
+    description: Text shown on the form's submit button.
+    default: Submit
+  - name: footnote
+    type: text
+    config:
+      required: false
+    label: Footnote
+    description: If provided, this text will be included below the form's submit button.
+  label: Newsletter Form
