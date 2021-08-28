@@ -8,5 +8,9 @@
       "title": "Terms & Conditions",
       "page": "src/pages/terms-conditions.md"
     }
+  ],
+  "pages": [
+    "src/data/pages/privacy-policy.md",
+    "src/data/pages/terms-conditions.md"
   ]
 }
