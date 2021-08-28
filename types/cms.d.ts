@@ -108,16 +108,11 @@ declare namespace CMS {
     blocks: Block[];
   }
 
-  interface MenuItem {
-    title: string;
-    page: string;
-  }
-
   interface Menu {
-    pages: MenuItem[];
+    pages: string[];
   }
 
   interface Footer {
-    legal_pages: MenuItem[];
+    legal_pages: string[];
   }
 }

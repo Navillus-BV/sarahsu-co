@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Page.astro'
+
+const page = Astro
+    .fetchContent('../data/pages/*.md')
+    .map(({ astro, url, file, ...page }) => page)
+    .find(({ href }) => href === '/')
+---
+
+<Layout content={page} />

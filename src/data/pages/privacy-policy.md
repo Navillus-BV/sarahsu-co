@@ -1,8 +1,7 @@
 ---
 title: Privacy Policy
-description: ''
-image: ''
+description: ""
+image: ""
 blocks: []
 href: "/privacy"
-
 ---

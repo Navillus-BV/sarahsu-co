@@ -1,9 +1,18 @@
 ---
 import Hummingbird from './Hummingbird.astro'
+import footer from '../data/footer.json'
+import menu from '../data/menu.json'
 import site from '../data/site.json'
-import { legalPages, pages } from '../utils/menu'
+import { getPages } from '../utils/pages'
 
 const year = new Date().getFullYear()
+
+const allPages = Astro.fetchContent('../data/pages/*.md')
+
+const pages = getPages(allPages, menu.pages)
+  .map(({ title, href }) => ({ title, href }))
+const legalPages = getPages(allPages, footer.legal_pages)
+  .map(({ title, href }) => ({ title, href }))
 ---
 
 <footer class="container">

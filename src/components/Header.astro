@@ -1,11 +1,17 @@
 ---
 import Hummingbird from './Hummingbird.astro'
+import menu from '../data/menu.json'
 import site from '../data/site.json'
-import { pages } from '../utils/menu'
+import { getPages } from '../utils/pages'
 
 interface Props {
   pathname: string
 }
+
+const allPages = Astro.fetchContent('../data/pages/*.md')
+
+const pages = getPages(allPages, menu.pages)
+  .map(({ title, href }) => ({ title, href }))
 
 const { pathname } = Astro.props as Props
 ---

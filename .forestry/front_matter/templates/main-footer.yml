@@ -2,7 +2,7 @@
 label: Main Footer
 hide_body: true
 fields:
-- name: pages
+- name: legal_pages
   type: list
   config:
     use_select: true

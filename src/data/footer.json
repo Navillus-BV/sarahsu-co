@@ -1,15 +1,5 @@
 {
   "legal_pages": [
-    {
-      "title": "Privacy Policy",
-      "page": "src/pages/privacy-policy.md"
-    },
-    {
-      "title": "Terms & Conditions",
-      "page": "src/pages/terms-conditions.md"
-    }
-  ],
-  "pages": [
     "src/data/pages/privacy-policy.md",
     "src/data/pages/terms-conditions.md"
   ]
