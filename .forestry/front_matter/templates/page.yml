@@ -11,7 +11,7 @@ fields:
 - name: description
   type: text
   config:
-    required: true
+    required: false
   label: Description
 - name: image
   type: file
