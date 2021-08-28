@@ -15,10 +15,10 @@ sections:
 - type: heading
   label: Site Data
 - type: directory
-  path: src/pages
+  path: src/data/pages
   label: Pages
   create: documents
-  match: "**/*.md"
+  match: "*.md"
   templates:
   - page
 upload_dir: src/assets/images
