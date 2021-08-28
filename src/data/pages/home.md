@@ -1,7 +1,7 @@
 ---
 title: Home
 description: Coaching for Curious and Creative People
-image: "../assets/images/bubbleshare.png"
+image: "../assets/images/share.png"
 blocks:
 - template: heroblock
   cta:
