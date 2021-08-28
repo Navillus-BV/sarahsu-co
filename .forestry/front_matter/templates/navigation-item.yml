@@ -1,4 +1,22 @@
 ---
 label: Navigation Item
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  default: Home
+- name: page
+  type: select
+  default: src/pages/index.md
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: pages
+      file: 
+      path: 
+  label: Page
