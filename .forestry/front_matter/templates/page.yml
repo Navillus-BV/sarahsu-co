@@ -30,3 +30,6 @@ fields:
     min: 
     max: 
   label: Content Blocks
+pages:
+- src/pages/privacy-policy.md
+- src/pages/terms-conditions.md
