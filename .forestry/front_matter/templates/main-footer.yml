@@ -11,6 +11,6 @@ fields:
     source:
       type: pages
       section: pages
-  label: Pages
+  label: Legal Pages
 pages:
 - src/data/footer.json
