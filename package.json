@@ -5,7 +5,8 @@
   "scripts": {
     "postinstall": "cp -r node_modules/@fontsource public/@fontsource",
     "dev": "astro dev",
-    "build": "astro build"
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@fontsource/montserrat": "^4.5.1",
