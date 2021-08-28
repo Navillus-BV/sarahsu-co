@@ -1,4 +1,14 @@
 ---
 label: Main Menu
 hide_body: true
-fields: []
+fields:
+- name: links
+  type: list
+  config:
+    use_select: true
+    min: 1
+    max: 5
+    source:
+      type: pages
+      section: pages
+  label: Navigation Items
