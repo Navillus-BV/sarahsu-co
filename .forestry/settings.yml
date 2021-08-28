@@ -4,10 +4,6 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: src/data/menu.json
-  label: Main Menu
-  match: "**/*"
 - type: directory
   path: src/pages
   label: Pages
@@ -15,6 +11,9 @@ sections:
   match: "**/*.md"
   templates:
   - page
+- type: document
+  path: src/data/menu.json
+  label: Main Menu
 upload_dir: src/assets/images
 public_path: "../assets/images"
 front_matter_path: ''
