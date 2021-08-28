@@ -1,5 +1,11 @@
 {
   "links": [
     "src/pages/index.md"
+  ],
+  "pages": [
+    {
+      "title": "Home",
+      "page": "src/pages/index.md"
+    }
   ]
 }
