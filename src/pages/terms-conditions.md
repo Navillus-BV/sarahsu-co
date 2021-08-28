@@ -1,5 +1,5 @@
 ---
-title: Terms & Conditions
+title: Terms
 description: ''
 image: ''
 blocks: []
