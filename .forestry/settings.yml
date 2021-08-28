@@ -12,7 +12,6 @@ sections:
 - type: document
   path: src/data/footer.json
   label: Main Footer
-  match: "**/*"
 - type: heading
   label: Site Data
 - type: directory

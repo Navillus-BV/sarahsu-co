@@ -1,0 +1,7 @@
+---
+label: Footer
+hide_body: true
+fields:
+- type: list
+  name: legal_pages
+  label: legal_pages
