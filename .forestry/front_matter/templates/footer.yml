@@ -28,3 +28,5 @@ fields:
     max: 5
     labelField: 
   label: Legal Pages
+pages:
+- src/data/footer.json

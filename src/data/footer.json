@@ -1,3 +1,8 @@
 {
-  "legal_pages": []
+  "legal_pages": [
+    {
+      "title": "Privacy Policy",
+      "page": "src/pages/privacy-policy.md"
+    }
+  ]
 }
