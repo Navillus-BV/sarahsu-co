@@ -1,6 +1,6 @@
 ---
 title: Home
-description: Temporary page description
+description: Coaching for Curious and Creative People
 image: "../assets/images/bubbleshare.png"
 blocks:
 - template: heroblock
