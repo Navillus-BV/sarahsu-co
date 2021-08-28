@@ -1,7 +1,7 @@
 ---
 import Hummingbird from './Hummingbird.astro'
-import navigation from '../data/navigation.json'
 import site from '../data/site.json'
+import { pages } from '../utils/menu'
 
 interface Props {
   pathname: string
@@ -24,7 +24,7 @@ const { pathname } = Astro.props as Props
 
     <nav>
       <ul>
-        {navigation.main.map(({ title, href }) => (
+        {pages.map(({ title, href }) => (
           <li>
             <a href={href}>{title}</a>
           </li>

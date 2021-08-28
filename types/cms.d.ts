@@ -107,4 +107,13 @@ declare namespace CMS {
     image: string;
     blocks: Block[];
   }
+
+  interface MenuItem {
+    title: string;
+    page: string;
+  }
+
+  interface Menu {
+    pages: MenuItem[];
+  }
 }
