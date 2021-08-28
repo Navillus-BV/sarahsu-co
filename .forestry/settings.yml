@@ -8,6 +8,7 @@ sections:
   path: src/data/navigation.json
   label: Main Menu
   match: "**/*"
+  read_only: false
 - type: directory
   path: src/pages
   label: Pages
