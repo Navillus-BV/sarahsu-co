@@ -12,3 +12,5 @@ fields:
       type: pages
       section: pages
   label: Navigation Items
+pages:
+- src/data/menu.json
