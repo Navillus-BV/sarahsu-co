@@ -1,12 +1,9 @@
 ---
 import Hummingbird from './Hummingbird.astro'
-import navigation from '../data/navigation.json'
 import site from '../data/site.json'
-import { pages } from '../utils/menu'
+import { legalPages, pages } from '../utils/menu'
 
 const year = new Date().getFullYear()
-
-const { legal } = navigation
 ---
 
 <footer class="container">
@@ -18,7 +15,7 @@ const { legal } = navigation
     </div>
 
     <div>
-      {legal.map(({ title, href }) => (
+      {legalPages.map(({ title, href }) => (
         <a href={href}>{title}</a>
       ))}
     </div>

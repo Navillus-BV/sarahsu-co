@@ -11,10 +11,10 @@ const { fields, submitText, footnote } = data
 
 <form>
   {fields.map((field) => (
-    <>
+    <Fragment>
       <label class='sr-only' for={field.id}>{field.title}</label>
       <input type={field.type} name={field.id} id={field.id} placeholder={field.placeholder} required={field.required} />
-    </>
+    </Fragment>
   ))}
 
   <button type='submit'>{submitText}</button>

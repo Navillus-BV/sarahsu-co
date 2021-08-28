@@ -1,3 +1,4 @@
+import footer from "../data/footer.json";
 import menu from "../data/menu.json";
 
 function parsePageData({ title, page }: CMS.MenuItem) {
@@ -8,3 +9,4 @@ function parsePageData({ title, page }: CMS.MenuItem) {
 }
 
 export const pages = (menu as CMS.Menu).pages.map(parsePageData);
+export const legalPages = (footer as CMS.Footer).legal_pages.map(parsePageData);

@@ -116,4 +116,8 @@ declare namespace CMS {
   interface Menu {
     pages: MenuItem[];
   }
+
+  interface Footer {
+    legal_pages: MenuItem[];
+  }
 }
