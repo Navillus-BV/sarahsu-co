@@ -1,7 +1,30 @@
 ---
-label: Footer
+label: Main Footer
 hide_body: true
 fields:
-- type: list
-  name: legal_pages
-  label: legal_pages
+- name: legal_pages
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+    description: Name of the page as shown in the footer
+  - name: page
+    type: select
+    default: []
+    config:
+      required: true
+      options: []
+      source:
+        type: pages
+        section: pages
+        file: 
+        path: 
+    label: Page
+  config:
+    min: 1
+    max: 5
+    labelField: 
+  label: Legal Pages
