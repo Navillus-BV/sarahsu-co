@@ -1,8 +1,5 @@
 {
   "pages": [
-    {
-      "title": "Home",
-      "page": "src/pages/index.md"
-    }
+    "src/data/pages/home.md"
   ]
 }
