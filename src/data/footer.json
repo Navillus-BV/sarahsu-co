@@ -3,6 +3,10 @@
     {
       "title": "Privacy Policy",
       "page": "src/pages/privacy-policy.md"
+    },
+    {
+      "title": "Terms & Conditions",
+      "page": "src/pages/terms-conditions.md"
     }
   ]
 }
