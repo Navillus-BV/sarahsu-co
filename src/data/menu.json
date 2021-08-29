@@ -1,6 +1,5 @@
 {
   "pages": [
-    "src/data/pages/home.md",
-    "src/data/pages/about.md"
+    "src/data/pages/home.md"
   ]
 }
