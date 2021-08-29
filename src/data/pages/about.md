@@ -1,7 +1,7 @@
 ---
 href: "/about"
 title: About
-description: ''
+description: Coaching for Curious and Creative People
 image: ''
 blocks: []
 
