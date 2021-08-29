@@ -1,5 +1,5 @@
 ---
-href: "/"
+href: "/contact"
 title: Contact
 description: ''
 image: ''
