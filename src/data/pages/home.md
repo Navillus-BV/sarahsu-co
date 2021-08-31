@@ -70,20 +70,13 @@ blocks:
 - template: cardblock
   title: No cookie-cutter solutions...
   cards:
-  - image:
-      alt: Sarah Sullivan
-      src: "../assets/images/sarah.jpg"
-    title: Sarah Sullivan
-    subtitle: Co-founder, Navillus B.V.
-    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-  - image:
-      src: "../assets/images/sarah.jpg"
-      alt: Sarah Sullivan
-    title: Sarah Sullivan
-    subtitle: Co-founder, Navillus B.V.
-    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+  - title: 1:1 Coaching
+    content: This is your time. We’ll clarify what matters to you and work together
+      to identify concrete steps to help get you where you want to go.
+    cta:
+      text: Find out more
+      url: "/services"
+      primary: true
 - template: newsletterblock
   image:
     src: "../assets/images/library.jpg"

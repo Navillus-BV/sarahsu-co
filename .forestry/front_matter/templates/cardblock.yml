@@ -11,33 +11,11 @@ fields:
 - name: cards
   type: field_group_list
   fields:
-  - name: image
-    type: field_group
-    config: {}
-    fields:
-    - name: src
-      type: file
-      config:
-        maxSize: 64
-      label: Image
-    - name: alt
-      type: text
-      config:
-        required: true
-      label: Alternate Text
-      description: Description of what is in the image. This is helpful for accessibility
-        but is not visible displayed on the page
-    label: Image
   - name: title
     type: text
     config:
       required: true
     label: Title
-  - name: subtitle
-    type: text
-    config:
-      required: true
-    label: Subtitle
   - name: content
     type: textarea
     default: ''
@@ -47,6 +25,24 @@ fields:
       schema:
         format: markdown
     label: Content
+  - name: cta
+    type: field_group
+    config: {}
+    fields:
+    - name: text
+      type: text
+      config:
+        required: true
+      label: Text
+    - name: url
+      type: text
+      config:
+        required: true
+      label: URL
+    - name: primary
+      type: boolean
+      label: Primary
+    label: Call to action
   config:
     min: 
     max: 
