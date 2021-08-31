@@ -28,6 +28,10 @@ blocks:
   cta:
     text: work with me
     url: "/services"
+  theme: white
+  ctas:
+  - text: Work with me
+    url: "/schedule"
 - template: imageblock
   image:
     src: "../assets/images/sarah.jpg"
@@ -49,6 +53,7 @@ blocks:
     primary: true
   - text: More about me
     url: "/about"
+  theme: primary
 - template: imageblock
   image:
     src: "../assets/images/philosophy.png"
@@ -67,6 +72,7 @@ blocks:
   - text: Learn more
     url: "/about"
     primary: true
+  theme: white
 - template: cardblock
   title: No cookie-cutter solutions...
   cards:
@@ -127,6 +133,7 @@ blocks:
   ctas:
   - text: Book a call
     url: "/schedule"
+  theme: primary
 href: "/"
 
 ---
