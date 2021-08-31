@@ -91,6 +91,12 @@ button.secondary,
 .button.secondary {
   background-color: var(--chisel-neutral-50);
   color: var(--chisel-primary);
+
+  &:hover,
+  &:active {
+    background-color: var(--chisel-primary);
+    color: var(--chisel-neutral-50);
+  }
 }
 
 h1,

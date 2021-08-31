@@ -59,6 +59,7 @@ declare namespace CMS {
   interface CardBlock {
     template: "cardblock";
     title: string;
+    subtitle?: string;
     cards: Card[];
   }
 

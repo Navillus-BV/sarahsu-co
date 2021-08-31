@@ -1,43 +1,63 @@
 ---
   import Card from './Card.astro'
-  import Hummingbird from './Hummingbird.astro'
 
   interface Props {
     data: CMS.CardBlock
   }
 
   const { data } = Astro.props as Props
-  const { title, cards } = data
+  const { title, subtitle, cards } = data
 ---
 
-<section>
-  <h2>
-    <Hummingbird width='8rem' height='8rem' theme='muted' />
-    {title}
-  </h2>
+<section class="full-bleed">
+  <div class="container">
+    <div class="wrapper">
+      <h2>
+        {title}
+      </h2>
 
-  <main>
-    {cards.map((card) => (<Card data={card} />))}
-  </main>
+      {subtitle && (
+        <p>{subtitle}</p>
+      )}
+
+      <main>
+        {cards.map((card) => (<Card data={card} />))}
+      </main>
+    </div>
+  </div>
 </section>
 
 <style lang="scss">
+  section {
+    background: var(--chisel-primary-light);
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: calc(var(--spacer-md) * 2) 0;
+  }
+
   h2 {
+    order: 2;
     position: relative;
     margin: 0;
     text-align: center;
     margin-bottom: var(--spacer-md);
+    color: var(--chisel-primary);
   }
 
-  h2 :global(svg) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%) scaleX(-1);
-    z-index: -1;
+  p {
+    order: 1;
+    font-weight: 400;
+    text-size: var(--chisel-h5);
+    font-family: var(--font-family-base);
+    text-transform: uppercase;
+    text-align: center;
   }
 
   main {
+    order: 3;
     display: flex;
     flex-direction: column;
 
@@ -46,13 +66,17 @@
     }
   }
 
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 979px) {
     main {
       flex-direction: row;
 
-      & :global(> *:not(:last-child)) {
+      & > :global(*) {
+        flex-basis: 100%;
+      }
+
+      & > :global(*:not(:last-child)) {
         margin-bottom: 0;
-        margin-right: var(--spacer-sm);
+        margin-right: var(--spacer-md);
       }
     }
   }
