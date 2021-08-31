@@ -96,7 +96,7 @@ blocks:
     src: "../assets/images/library.jpg"
     alt: Books on a library shelf
   form:
-    submitText: Get it now
+    submitText: Subscribe
     fields:
     - id: name
       title: Your first name
@@ -108,8 +108,10 @@ blocks:
       placeholder: Your Email
       required: true
       type: email
-    footnote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore.
+    footnote: By subscribing you agree with my [Terms of Use](/terms "Terms of Use")
+      and [Privacy Policy](/privacy "Privacy Policy") and are giving me permission
+      to email you with ideas, articles and the occasional detail about my services.
+      I promise not to overload your inbox!
   title: Join the mailing list for some inbox inspriation!
   subtitle: ''
   flipped: false

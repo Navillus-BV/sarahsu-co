@@ -12,15 +12,6 @@ fields:
   type: boolean
   label: Title Icon
   description: Whether or not to show the hummingbird icon next to the title
-- name: content
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Content
 - name: form
   type: field_group
   config: {}
@@ -83,9 +74,12 @@ fields:
     description: Text shown on the form's submit button.
     default: Submit
   - name: footnote
-    type: text
+    type: textarea
+    default: ''
     config:
-      required: false
+      required: true
+      wysiwyg: true
+      schema:
+        format: markdown
     label: Footnote
-    description: If provided, this text will be included below the form's submit button.
   label: Newsletter Form
