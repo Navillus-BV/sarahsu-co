@@ -12,6 +12,9 @@ blocks:
     I help curious and creative people imagine what's possible and come alive in pursuit of their personal and professional goals.
 
     If you're looking for a breakthrough, I’d love to help you get inspired and focus your energy into actions that get results!
+  image:
+    alt: Sarah Sullivan
+    src: "../assets/images/sarah.jpg"
 - template: imageblock
   image:
     src: "../assets/images/stuck.png"
