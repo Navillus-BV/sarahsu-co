@@ -6,12 +6,10 @@ blocks:
 - template: heroblock
   cta:
     url: "/services"
-    text: How I can help
+    text: Find out how
   title: Need a little inspiration?
-  content: |-
-    I help curious and creative people imagine what's possible and come alive in pursuit of their personal and professional goals.
-
-    If you're looking for a breakthrough, I’d love to help you get inspired and focus your energy into actions that get results!
+  content: I can help you imagine what’s possible and how to get there so that you
+    can come alive in pursuit of your personal and professional goals.
   image:
     alt: Sarah Sullivan
     src: "../assets/images/sarah.jpg"
