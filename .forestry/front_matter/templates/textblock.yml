@@ -23,9 +23,8 @@ fields:
     schema:
       format: markdown
   label: Content
-- name: cta
-  type: field_group
-  config: {}
+- name: ctas
+  type: field_group_list
   fields:
   - name: text
     type: text
@@ -37,5 +36,8 @@ fields:
     config:
       required: true
     label: URL
-    default: "/about"
-  label: Call to Action
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Calls to action
