@@ -96,6 +96,7 @@ blocks:
       text: Find out more
       url: "/services"
       primary: true
+  subtitle: Services
 - template: newsletterblock
   image:
     src: "../assets/images/library.jpg"

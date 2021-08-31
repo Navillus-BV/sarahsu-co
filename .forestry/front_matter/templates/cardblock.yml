@@ -8,6 +8,11 @@ fields:
   config:
     required: true
   label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
 - name: cards
   type: field_group_list
   fields:
