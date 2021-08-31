@@ -3,6 +3,20 @@ label: ImageBlock
 hide_body: true
 display_field: title
 fields:
+- name: theme
+  type: select
+  default: white
+  config:
+    required: true
+    options:
+    - white
+    - primary
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Theme
 - name: title
   type: text
   config:
@@ -22,10 +36,6 @@ fields:
   type: boolean
   label: Image Right
   description: If enabled, the image will be shown on the right of the screen on desktop.
-- name: muted
-  type: boolean
-  label: Muted theme
-  description: If enabled, the image block will use the light gray theme
 - name: image
   type: field_group
   config: {}
