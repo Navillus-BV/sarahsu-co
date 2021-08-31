@@ -30,18 +30,19 @@ blocks:
     url: "/services"
 - template: imageblock
   image:
-    src: "../assets/images/stuck.png"
-    alt: The word stuck spelled in Scrabble tiles
-  title: One line about the problem.
-  muted: true
-  content: |-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-
-    * Lorem ipsum dolor sit amet, consectetur.
-    * Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-    * Lorem ipsum dolor sit amet, consectetur.
+    src: "../assets/images/sarah.jpg"
+    alt: Sarah Sullivan
+  title: Curious and curiouser.
+  muted: false
+  content: "Hi, I’m Sarah – I follow my curiosity and do my best to integrate and
+    apply what I learn in pursuit of wisdom and wonder.  \nMy [background](/about
+    \"background\") and [professional experience](/about \"personal experience\")
+    are rooted in psychology and human development, but I have a [wide range of interests](/about
+    \"wide range of interests\") and feel most alive when I’m helping others imagine
+    what’s possible and how.  \nIt’s kind of tough to get to know someone from a little
+    blurb, so here are two ways to get more context…"
+  subtitle: About me
+  subtitleIcon: true
 - template: imageblock
   image:
     src: "../assets/images/sarah.jpg"
