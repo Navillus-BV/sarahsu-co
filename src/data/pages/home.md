@@ -46,6 +46,7 @@ blocks:
   ctas:
   - text: Book a free intro call
     url: "/schedule"
+    primary: true
   - text: More about me
     url: "/about"
 - template: imageblock
