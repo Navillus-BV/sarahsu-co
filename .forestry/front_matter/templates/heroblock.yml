@@ -17,6 +17,11 @@ fields:
     schema:
       format: markdown
   label: Content
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
 - name: cta
   type: field_group
   config: {}
