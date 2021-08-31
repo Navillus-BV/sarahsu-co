@@ -13,6 +13,21 @@ blocks:
   image:
     alt: Sarah Sullivan
     src: "../assets/images/sarah.jpg"
+- template: textblock
+  text: see services and pricing
+  title: You already have everything you need within you.
+  subtitle: About you
+  url: "/services"
+  content: "You just need a little help to clear through the clutter and the noise
+    so you can focus your energy on what matters most.  \n[Why are you here](/services
+    \"Why are you here?\")? Maybe you’re feeling lost and in need of some direction
+    or maybe you know where you’re going but just aren’t sure how to get there.  \nWhether
+    you’re looking to dream big, get focused, or just be truly seen and heard for
+    a change, [I’d love to be part of your journey](/services \"I'd love to be a part
+    of your journey\")."
+  cta:
+    text: work with me
+    url: "/services"
 - template: imageblock
   image:
     src: "../assets/images/stuck.png"
@@ -27,18 +42,6 @@ blocks:
     * Lorem ipsum dolor sit amet, consectetur.
     * Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
     * Lorem ipsum dolor sit amet, consectetur.
-- template: textblock
-  text: see services and pricing
-  title: One line about the solution
-  subtitle: Invitation to do something together
-  url: "/services"
-  content: |-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-  cta:
-    text: see services and pricing
-    url: "/services"
 - template: imageblock
   image:
     src: "../assets/images/sarah.jpg"
