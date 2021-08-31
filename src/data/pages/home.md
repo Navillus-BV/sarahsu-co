@@ -51,18 +51,22 @@ blocks:
     url: "/about"
 - template: imageblock
   image:
-    src: "../assets/images/sarah.jpg"
-    alt: Sarah Sullivan
-  title: One line about what I do.
-  subtitle: Hi, I'm Sarah
-  subtitleIcon: true
-  content: |-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+    src: "../assets/images/philosophy.png"
+    alt: Graphic showing the connection from focus to exploration
+  title: How I approach coaching & life
+  subtitle: My philosophy
+  subtitleIcon: false
+  content: "Everything is connected.  \nLife is dynamic.  \nWhat I offer clients is
+    my time and full attention so that we can create, together,  \nNo judgment."
   cta:
     text: More about me
     url: "/about"
+  flipped: true
+  muted: true
+  ctas:
+  - text: Learn more
+    url: "/about"
+    primary: true
 - template: cardblock
   title: No cookie-cutter solutions...
   cards:
