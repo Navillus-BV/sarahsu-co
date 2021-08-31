@@ -77,6 +77,20 @@ blocks:
       text: Find out more
       url: "/services"
       primary: true
+  - title: Group Coaching & Workshops
+    content: Looking for more of a community experience? These 90-minute, interactive
+      small-group sessions cover a new topic every quarter.
+    cta:
+      text: Find out more
+      url: "/services"
+      primary: true
+  - title: Corporate Packages
+    content: Looking to supplement your L&D offerings with personalized experiences
+      that truly empower employees? I can help!
+    cta:
+      text: Find out more
+      url: "/services"
+      primary: true
 - template: newsletterblock
   image:
     src: "../assets/images/library.jpg"
@@ -88,21 +102,22 @@ blocks:
       title: Your first name
       required: true
       type: text
-      placeholder: Your first name
+      placeholder: First Name
     - id: email
       title: Your email address
-      placeholder: Your email
+      placeholder: Your Email
       required: true
       type: email
     footnote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore.
-  title: Title for the download
-  subtitle: Free download
-  flipped: true
-  content: |-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+  title: Join the mailing list for some inbox inspriation!
+  subtitle: ''
+  flipped: false
+  content: By subscribing you agree with my [Terms of Use](/terms "Terms of Use")
+    and [Privacy Policy](/privacy "Privacy Policy") and are giving me permission to
+    email you with ideas, articles and the occasional detail about my services. I
+    promise not to overload your inbox!
+  title_icon: true
 href: "/"
 
 ---
