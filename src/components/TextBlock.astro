@@ -36,6 +36,8 @@ const contentHtml = mdToHtml(content)
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: var(--width-prose);
+    margin: 0 auto;
   }
 
   section :global(svg) {
@@ -50,12 +52,13 @@ const contentHtml = mdToHtml(content)
   h2 {
     order: 2;
     color: var(--chisel-primary);
+    text-align: center;
   }
 
   h3 {
     order: 1;
     margin-bottom: var(--spacer-sm);
-    font-size: 1rem;
+    font-size: var(--chisel-h5);
     font-family: var(--font-family-base);
     font-weight: 400;
     text-transform: uppercase;

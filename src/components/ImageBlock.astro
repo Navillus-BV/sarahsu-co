@@ -8,12 +8,21 @@ interface Props {
 }
 
 const { data } = Astro.props as Props
-const { title, subtitle, subtitleIcon, image, content, cta, flipped, muted } = data
+const {
+  theme = 'white',
+  title,
+  subtitle,
+  subtitleIcon,
+  image,
+  content,
+  ctas = [],
+  flipped
+} = data
 
 const contentHtml = mdToHtml(content)
 ---
 
-<section class={clsx({ muted, flipped })}>
+<section class={clsx({ flipped, primary: theme === 'primary' })}>
   <div class='bg'></div>
   <img alt={image.alt} src={Astro.resolve(image.src)} />
 
@@ -22,7 +31,7 @@ const contentHtml = mdToHtml(content)
       <h2 class={clsx({ h5: subtitle })}>
         {subtitle || title}
         {subtitle && subtitleIcon && (
-          <Hummingbird width='3rem' height='3rem' theme='secondary' />
+          <Hummingbird width='3rem' height='3rem' opacity='0.5' />
         )}
       </h2>
     )}
@@ -34,9 +43,11 @@ const contentHtml = mdToHtml(content)
     {contentHtml}
     <slot />
 
-    {cta && (
-      <footer>
-        <a class="button" href={cta.url}>{cta.text}</a>
+    {ctas.length > 0 && (
+      <footer class={clsx({ multi: ctas.length > 1 })}>
+        {ctas.map(({ text, url, primary }) => (
+          <a class={clsx({ button: true, secondary: !primary })} href={url}>{text}</a>
+        ))}
       </footer>
     )}
   </main>
@@ -63,13 +74,12 @@ const contentHtml = mdToHtml(content)
   .bg {
     grid-column: 1;
     grid-row: 2 / 4;
-    background: var(--chisel-primary-light);
     width: 100%;
     height: 100%;
   }
 
-  section.muted .bg {
-    background: var(--chisel-neutral-200);
+  section.primary .bg {
+    background: var(--chisel-primary-light);
   }
 
   main {
@@ -122,12 +132,23 @@ const contentHtml = mdToHtml(content)
 
   h3 {
     margin: var(--spacer-sm) 0 var(--spacer-md);
+    color: var(--chisel-primary);
   }
 
   footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: var(--spacer-sm);
+    max-width: 25rem;
+    margin: var(--spacer-md) auto 0;
+
+    & :not(:last-child) {
+      margin-bottom: var(--spacer-sm);
+    }
+  }
+
+  footer:not(.multi) {
+    align-items: center;
   }
 
   @media screen and (min-width: 979px) {
@@ -158,6 +179,24 @@ const contentHtml = mdToHtml(content)
       grid-row: 1;
       grid-column: 3 / -1;
       margin: var(--spacer-md);
+    }
+
+    footer {
+      flex-direction: row;
+      max-width: unset;
+      margin: var(--spacer-md) 0 0;
+      justify-content: start;
+
+      & a {
+        &:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: var(--spacer-md);
+        }
+      }
+    }
+
+    footer:not(.multi) > * {
+      align-self: start;
     }
 
     .flipped .bg {
