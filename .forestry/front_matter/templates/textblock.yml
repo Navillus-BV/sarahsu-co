@@ -3,6 +3,20 @@ label: TextBlock
 hide_body: true
 display_field: title
 fields:
+- name: theme
+  type: select
+  default: white
+  config:
+    required: true
+    options:
+    - white
+    - primary
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Theme
 - name: title
   type: text
   config:
