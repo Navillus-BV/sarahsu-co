@@ -1,5 +1,6 @@
 ---
 import Hummingbird from './Hummingbird.astro'
+import { mdToHtml } from '../utils/markdown'
 
 interface Props {
   data: CMS.Form
@@ -7,6 +8,8 @@ interface Props {
 
 const { data } = Astro.props as Props
 const { fields, submitText, footnote } = data
+
+const footnoteHtml = mdToHtml(footnote)
 ---
 
 <form>
@@ -19,12 +22,7 @@ const { fields, submitText, footnote } = data
 
   <button type='submit'>{submitText}</button>
 
-  {footnote && (
-    <small>
-      <Hummingbird width='2.5rem' height='2.5rem' theme='secondary' />
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span>
-    </small>
-  )}
+  <small>{footnoteHtml}</small>
 </form>
 
 <style lang='scss'>
@@ -66,12 +64,12 @@ const { fields, submitText, footnote } = data
     grid-template-columns: auto 1fr;
     gap: var(--spacer-xs);
     align-items: center;
-    text-align: start;
+    text-align: center;
     margin-top: var(--spacer-sm);
   }
 
-  small :global(svg) {
-    transform: scaleX(-1);
+  small :global(a) {
+    color: var(--chisel-primary);
   }
 
   @media screen and (min-width: 979px) {

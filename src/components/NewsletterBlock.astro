@@ -1,5 +1,4 @@
 ---
-import ImageBlock from './ImageBlock.astro'
 import NewsletterForm from './NewsletterForm.astro'
 
 interface Props {
@@ -7,11 +6,21 @@ interface Props {
 }
 
 const { data } = Astro.props as Props
-const { title, subtitle, subtitleIcon, flipped, image, content, form } = data
-
-const imageBlockData = { title, subtitle, subtitleIcon, flipped, image, content }
+const { title, titleIcon, form } = data
 ---
 
-<ImageBlock data={imageBlockData}>
+<section>
+  <h2>
+    {title}
+  </h2>
+
   <NewsletterForm data={form} />
-</ImageBlock>
+</section>
+
+<style>
+  h2 {
+    font-size: var(--chisel-h3);
+    font-family: var(--font-family-base);
+    text-align: center;
+  }
+</style>
