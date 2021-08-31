@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { data } = Astro.props as Props
-const { title, cta, content } = data
+const { title, cta, content, image } = data
 
 const contentHtml = mdToHtml(content)
 ---
@@ -18,11 +18,13 @@ const contentHtml = mdToHtml(content)
 
       <main>
         {contentHtml}
-
-        {cta && (
-          <a class='button' href={cta.url}>{cta.text}</a>
-        )}
       </main>
+      
+      {cta && (
+        <a class="button secondary" href={cta.url}>{cta.text}</a>
+      )}
+
+      <img src={Astro.resolve(image.src)} alt={image.alt} />
     </div>
   </div>
 </section>
@@ -37,48 +39,57 @@ const contentHtml = mdToHtml(content)
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'title' 'image' 'content' 'cta';
     align-items: center;
-    justify-content: center;
+    text-align: center;
   }
 
   h1 {
+    grid-area: title;
     margin-bottom: 0;
-    margin-bottom: var(--spacer-md);
+    text-align: center;
   }
 
   main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: var(--spacer-md);
-    background-color: var(--chisel-neutral-50);
+    grid-area: content;
+    font-size: var(--chisel-h5);
     color: var(--chisel-neutral-900);
-    aspect-ratio: 1;
-    border-radius: 999px;
-    margin: 0 auto;
-    max-width: 500px;
-    max-height: 500px;
+  }
+
+  img {
+    grid-area: image;
+    border-radius: 9999px;
+    width: min(60vw, 25rem);
+    height: min(60vw, 25rem);
+    object-fit: contain;
+    justify-self: center;
     filter: var(--drop-shadow-lg);
+    margin: var(--spacer-md) 0;
   }
 
   a.button {
+    grid-area: cta;
     font-size: var(--chisel-p);
+    justify-self: center;
   }
 
   @media screen and (min-width: 979px) {
     .wrapper {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    main {
-      max-width: min(640px, 65vh);
-      max-height: min(640px, 65vh);
+      grid-template-columns: 1fr auto;
+      grid-template-areas: 'title image' 'content image' 'cta image';
+      column-gap: var(--spacer-xl);
     }
 
     a.button {
       margin-top: var(--spacer-sm);
+    }
+  }
+
+  @media screen and (min-aspect-ratio: 1 / 1) {
+    img {
+      max-height: min(50vh, 25rem);
+      max-width: min(50vh, 25rem);
     }
   }
 </style>

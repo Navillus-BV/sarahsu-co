@@ -35,6 +35,7 @@ declare namespace CMS {
   interface CallToAction {
     text: string;
     url: string;
+    primary: boolean;
   }
 
   interface Form {
@@ -43,16 +44,16 @@ declare namespace CMS {
       title: string;
       placeholder: string;
       required: boolean;
+      type: string;
     }[];
     submitText: string;
-    footnote?: string;
+    footnote: string;
   }
 
   interface Card {
     title: string;
-    subtitle: string;
     content: Markdown;
-    image: Image;
+    cta: CallToAction;
   }
 
   interface CardBlock {
@@ -65,38 +66,36 @@ declare namespace CMS {
     template: "heroblock";
     title: string;
     content: Markdown;
+    image: Image;
     cta: CallToAction;
   }
 
   interface ImageBlock {
     template: "imageblock";
+    theme: "white" | "primary";
     title: string;
     subtitle: string;
     subtitleIcon: boolean;
     flipped: boolean;
-    muted: boolean;
     image: Image;
     content: Markdown;
-    cta: CallToAction;
+    ctas: CallToAction[];
   }
 
   interface NewsletterBlock {
     template: "newsletterblock";
     title: string;
-    subtitle: string;
-    subtitleIcon: boolean;
-    flipped: boolean;
-    image: Image;
-    content: Markdown;
+    titleIcon: boolean;
     form: Form;
   }
 
   interface TextBlock {
     template: "textblock";
+    theme: "white" | "primary";
     title: string;
     subtitle: string;
     content: Markdown;
-    cta: CallToAction;
+    ctas: CallToAction[];
   }
 
   type Block = CardBlock | HeroBlock | ImageBlock | NewsletterBlock | TextBlock;
