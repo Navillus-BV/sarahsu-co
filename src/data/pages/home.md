@@ -73,7 +73,7 @@ blocks:
     primary: true
   theme: white
 - template: cardblock
-  title: No cookie-cutter solutions...
+  title: How we can work together
   cards:
   - title: 1:1 Coaching
     content: This is your time. We’ll clarify what matters to you and work together
