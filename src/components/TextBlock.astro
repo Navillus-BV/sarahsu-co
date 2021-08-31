@@ -1,4 +1,5 @@
 ---
+import clsx from 'clsx'
 import Hummingbird from './Hummingbird.astro'
 import { mdToHtml } from '../utils/markdown'
 
@@ -7,26 +8,26 @@ interface Props {
 }
 
 const { data } = Astro.props as Props
-const { title, subtitle, content, cta } = data
+const { theme, title, subtitle, content, ctas = [] } = data
 
 const contentHtml = mdToHtml(content)
 ---
 
-<section>
+<section class={clsx({ primary: theme === 'primary' })}>
   <h2>{title}</h2>
   {subtitle && (
     <h3>{subtitle}</h3>
   )}
 
-  <Hummingbird width="6rem" height="6rem" theme="gradient" opacity="0.5" />
+  <Hummingbird width="6rem" height="6rem" opacity="0.4" />
 
   <main>
     {contentHtml}
   </main>
 
-  {cta && (
-    <a class="button" href={cta.url}>{cta.text}</a>
-  )}
+  {ctas.map(({ url, text }) => (
+    <a class="button" href={url}>{text}</a>
+  ))}
 </section>
 
 <style lang="scss">
@@ -38,7 +39,7 @@ const contentHtml = mdToHtml(content)
   }
 
   section :global(svg) {
-    transform: scaleX(-1);
+    order: 3;
     margin: var(--spacer-sm) 0;
   }
 
@@ -46,8 +47,14 @@ const contentHtml = mdToHtml(content)
     margin: 0;
   }
 
+  h2 {
+    order: 2;
+    color: var(--chisel-primary);
+  }
+
   h3 {
-    margin-top: var(--spacer-xs);
+    order: 1;
+    margin-bottom: var(--spacer-sm);
     font-size: 1rem;
     font-family: var(--font-family-base);
     font-weight: 400;
@@ -55,10 +62,16 @@ const contentHtml = mdToHtml(content)
   }
 
   main {
+    order: 4;
     max-width: var(--width-prose);
   }
 
-  .button {
+  main :global(b) {
+    color: var(--chisel-primary);
+  }
+
+  a.button {
+    order: 5;
     margin-top: var(--spacer-sm);
   }
 </style>

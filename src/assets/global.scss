@@ -7,6 +7,12 @@
   $fontDir: "/@fontsource/montserrat/files"
 );
 
+@include Montserrat.fontFace(
+  $weight: 700,
+  $display: fallback,
+  $fontDir: "/@fontsource/montserrat/files"
+);
+
 @font-face {
   font-family: Modern Love;
   src: url("/webfonts/Fontspring-DEMO-modernlove-regular.otf")
