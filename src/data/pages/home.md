@@ -120,6 +120,13 @@ blocks:
     email you with ideas, articles and the occasional detail about my services. I
     promise not to overload your inbox!
   title_icon: true
+- template: textblock
+  title: Ready to break through?
+  content: Let’s work together to imagine what’s possible and how to get there so
+    that you can come alive in pursuit of your personal and professional goals.
+  ctas:
+  - text: Book a call
+    url: "/schedule"
 href: "/"
 
 ---
