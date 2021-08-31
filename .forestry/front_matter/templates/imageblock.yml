@@ -66,6 +66,9 @@ fields:
     config:
       required: true
     label: URL
+  - name: primary
+    type: boolean
+    label: Primary
   config:
     min: 
     max: 
