@@ -43,6 +43,9 @@ blocks:
     blurb, so here are two ways to get more context…"
   subtitle: About me
   subtitleIcon: true
+  ctas:
+  - text: Book a free intro call
+    url: "/schedule"
 - template: imageblock
   image:
     src: "../assets/images/sarah.jpg"
