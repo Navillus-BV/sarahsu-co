@@ -136,7 +136,7 @@ h6,
   grid-column: 1 / -1;
 }
 
-.container > section:last-child {
+.container > section:last-child:not(.primary) {
   margin-bottom: 8rem;
 }
 

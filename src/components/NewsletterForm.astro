@@ -21,51 +21,28 @@ const footnoteHtml = mdToHtml(footnote)
   ))}
 
   <button type='submit'>{submitText}</button>
-
-  <small>{footnoteHtml}</small>
 </form>
+
+<small>{footnoteHtml}</small>
 
 <style lang='scss'>
   form {
     margin-top: var(--spacer-sm);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 'name' 'email' 'submit' 'note';
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-xs);
   }
 
   input {
     background-color: var(--chisel-neutral-50);
     color: var(--chisel-neutral-900);
     border: 2px solid var(--chisel-primary);
-    border-radius: 0;
-
-    &:not(:last-child) {
-      border-bottom-width: 0;
-    }
-  }
-
-  [type=text] {
-    grid-area: name;
-  }
-
-  [type=email] {
-    grid-area: email;
-  }
-
-  button {
-    grid-area: submit;
-    border-radius: 0;
-    font-size: 1rem;
   }
 
   small {
-    grid-area: note;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--spacer-xs);
-    align-items: center;
+    display: block;
     text-align: center;
-    margin-top: var(--spacer-sm);
+    margin: var(--spacer-sm) auto 0;
   }
 
   small :global(a) {
@@ -75,9 +52,12 @@ const footnoteHtml = mdToHtml(footnote)
   @media screen and (min-width: 979px) {
     form {
       margin: var(--spacer-md) auto 0;
-      max-width: 640px;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 'name email' 'submit submit' 'note note';
+      flex-direction: row;
+      gap: var(--spacer-sm);
+    }
+    
+    form, small {
+      max-width: var(--width-prose);
     }
   }
 </style>

@@ -13,34 +13,42 @@ const { theme, title, subtitle, content, ctas = [] } = data
 const contentHtml = mdToHtml(content)
 ---
 
-<section class={clsx({ primary: theme === 'primary' })}>
-  <h2>{title}</h2>
-  {subtitle && (
-    <h3>{subtitle}</h3>
-  )}
+<section class={clsx({'full-bleed': true, primary: theme === 'primary' })}>
+  <div class='container container--prose'>
+    <div class='wrapper'>
+      <h2>{title}</h2>
+      {subtitle && (
+        <h3>{subtitle}</h3>
+      )}
 
-  <Hummingbird width="6rem" height="6rem" opacity="0.4" />
+      <Hummingbird width="6rem" height="6rem" opacity="0.4" />
 
-  <main>
-    {contentHtml}
-  </main>
+      <main>
+        {contentHtml}
+      </main>
 
-  {ctas.map(({ url, text }) => (
-    <a class="button" href={url}>{text}</a>
-  ))}
+      {ctas.map(({ url, text }) => (
+        <a class="button" href={url}>{text}</a>
+      ))}
+    </div>
+  </div>
 </section>
 
 <style lang="scss">
-  section {
+  section.primary {
+    padding: var(--spacer-md) 0;
+    background: var(--chisel-primary-light);
+  }
+
+  .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: var(--width-prose);
     margin: 0 auto;
   }
 
-  section :global(svg) {
+  .wrapper :global(svg) {
     order: 3;
     margin: var(--spacer-sm) 0;
   }
