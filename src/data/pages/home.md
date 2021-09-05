@@ -18,13 +18,12 @@ blocks:
   title: You already have everything you need.
   subtitle: A Little about You
   url: "/services"
-  content: "You could just use a little help to clear through the clutter and the
-    noise so you can focus your energy on what matters most.\n\n**You're in the right
-    place if you:**\n\n* Aren't sure where you want to go and are looking for some
-    direction. \n* Know where you’re going but aren’t quite sure how to get there.\n*
-    Want a trusted partner who can act as sounding board or a sanity check.\n\nWhether
-    you’re looking to dream big, get focused, or just be truly seen and heard for
-    a change, **I'd love to be part of your journey**."
+  content: |-
+    You could just use a little help to clear through the clutter and the noise so you can focus your energy on what matters most.
+
+    Maybe you aren't sure where you want to go and are **looking for some direction**. Or you know where you’re going but aren’t quite sure **how to get there**. Or maybe you just want a trusted partner who can act as **sounding board or a sanity check**.
+
+    Whether you’re looking to dream big, get focused, or just be truly seen and heard for a change, **I'd love to be part of your journey**.
   cta:
     text: work with me
     url: "/services"
