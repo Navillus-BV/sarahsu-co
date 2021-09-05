@@ -37,13 +37,12 @@ blocks:
     alt: Sarah Sullivan
   title: Curious and curiouser.
   muted: false
-  content: "Hi, I’m Sarah – I follow my curiosity and do my best to integrate and
-    apply what I learn in pursuit of wisdom and wonder.\n\n  \nMy [background](/about
-    \"background\") and [professional experience](/about \"personal experience\")
-    are rooted in psychology and human development, but I have a [wide range of interests](/about
-    \"wide range of interests\") and feel most alive when I’m helping others imagine
-    what’s possible and how.\n\n  \nIt’s kind of tough to get to know someone from
-    a little blurb, so here are two ways to get more context…"
+  content: |-
+    Hi, I’m Sarah – I follow my curiosity and do my best to integrate and apply what I learn in pursuit of wisdom and wonder.
+
+    My background and professional experience are rooted in psychology and human development, but I have a wide range of interests and feel most alive when I’m helping others imagine what’s possible and how.
+
+    It’s kind of tough to get to know someone from a little blurb, so here are two ways to get more context…
   subtitle: A Little about Me
   subtitleIcon: true
   ctas:
