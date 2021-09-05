@@ -44,7 +44,7 @@ blocks:
     \"wide range of interests\") and feel most alive when I’m helping others imagine
     what’s possible and how.\n\n  \nIt’s kind of tough to get to know someone from
     a little blurb, so here are two ways to get more context…"
-  subtitle: About me
+  subtitle: A Little about Me
   subtitleIcon: true
   ctas:
   - text: Book a free intro call
