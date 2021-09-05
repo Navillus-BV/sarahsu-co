@@ -16,14 +16,13 @@ blocks:
 - template: textblock
   text: see services and pricing
   title: You already have everything you need within you.
-  subtitle: About you
+  subtitle: Why are you here?
   url: "/services"
   content: "You just need a little help to clear through the clutter and the noise
-    so you can focus your energy on what matters most.\n\n**Why are you here?** Maybe
-    you’re feeling lost and in need of some direction or maybe you know where you’re
-    going but just aren’t sure how to get there.\n\n  \nWhether you’re looking to
-    dream big, get focused, or just be truly seen and heard for a change, **I'd love
-    to be part of your journey**."
+    so you can focus your energy on what matters most.\n\nMaybe you’re feeling lost
+    and in need of some direction or maybe you know where you’re going but just aren’t
+    sure how to get there.\n\nWhether you’re looking to dream big, get focused, or
+    just be truly seen and heard for a change, \n\n**I'd love to be part of your journey**."
   cta:
     text: work with me
     url: "/services"
