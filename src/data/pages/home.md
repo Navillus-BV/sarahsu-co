@@ -15,7 +15,7 @@ blocks:
     src: "../assets/images/sarah.jpg"
 - template: textblock
   text: see services and pricing
-  title: You already have everything you need within you.
+  title: You already have everything you need.
   subtitle: Why are you here?
   url: "/services"
   content: "You just need a little help to clear through the clutter and the noise
