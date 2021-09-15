@@ -22,41 +22,49 @@ const {
 const contentHtml = mdToHtml(content)
 ---
 
-<section class={clsx({ flipped, primary: theme === 'primary' })}>
-  <div class='bg'></div>
-  <img alt={image.alt} src={Astro.resolve(image.src)} />
+<section class={clsx({ 'full-bleed': true, flipped, primary: theme === 'primary' })}>
+  <div class='container'>
+    <div class='wrapper'>
+      <img alt={image.alt} src={Astro.resolve(image.src)} />
 
-  <main>
-    {(title || subtitle) && (
-      <h2 class={clsx({ h5: subtitle })}>
-        {subtitle || title}
-        {subtitle && subtitleIcon && (
-          <Hummingbird width='3rem' height='3rem' opacity={0.5} />
+      <main>
+        {(title || subtitle) && (
+          <h2 class={clsx({ h5: subtitle })}>
+            {subtitle || title}
+            {subtitle && subtitleIcon && (
+              <Hummingbird width='3rem' height='3rem' opacity={0.5} theme='secondary' />
+            )}
+          </h2>
         )}
-      </h2>
-    )}
 
-    {(title && subtitle && (
-      <h3 class='h2'>{title}</h3>
-    ))}
-
-    {contentHtml}
-    <slot />
-
-    {ctas.length > 0 && (
-      <footer class={clsx({ multi: ctas.length > 1 })}>
-        {ctas.map(({ text, url, primary }) => (
-          <a class={clsx({ button: true, secondary: !primary })} href={url}>{text}</a>
+        {(title && subtitle && (
+          <h3 class='h2'>{title}</h3>
         ))}
-      </footer>
-    )}
-  </main>
+
+        {contentHtml}
+        <slot />
+
+        {ctas.length > 0 && (
+          <footer class={clsx({ multi: ctas.length > 1 })}>
+            {ctas.map(({ text, url }) => (
+              <a class="button alt" href={url}>{text}</a>
+            ))}
+          </footer>
+        )}
+      </main>
+    </div>
+  </div>
 </section>
 
 <style lang='scss'>
-  section {
+  section.primary {
+    background: var(--primary-gradient);
+    color: var(--chisel-neutral-50);
+  }
+
+  .wrapper {
     display: grid;
-    grid-template-rows: 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
@@ -69,17 +77,6 @@ const contentHtml = mdToHtml(content)
     filter: var(--drop-shadow-lg);
     aspect-ratio: 1;
     border-radius: 999px;
-  }
-
-  .bg {
-    grid-column: 1;
-    grid-row: 2 / 4;
-    width: 100%;
-    height: 100%;
-  }
-
-  section.primary .bg {
-    background: var(--chisel-primary-light);
   }
 
   main {
@@ -132,7 +129,6 @@ const contentHtml = mdToHtml(content)
 
   h3 {
     margin: var(--spacer-sm) 0 var(--spacer-md);
-    color: var(--chisel-primary);
   }
 
   footer {

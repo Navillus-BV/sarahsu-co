@@ -116,6 +116,13 @@ button.secondary,
   }
 }
 
+button.alt,
+.button.alt {
+  background: var(--chisel-neutral-50);
+  border-color: var(--chisel-neutral-50);
+  color: var(--chisel-secondary);
+}
+
 h1,
 .h1,
 h2,
