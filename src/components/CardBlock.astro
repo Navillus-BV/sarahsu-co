@@ -11,6 +11,8 @@
 ---
 
 <section>
+  <Icon icon='chevron-right' size={64} alt='' />
+
   <h2 class='text-gradient'>
     {title}
   </h2>
@@ -20,18 +22,33 @@
   )}
 
   <main>
-    <Icon icon='chevron-right' size={64} alt='' />
-
     {cards.map((card) => (<Card data={card} />))}
-
-    <Icon icon='chevron-left' size={64} alt='' />
   </main>
+
+  <Icon icon='chevron-left' size={64} alt='' />
 </section>
 
 <style lang="scss">
   section {
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    & > :global(svg) {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      color: var(--chisel-secondary);
+
+      &:first-of-type {
+        left: -7rem;
+      }
+
+      &:last-of-type {
+        right: -7rem;
+      }
+    }
   }
 
   h2 {
@@ -78,6 +95,12 @@
         margin-bottom: 0;
         margin-right: var(--spacer-md);
       }
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    section > :global(svg) {
+      display: block;
     }
   }
 </style>
