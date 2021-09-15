@@ -9,33 +9,24 @@
   const { title, subtitle, cards } = data
 ---
 
-<section class="full-bleed">
-  <div class="container">
-    <div class="wrapper">
-      <h2>
-        {title}
-      </h2>
+<section>
+  <h2 class='text-gradient'>
+    {title}
+  </h2>
 
-      {subtitle && (
-        <p>{subtitle}</p>
-      )}
+  {subtitle && (
+    <p>{subtitle}</p>
+  )}
 
-      <main>
-        {cards.map((card) => (<Card data={card} />))}
-      </main>
-    </div>
-  </div>
+  <main>
+    {cards.map((card) => (<Card data={card} />))}
+  </main>
 </section>
 
 <style lang="scss">
   section {
-    background: var(--chisel-primary-light);
-  }
-
-  .wrapper {
     display: flex;
     flex-direction: column;
-    margin: calc(var(--spacer-md) * 2) 0;
   }
 
   h2 {
@@ -63,6 +54,10 @@
 
     & :global(> *:not(:last-child)) {
       margin-bottom: var(--spacer-md);
+    }
+
+    & :global(b) {
+      color: var(--chisel-secondary);
     }
   }
 
