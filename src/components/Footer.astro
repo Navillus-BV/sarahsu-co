@@ -13,8 +13,6 @@ const pages = getPages(allPages, menu.pages)
   .map(({ title, href }) => ({ title, href }))
 const legalPages = getPages(allPages, footer.legal_pages)
   .map(({ title, href }) => ({ title, href }))
-
-console.log(legalPages);
 ---
 
 <footer class="container">
@@ -38,6 +36,12 @@ console.log(legalPages);
 
     <small>
       © Copyright {year} {site.name}. All rights reserved.
+    </small>
+
+    <small>
+      <a href="https://www.pexels.com/photo/aurora-borealis-1938351/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+        Hero photo by <b>Tobias Bjørkli</b> from <b>Pexels</b>
+      </a>
     </small>
   </section>
 </footer>

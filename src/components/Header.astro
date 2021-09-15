@@ -16,46 +16,37 @@ const pages = getPages(allPages, menu.pages)
 const { pathname } = Astro.props as Props
 ---
 
-<header class='container'>
-  <div class='header'>
-    <a href='/' class='h5' rel='home'>
-      <Hummingbird width='2.5em' height='2.5em' opacity={0.3} />
-      {site.title}
-    </a>
+<header>
+  <a href='/' class='h5' rel='home'>
+    <Hummingbird width='4em' height='4em' opacity={0.4} theme="secondary" />
+    {site.title}
+  </a>
 
-    <input type="checkbox" id="menubtn" class="sr-only" />
-    <label role="button" for="menubtn" class="button">
-      <span></span>
-    </label>
+  <input type="checkbox" id="menubtn" class="sr-only" />
+  <label role="button" for="menubtn" class="button">
+    <span></span>
+  </label>
 
-    <nav>
-      <ul>
-        {pages.map(({ title, href }) => (
-          <li>
-            <a href={href}>{title}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <ul>
+      {pages.map(({ title, href }) => (
+        <li>
+          <a href={href}>{title}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 </header>
 
 <style lang='scss'>
   header {
-    position: sticky;
-    top: 0;
-    background: var(--chisel-neutral-50);
-    z-index: 100;
-    filter: var(--drop-shadow);
-  }
-
-  .header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-areas: 'brand . menu' 'nav nav nav';
     align-items: center;
     justify-content: space-between;
     padding: var(--spacer-sm) 0;
+    color: var(--chisel-neutral-50);
   }
 
   a {
@@ -65,7 +56,6 @@ const { pathname } = Astro.props as Props
   [rel=home] {
     grid-area: brand;
     position: relative;
-    color: var(--chisel-primary);
   }
 
   [rel=home] :global(svg) {
@@ -73,7 +63,6 @@ const { pathname } = Astro.props as Props
     top: 50%;
     left: 50%;
     transform: translate(-50%, -55%) scaleX(-1);
-    z-index: -1;
   }
 
   label[for=menubtn] {
@@ -154,7 +143,7 @@ const { pathname } = Astro.props as Props
       display: none;
     }
 
-    .header {
+    header {
       grid-template-areas: 'brand . nav';
     }
 

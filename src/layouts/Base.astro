@@ -1,5 +1,4 @@
 ---
-import site from '../data/site.json'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import MainHead from '../components/MainHead.astro'
@@ -35,8 +34,6 @@ const {
     >
       Skip to content
     </a>
-
-    <Header pathname={pathname} />
 
     <main class="container" id="main">
       <slot />

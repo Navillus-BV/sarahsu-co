@@ -1,4 +1,6 @@
 ---
+import Header from './Header.astro'
+import Icon from './Icon.astro'
 import { mdToHtml } from '../utils/markdown'
 
 interface Props {
@@ -11,8 +13,10 @@ const { title, cta, content, image } = data
 const contentHtml = mdToHtml(content)
 ---
 
-<section class='full-bleed'>
+<section class='full-bleed' style={`background-image: url(${Astro.resolve('../assets/images/aurora-borealis.jpg')})`}>
   <div class='container'>
+    <Header pathname="/" />
+
     <div class='wrapper'>
       <h1>{title}</h1>
 
@@ -21,26 +25,40 @@ const contentHtml = mdToHtml(content)
       </main>
       
       {cta && (
-        <a class="button secondary" href={cta.url}>{cta.text}</a>
+        <a class="button lg" href={cta.url}>{cta.text}</a>
       )}
-
-      <img src={Astro.resolve(image.src)} alt={image.alt} />
     </div>
+
+    <footer>
+      <Icon alt='Scroll down' icon='chevron-down' size={64} />
+    </footer>
   </div>
 </section>
 
 <style lang='scss'>
   section {
     padding: var(--spacer-md) 0;
-    background: var(--rainbow-gradient);
     color: var(--chisel-neutral-50);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .container {
+    height: 100%;
+    row-gap: 0;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
   }
 
   .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 'title' 'image' 'content' 'cta';
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
@@ -52,26 +70,8 @@ const contentHtml = mdToHtml(content)
   }
 
   main {
-    grid-area: content;
     font-size: var(--chisel-h5);
-    color: var(--chisel-neutral-900);
-  }
-
-  img {
-    grid-area: image;
-    border-radius: 9999px;
-    width: min(60vw, 25rem);
-    height: min(60vw, 25rem);
-    object-fit: contain;
-    justify-self: center;
-    filter: var(--drop-shadow-lg);
-    margin: var(--spacer-md) 0;
-  }
-
-  a.button {
-    grid-area: cta;
-    font-size: var(--chisel-p);
-    justify-self: center;
+    color: var(--chisel-neutral-50);
   }
 
   @media screen and (min-width: 979px) {
