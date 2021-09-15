@@ -1,6 +1,6 @@
 ---
 import clsx from 'clsx'
-import Hummingbird from './Hummingbird.astro'
+import Icon from './Icon.astro'
 import { mdToHtml } from '../utils/markdown'
 
 interface Props {
@@ -16,12 +16,12 @@ const contentHtml = mdToHtml(content)
 <section class={clsx({'full-bleed': true, primary: theme === 'primary' })}>
   <div class='container container--prose'>
     <div class='wrapper'>
-      <h2>{title}</h2>
+      <Icon icon='chevron-right' alt='' size={64} />
+
+      <h2 class='text-gradient'>{title}</h2>
       {subtitle && (
         <h3>{subtitle}</h3>
       )}
-
-      <Hummingbird width="6rem" height="6rem" opacity={0.4} />
 
       <main>
         {contentHtml}
@@ -30,6 +30,8 @@ const contentHtml = mdToHtml(content)
       {ctas.map(({ url, text }) => (
         <a class="button" href={url}>{text}</a>
       ))}
+
+      <Icon icon='chevron-left' alt='' size={64} />
     </div>
   </div>
 </section>
@@ -41,16 +43,31 @@ const contentHtml = mdToHtml(content)
   }
 
   .wrapper {
+    position: relative;
+
+    & > :global(svg) {
+      display: none;
+      color: var(--chisel-secondary);
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      &:first-of-type {
+        left: -10.75rem;
+      }
+
+      &:last-of-type {
+        right: -10.75rem;
+      }
+    }
+  }
+
+  .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-  }
-
-  .wrapper :global(svg) {
-    order: 3;
-    margin: var(--spacer-sm) 0;
   }
 
   h2, h3 {
@@ -73,16 +90,23 @@ const contentHtml = mdToHtml(content)
   }
 
   main {
-    order: 4;
+    order: 3;
+    margin-top: var(--spacer-md);
     max-width: var(--width-prose);
   }
 
   main :global(b) {
-    color: var(--chisel-primary);
+    color: var(--chisel-secondary);
   }
 
   a.button {
-    order: 5;
+    order: 4;
     margin-top: var(--spacer-sm);
+  }
+
+  @media (min-width: 1280px) {
+    .wrapper > :global(svg) {
+      display: block;
+    }
   }
 </style>
