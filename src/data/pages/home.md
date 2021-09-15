@@ -21,8 +21,6 @@ blocks:
   content: |-
     You could just use a little help to clear through the clutter and the noise so you can focus your energy on what matters most.
 
-    Maybe you're **not sure where you want to go** next and are looking for some direction. Or you know where you’re going but you're **not quite sure** **how to get there**. Or maybe you just want a trusted partner who can act as sounding board or a sanity check.
-
     Whether you’re looking to dream big, get focused, or just be truly seen and heard for a change, **I'd love to be part of your journey**.
   cta:
     text: work with me
