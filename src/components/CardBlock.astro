@@ -1,5 +1,6 @@
 ---
   import Card from './Card.astro'
+  import Icon from './Icon.astro'
 
   interface Props {
     data: CMS.CardBlock
@@ -19,7 +20,11 @@
   )}
 
   <main>
+    <Icon icon='chevron-right' size={64} alt='' />
+
     {cards.map((card) => (<Card data={card} />))}
+
+    <Icon icon='chevron-left' size={64} alt='' />
   </main>
 </section>
 
