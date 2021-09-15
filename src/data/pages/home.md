@@ -6,7 +6,7 @@ blocks:
 - template: heroblock
   cta:
     url: "/services"
-    text: Find out how
+    text: Learn more
   title: Need a little inspiration?
   content: I can help you imagine what’s possible and how to get there so that you
     can come alive in pursuit of your personal and professional goals.
