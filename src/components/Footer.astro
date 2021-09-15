@@ -13,6 +13,8 @@ const pages = getPages(allPages, menu.pages)
   .map(({ title, href }) => ({ title, href }))
 const legalPages = getPages(allPages, footer.legal_pages)
   .map(({ title, href }) => ({ title, href }))
+
+console.log(legalPages);
 ---
 
 <footer class="container">
@@ -30,7 +32,7 @@ const legalPages = getPages(allPages, footer.legal_pages)
     </div>
 
     <a href='/' alt={site.title} rel="home">
-      <Hummingbird width="5rem" height="5rem" theme="secondary" opacity=".5" />
+      <Hummingbird width="5rem" height="5rem" theme="secondary" opacity={0.5} />
       {site.title}
     </a>
 

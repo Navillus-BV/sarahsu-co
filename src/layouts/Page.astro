@@ -1,7 +1,6 @@
 ---
 import Layout from './Base.astro'
 
-import Card from '../components/Card.astro'
 import CardBlock from '../components/CardBlock.astro'
 import HeroBlock from '../components/HeroBlock.astro'
 import ImageBlock from '../components/ImageBlock.astro'
@@ -9,26 +8,45 @@ import NewsletterBlock from '../components/NewsletterBlock.astro'
 import TextBlock from '../components/TextBlock.astro'
 
 interface Props {
-  content: Page
+  content: CMS.Page
 }
 
 const { content } = Astro.props as Props;
 const { title, description, image, blocks } = content;
+
+function isCardBlock(block: CMS.Block): block is CMS.CardBlock {
+  return block.template === "cardblock";
+}
+
+function isHeroBlock(block: CMS.Block): block is CMS.HeroBlock {
+  return block.template === "heroblock";
+}
+
+function isImageBlock(block: CMS.Block): block is CMS.ImageBlock {
+  return block.template === "imageblock";
+}
+
+function isNewsletterBlock(block: CMS.Block): block is CMS.NewsletterBlock {
+  return block.template === "newsletterblock";
+}
+
+function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
+  return block.template === "textblock";
+}
 ---
 
 <Layout title={title} description={description} image={image} pathname={Astro.request.url.pathname} canonicalURL={Astro.request.canonicalURL}>
-  {blocks.map(({ template, ...data }) => {
-    switch (template) {
-      case "cardblock":
-        return (<CardBlock data={data} />);
-      case "heroblock":
-        return (<HeroBlock data={data} />);
-      case "imageblock":
-        return (<ImageBlock data={data} />);
-      case "newsletterblock":
-        return (<NewsletterBlock data={data} />);
-      case "textblock":
-        return (<TextBlock data={data} />);
+  {blocks.map((block) => {
+    if (isCardBlock(block)) {
+      return (<CardBlock data={block} />);
+    } else if (isHeroBlock(block)) {
+      return (<HeroBlock data={block} />);
+    } else if (isImageBlock(block)) {
+      return (<ImageBlock data={block} />);
+    } else if (isNewsletterBlock(block)) {
+      return (<NewsletterBlock data={block} />);
+    } else if (isTextBlock(block)) {
+      return (<TextBlock data={block} />);
     }
   })}
 </Layout>

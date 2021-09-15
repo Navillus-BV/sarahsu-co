@@ -1,4 +1,6 @@
 interface PageData extends CMS.Page {
+  title: string;
+  href: string;
   file: URL;
 }
 

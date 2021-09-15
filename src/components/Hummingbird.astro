@@ -3,10 +3,10 @@ interface Props {
   width: string
   height: string
   opacity: number
-  theme: "primary" | "gradient" | "secondary" | "muted"
+  theme?: "primary" | "gradient" | "secondary" | "muted"
 }
 
-const { width, height, opacity = 1, theme = "primary", direction = "left" } = Astro.props as Props
+const { width, height, opacity = 1, theme = "primary" } = Astro.props as Props
 
 const fill = theme === "primary"
   ? "var(--chisel-primary)"

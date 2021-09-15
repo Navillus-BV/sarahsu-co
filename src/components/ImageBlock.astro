@@ -31,7 +31,7 @@ const contentHtml = mdToHtml(content)
       <h2 class={clsx({ h5: subtitle })}>
         {subtitle || title}
         {subtitle && subtitleIcon && (
-          <Hummingbird width='3rem' height='3rem' opacity='0.5' />
+          <Hummingbird width='3rem' height='3rem' opacity={0.5} />
         )}
       </h2>
     )}
