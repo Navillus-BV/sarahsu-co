@@ -60,11 +60,11 @@ const contentHtml = mdToHtml(content)
   section.primary {
     background: var(--primary-gradient);
     color: var(--chisel-neutral-50);
+    padding: var(--spacer-xl) 0;
   }
 
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
@@ -82,7 +82,7 @@ const contentHtml = mdToHtml(content)
   main {
     grid-column: 1;
     grid-row: 3;
-    padding: var(--spacer-md) var(--spacer-sm);
+    padding: var(--spacer-md) var(--spacer-sm) 0;
     max-width: var(--width-prose);
     margin: 0 auto;
 
@@ -155,6 +155,10 @@ const contentHtml = mdToHtml(content)
       &.flipped {
         grid-template-columns: 1fr auto auto;
       }
+    }
+
+    .wrapper {
+      grid-template-columns: 1fr 1fr;
     }
 
     .h5 {

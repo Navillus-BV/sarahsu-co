@@ -11,14 +11,15 @@ const { data } = Astro.props as Props
 const { theme, title, subtitle, content, ctas = [] } = data
 
 const contentHtml = mdToHtml(content)
+const primary = theme === 'primary'
 ---
 
-<section class={clsx({'full-bleed': true, primary: theme === 'primary' })}>
+<section class={clsx({'full-bleed': true, primary })}>
   <div class='container container--prose'>
     <div class='wrapper'>
       <Icon icon='chevron-right' alt='' size={64} />
 
-      <h2 class='text-gradient'>{title}</h2>
+      <h2 class={clsx({ 'text-gradient': !primary })}>{title}</h2>
       {subtitle && (
         <h3>{subtitle}</h3>
       )}
@@ -28,7 +29,7 @@ const contentHtml = mdToHtml(content)
       </main>
 
       {ctas.map(({ url, text }) => (
-        <a class="button" href={url}>{text}</a>
+        <a class={clsx({ button: true, alt: primary })} href={url}>{text}</a>
       ))}
 
       <Icon icon='chevron-left' alt='' size={64} />
@@ -38,12 +39,18 @@ const contentHtml = mdToHtml(content)
 
 <style lang="scss">
   section.primary {
-    padding: var(--spacer-md) 0;
-    background: var(--chisel-primary-light);
+    padding: var(--spacer-xl) 0;
+    background: var(--primary-gradient);
+    color: var(--chisel-neutral-50);
   }
 
   .wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 
     & > :global(svg) {
       display: none;
@@ -62,21 +69,12 @@ const contentHtml = mdToHtml(content)
     }
   }
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-  }
-
   h2, h3 {
     margin: 0;
   }
 
   h2 {
     order: 2;
-    color: var(--chisel-primary);
     text-align: center;
   }
 

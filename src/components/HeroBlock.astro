@@ -30,6 +30,7 @@ const contentHtml = mdToHtml(content)
     </div>
 
     <footer>
+      <Icon class='mobile' alt='Scroll down' icon='chevron-down' size={48} />
       <Icon alt='Scroll down' icon='chevron-down' size={64} />
     </footer>
   </div>
@@ -37,7 +38,7 @@ const contentHtml = mdToHtml(content)
 
 <style lang='scss'>
   section {
-    padding: var(--spacer-md) 0;
+    padding: var(--spacer-sm) 0;
     color: var(--chisel-neutral-50);
     background-position: center;
     background-size: cover;
@@ -49,11 +50,6 @@ const contentHtml = mdToHtml(content)
     row-gap: 0;
     grid-template-rows: auto 1fr;
     align-items: center;
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
   }
 
   .wrapper {
@@ -74,7 +70,44 @@ const contentHtml = mdToHtml(content)
     color: var(--chisel-neutral-50);
   }
 
+  a.button {
+    margin-top: var(--spacer-md);
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+
+    & :global(svg) {
+      animation: bounce 2s infinite;
+      animation-delay: 3s;
+
+      &:not(.mobile) {
+        display: none;
+      }
+    }
+  }
+
+  @keyframes bounce {
+    0%, 25%, 75%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+    60% {
+      transform: translateY(-12px);
+    }
+  }
+
   @media screen and (min-width: 979px) {
+    section {
+      padding: var(--spacer-md) 0;
+    }
+
     .wrapper {
       grid-template-columns: 1fr auto;
       grid-template-areas: 'title image' 'content image' 'cta image';
@@ -84,12 +117,13 @@ const contentHtml = mdToHtml(content)
     a.button {
       margin-top: var(--spacer-sm);
     }
-  }
 
-  @media screen and (min-aspect-ratio: 1 / 1) {
-    img {
-      max-height: min(50vh, 25rem);
-      max-width: min(50vh, 25rem);
+    footer :global(svg) {
+      display: block;
+
+      &.mobile {
+        display: none;
+      }
     }
   }
 </style>

@@ -68,6 +68,7 @@
   );
   --drop-shadow: drop-shadow(0 0 3px rgb(0, 0, 0, 0.5));
   --drop-shadow-lg: drop-shadow(0 0 6px rgb(0, 0, 0, 0.67));
+  --shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
   /* Spacer Sizes */
   --spacer-tiny: 0.25rem;
@@ -97,7 +98,7 @@ button,
 .button {
   &:hover,
   &:active {
-    background-color: var(--chisel-neutral-50);
+    background: var(--chisel-neutral-50);
     border-color: var(--chisel-primary);
     color: var(--chisel-primary);
   }
@@ -105,13 +106,13 @@ button,
 
 button.secondary,
 .button.secondary {
-  background-color: var(--chisel-primary-dark);
+  background: var(--chisel-primary-dark);
   border-color: var(--chisel-primary-dark);
   color: var(--chisel-neutral-50);
 
   &:hover,
   &:active {
-    background-color: var(--chisel-neutral-50);
+    background: var(--chisel-neutral-50);
     color: var(--chisel-primary-dark);
   }
 }

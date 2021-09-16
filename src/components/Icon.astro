@@ -8,10 +8,11 @@ type Icon =
 interface Props {
   icon: Icon,
   alt: string,
-  size?: number
+  size?: number,
+  class?: string
 }
 
-const { icon, alt, size = 24 } = Astro.props as Props
+const { icon, alt, size = 24, class: className } = Astro.props as Props
 
 const icons = {
   'chevron-up': `
@@ -29,7 +30,7 @@ const icons = {
 }
 ---
 
-<svg width={size} height={size} viewBox="0 0 24 24" fill="none" role="img">
+<svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" role="img">
   {icons[icon]}
   <span class='sr-only'>{alt}</span>
 </svg>

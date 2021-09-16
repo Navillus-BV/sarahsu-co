@@ -76,27 +76,14 @@ const { pathname } = Astro.props as Props
     border-radius: 999px;
     padding: 0;
     margin: 0;
-    background: var(--chisel-neutral-50);
-    border-color: transparent;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      border-radius: inherit;
-      background: var(--rainbow-gradient);
-      margin: -4px;
-      filter: var(--drop-shadow);
-    }
+    background: transparent;
+    border: 2px solid var(--chisel-neutral-50);
+    box-shadow: var(--shadow);
 
     & span {
-      width: 67%;
+      width: 50%;
       height: 1px;
-      background: var(--chisel-primary);
+      background: var(--chisel-neutral-50);
     }
 
     & span:before, & span:after {
@@ -104,15 +91,15 @@ const { pathname } = Astro.props as Props
       display: block;
       width: 100%;
       height: 1px;
-      background: var(--chisel-primary);
+      background: var(--chisel-neutral-50);
     }
 
     & span:before {
-      transform: translateY(-.5em);
+      transform: translateY(-.33em);
     }
 
     & span:after {
-      transform: translateY(calc(.5em - 2px));
+      transform: translateY(calc(.33em - 1px));
     }
   }
 
