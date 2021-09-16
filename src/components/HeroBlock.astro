@@ -13,7 +13,9 @@ const { title, cta, content, image } = data
 const contentHtml = mdToHtml(content)
 ---
 
-<section class='full-bleed' style={`background-image: url(${Astro.resolve('../assets/images/aurora-borealis.jpg')})`}>
+<section class='full-bleed'>
+  <img aria-hidden="true" alt={image.alt} src={Astro.resolve(image.src)} />
+
   <div class='container'>
     <Header pathname="/" />
 
@@ -38,11 +40,20 @@ const contentHtml = mdToHtml(content)
 
 <style lang='scss'>
   section {
+    position: relative;
     padding: var(--spacer-sm) 0;
     color: var(--chisel-neutral-50);
-    background-position: center;
-    background-size: cover;
     height: 100vh;
+  }
+
+  section > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 
   .container {
