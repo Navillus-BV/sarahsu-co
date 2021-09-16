@@ -73,7 +73,7 @@ blocks:
 
       I can bring a fresh perspective to new or ongoing projects to generate ideas and insights.
     cta:
-      text: Learn more
+      text: Find out more
       url: "/services"
       primary: false
   subtitle: Work with Me
