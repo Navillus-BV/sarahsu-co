@@ -215,3 +215,9 @@ h6,
     text-align: start;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  :root {
+    font-size: 125%;
+  }
+}

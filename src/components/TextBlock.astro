@@ -42,6 +42,10 @@ const primary = theme === 'primary'
     padding: var(--spacer-xl) 0;
     background: var(--primary-gradient);
     color: var(--chisel-neutral-50);
+
+    .wrapper :global(svg) {
+      color: var(--chisel-neutral-50);
+    }
   }
 
   .wrapper {
@@ -60,11 +64,11 @@ const primary = theme === 'primary'
       transform: translate(0, -50%);
 
       &:first-of-type {
-        left: -10.75rem;
+        left: -8rem;
       }
 
       &:last-of-type {
-        right: -10.75rem;
+        right: -8rem;
       }
     }
   }
