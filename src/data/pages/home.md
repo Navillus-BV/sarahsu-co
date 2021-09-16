@@ -50,19 +50,23 @@ blocks:
   title: How we can work together
   cards:
   - title: 1:1 Coaching
-    content: This is your time. We’ll clarify what matters to you and work together
-      to identify concrete steps to help get you where you want to go.
+    content: |-
+      **Looking for a trusted partner?**
+
+      I can help you focus on what matters and make a plan to get where you want to go.
     cta:
       text: Learn more
       url: "/services"
-      primary: true
-  - title: Group Coaching & Workshops
-    content: Looking for more of a community experience? These 90-minute, interactive
-      small-group sessions cover a new topic every quarter.
+      primary: false
+  - title: Team Coaching
+    content: |-
+      **Looking for a group guide?**
+
+      I can help you and your team leverage your unique strengths to get results with less effort.
     cta:
       text: Learn more
       url: "/services"
-      primary: true
+      primary: false
   - title: Collaboration
     content: |-
       **Looking for a creative catalyst?**
@@ -71,7 +75,7 @@ blocks:
     cta:
       text: Learn more
       url: "/services"
-      primary: true
+      primary: false
   subtitle: Services
 - template: newsletterblock
   image:
