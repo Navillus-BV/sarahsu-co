@@ -1,15 +1,14 @@
 ---
 title: Home
 description: Coaching for Curious and Creative People
-image: "../assets/images/share.png"
+image: "../assets/images/aurora-borealis.jpg"
 blocks:
 - template: heroblock
   cta:
     url: "/services"
     text: Learn more
   title: Need a little inspiration?
-  content: I can help you imagine what’s possible and how to get there so that you
-    can come alive in pursuit of your personal and professional goals.
+  content: ''
   image:
     alt: Sarah Sullivan
     src: "../assets/images/sarah.jpg"
@@ -41,8 +40,8 @@ blocks:
     My background and professional experience are rooted in psychology and human development, but I have a wide range of interests and feel most alive when I’m helping others imagine what’s possible and how.
 
     It’s kind of tough to get to know someone from a little blurb, so here are two ways to get more context…
-  subtitle: A Little about Me
-  subtitleIcon: true
+  subtitle: ''
+  subtitleIcon: false
   ctas:
   - text: Book a free intro call
     url: "/schedule"
