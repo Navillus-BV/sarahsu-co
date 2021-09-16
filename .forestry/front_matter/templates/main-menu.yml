@@ -21,18 +21,14 @@ fields:
     config:
       required: false
     label: Text
-  - name: page
-    type: select
-    default: []
+  - name: url
+    type: text
     config:
       required: false
-      options: []
-      source:
-        type: pages
-        section: pages
-        file: 
-        path: 
-    label: Page
+    label: URL
+  - name: primary
+    type: boolean
+    label: Primary
   label: Call to Action
 pages:
 - src/data/menu.json
