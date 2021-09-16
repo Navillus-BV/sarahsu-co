@@ -35,7 +35,7 @@ blocks:
   title: Getting from here to there.
   muted: false
   content: |-
-    Hi, I’m Sarah Sullivan! My superpower is navigating the “space between” (e.g. ideas, people, behaviors, stages) and making magic happen in the process.
+    Hi, I’m Sarah - My superpower is navigating the “space between” (e.g. ideas, people, behaviors, stages) and making magic happen in the process.
 
     Life happens at the edges – between what we know and what we don’t, between where we are and where we want to be.
 
