@@ -6,12 +6,12 @@ blocks:
 - template: heroblock
   cta:
     url: "/services"
-    text: Learn more
+    text: Let's chat
   title: Need a little inspiration?
   content: ''
   image:
     alt: Sarah Sullivan
-    src: "../assets/images/sarah.jpg"
+    src: "../assets/images/aurora-borealis.jpg"
 - template: textblock
   text: see services and pricing
   title: You already have everything you need.
