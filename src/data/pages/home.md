@@ -47,7 +47,7 @@ blocks:
     url: "/about"
   theme: primary
 - template: cardblock
-  title: How we can work together
+  title: Anything is possible.
   cards:
   - title: 1:1 Coaching
     content: |-
@@ -76,7 +76,7 @@ blocks:
       text: Learn more
       url: "/services"
       primary: false
-  subtitle: Services
+  subtitle: Work with Me
 href: "/"
 
 ---
