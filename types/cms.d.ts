@@ -110,6 +110,7 @@ declare namespace CMS {
 
   interface Menu {
     pages: string[];
+    cta?: CallToAction;
   }
 
   interface Footer {
