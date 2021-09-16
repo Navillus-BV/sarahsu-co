@@ -60,7 +60,7 @@ blocks:
     content: Looking for more of a community experience? These 90-minute, interactive
       small-group sessions cover a new topic every quarter.
     cta:
-      text: Find out more
+      text: Learn more
       url: "/services"
       primary: true
   - title: Corporate Packages
