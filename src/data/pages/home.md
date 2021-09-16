@@ -77,35 +77,6 @@ blocks:
       url: "/services"
       primary: false
   subtitle: Services
-- template: newsletterblock
-  image:
-    src: "../assets/images/library.jpg"
-    alt: Books on a library shelf
-  form:
-    submitText: Subscribe
-    fields:
-    - id: name
-      title: Your first name
-      required: true
-      type: text
-      placeholder: First Name
-    - id: email
-      title: Your email address
-      placeholder: Your Email
-      required: true
-      type: email
-    footnote: By subscribing you agree with my [Terms of Use](/terms "Terms of Use")
-      and [Privacy Policy](/privacy "Privacy Policy") and are giving me permission
-      to email you with ideas, articles and the occasional detail about my services.
-      I promise not to overload your inbox!
-  title: Join the mailing list for some inbox inspriation!
-  subtitle: ''
-  flipped: false
-  content: By subscribing you agree with my [Terms of Use](/terms "Terms of Use")
-    and [Privacy Policy](/privacy "Privacy Policy") and are giving me permission to
-    email you with ideas, articles and the occasional detail about my services. I
-    promise not to overload your inbox!
-  title_icon: true
 - template: textblock
   title: Ready to break through?
   content: Let’s work together to imagine what’s possible and how to get there so
