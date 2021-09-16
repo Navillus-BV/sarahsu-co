@@ -12,5 +12,27 @@ fields:
       type: pages
       section: pages
   label: Pages
+- name: cta
+  type: field_group
+  config: {}
+  fields:
+  - name: text
+    type: text
+    config:
+      required: false
+    label: Text
+  - name: page
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: pages
+        file: 
+        path: 
+    label: Page
+  label: Call to Action
 pages:
 - src/data/menu.json
