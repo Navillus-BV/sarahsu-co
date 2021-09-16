@@ -60,7 +60,7 @@ blocks:
       primary: false
   - title: Team Coaching
     content: |-
-      **Looking for a group guide?**
+      **Group Guide**
 
       I can help you and your team leverage your unique strengths to get results with less effort.
     cta:
@@ -69,7 +69,7 @@ blocks:
       primary: false
   - title: Collaboration
     content: |-
-      ##### **Creative Catalyst**
+      ##### **Your Creative Catalyst**
 
       I can bring a fresh perspective to new or ongoing projects to generate ideas and insights.
     cta:
