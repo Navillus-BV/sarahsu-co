@@ -64,7 +64,7 @@ blocks:
 
       I can help you and your team leverage your unique strengths to get results with less effort.
     cta:
-      text: Learn more
+      text: Find out more
       url: "/services"
       primary: false
   - title: Collaboration
