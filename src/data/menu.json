@@ -3,5 +3,9 @@
     "src/data/pages/coaching.md",
     "src/data/pages/collaboration.md",
     "src/data/pages/about.md"
-  ]
+  ],
+  "cta": {
+    "text": "Book a call",
+    "page": "src/data/pages/collaboration.md"
+  }
 }
