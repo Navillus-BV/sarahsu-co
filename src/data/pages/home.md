@@ -15,7 +15,7 @@ blocks:
 - template: textblock
   text: see services and pricing
   title: You already have everything you need.
-  subtitle: A Little about You
+  subtitle: About You
   url: "/services"
   content: |-
     You could just use a little help to clear through the clutter and the noise so you can focus your energy on what matters most.
@@ -40,13 +40,10 @@ blocks:
     My background and professional experience are rooted in psychology and human development, but I have a wide range of interests and feel most alive when I’m helping others imagine what’s possible and how.
 
     It’s kind of tough to get to know someone from a little blurb, so here are two ways to get more context…
-  subtitle: ''
+  subtitle: About me
   subtitleIcon: false
   ctas:
-  - text: Book a free intro call
-    url: "/schedule"
-    primary: true
-  - text: More about me
+  - text: Learn more
     url: "/about"
   theme: primary
 - template: imageblock
