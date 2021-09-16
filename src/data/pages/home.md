@@ -37,7 +37,7 @@ blocks:
   content: |-
     Hi, I’m Sarah Sullivan! My superpower is navigating the “space between” (e.g. ideas, people, behaviors, stages) and making magic happen in the process.
 
-    Life happens at the edges – between ourselves and those around us, between what we know and what we don’t, between where we are and where we want to be.
+    Life happens at the edges – between what we know and what we don’t, between where we are and where we want to be.
 
     I help people (like you!) find their own unique ways to navigate these spaces and get where they want to go in the process
   subtitle: About me
