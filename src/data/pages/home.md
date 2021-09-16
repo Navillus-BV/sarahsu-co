@@ -77,14 +77,6 @@ blocks:
       url: "/services"
       primary: false
   subtitle: Services
-- template: textblock
-  title: Ready to break through?
-  content: Let’s work together to imagine what’s possible and how to get there so
-    that you can come alive in pursuit of your personal and professional goals.
-  ctas:
-  - text: Book a call
-    url: "/schedule"
-  theme: primary
 href: "/"
 
 ---
