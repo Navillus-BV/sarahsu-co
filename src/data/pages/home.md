@@ -58,7 +58,7 @@ blocks:
       primary: false
   - title: Team Coaching
     content: |-
-      #### **Group Guide**
+      **Looking for a group guide?**
 
       I can help you and your team leverage your unique strengths to get results with less effort.
     cta:
