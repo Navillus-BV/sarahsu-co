@@ -11,7 +11,7 @@
   "devDependencies": {
     "@fontsource/montserrat": "^4.5.1",
     "astro": "^0.20.6",
-    "chisel.css": "^0.7.2",
+    "chisel.css": "^0.7.3",
     "clsx": "^1.1.1",
     "nano-markdown": "^1.2.1"
   }

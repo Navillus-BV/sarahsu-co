@@ -12,8 +12,6 @@ const allPages = Astro.fetchContent('../data/pages/*.md')
 
 const pages = getPages(allPages, menu.pages)
   .map(({ title, href }) => ({ title, href }))
-
-const { pathname } = Astro.props as Props
 ---
 
 <header>
@@ -34,6 +32,10 @@ const { pathname } = Astro.props as Props
           <a href={href}>{title}</a>
         </li>
       ))}
+
+      {menu.cta && (
+        <a class="button secondary" href={menu.cta.url}>{menu.cta.text}</a>
+      )}
     </ul>
   </nav>
 </header>
@@ -113,11 +115,14 @@ const { pathname } = Astro.props as Props
       margin: 0;
     }
     
-    & a {
+    & a:not(.button) {
       display: block;
-      font-size: var(--chisel-h5);
       padding: var(--spacer-tiny) 0;
       text-transform: uppercase;
+    }
+
+    & a.button {
+      font-size: inherit;
     }
   }
 
@@ -125,13 +130,17 @@ const { pathname } = Astro.props as Props
     display: block;
   }
 
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 979px) {
     #menubtn, label[for=menubtn] {
       display: none;
     }
 
     header {
       grid-template-areas: 'brand . nav';
+    }
+
+    [rel=home] {
+      font-size: var(--chisel-h4);
     }
 
     nav {
@@ -142,27 +151,16 @@ const { pathname } = Astro.props as Props
         padding: 0;
       }
 
-      & a {
-        font-size: var(--chisel-p);
-        padding: var(--spacer-sm);
+      & a:not(.button) {
+        padding: var(--spacer-sm) var(--spacer-md);
 
         &:last-child {
           padding-right: 0;
         }
       }
-    }
-  }
 
-  @media screen and (min-width: 979px) {
-    [rel=home] {
-      font-size: var(--chisel-h4);
-    }
-
-    nav a {
-      padding: var(--spacer-sm) var(--spacer-md);
-      
-      &:last-child {
-        padding-right: 0;
+      a.button {
+        margin-left: var(--spacer-md);
       }
     }
   }

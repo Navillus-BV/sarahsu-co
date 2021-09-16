@@ -119,7 +119,9 @@ const contentHtml = mdToHtml(content)
     }
 
     footer :global(svg) {
-      display: block;
+      &:not(.mobile) {
+        display: block;
+      }
 
       &.mobile {
         display: none;

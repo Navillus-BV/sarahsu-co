@@ -92,10 +92,7 @@ button,
   background: var(--primary-gradient);
   border: none;
   font-size: var(--chisel-h5);
-}
 
-button,
-.button {
   &:hover,
   &:active {
     background: var(--chisel-neutral-50);

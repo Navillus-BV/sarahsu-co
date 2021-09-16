@@ -37,6 +37,14 @@ const legalPages = getPages(allPages, footer.legal_pages)
     <small>
       © Copyright {year} {site.name}. All rights reserved.
     </small>
+
+    <br>
+
+    <small>
+      <a href="https://www.pexels.com/photo/aurora-borealis-1938351/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+        Aurora Borealis photo by <b>Tobias Bjørkli</b> from <b>Pexels</b>
+      </a>
+    </small>
   </section>
 </footer>
 
@@ -86,6 +94,14 @@ const legalPages = getPages(allPages, footer.legal_pages)
     top: 50%;
     left: 50%;
     transform: translate(-50%, -45%) scaleX(-1);
+  }
+
+  small a {
+    text-decoration: none;
+
+    & b {
+      text-decoration: underline;
+    }
   }
 
   @media screen and (min-width: 640px) {

@@ -35,7 +35,7 @@ declare namespace CMS {
   interface CallToAction {
     text: string;
     url: string;
-    primary: boolean;
+    primary?: boolean;
   }
 
   interface Form {
