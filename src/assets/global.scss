@@ -77,6 +77,9 @@
   --spacer-md: 2.5rem;
   --spacer-lg: 4rem;
   --spacer-xl: 6rem;
+
+  /* Container Layouts */
+  --container-row-gap: 6rem;
 }
 
 :focus-visible {
@@ -163,7 +166,8 @@ h6,
   display: grid;
   grid-template-columns: 1fr calc(100% - 3rem) 1fr;
   column-gap: 1.5rem;
-  row-gap: var(--spacer-xl);
+  row-gap: var(--container-row-gap);
+  padding-bottom: var(--container-row-gap);
 }
 
 .container > * {
@@ -204,6 +208,8 @@ h6,
     --chisel-h5: 1.333rem;
     --chisel-p: 1.2rem;
     --chisel-h6: 0.75rem;
+
+    --container-row-gap: 8rem;
   }
 
   .container {
