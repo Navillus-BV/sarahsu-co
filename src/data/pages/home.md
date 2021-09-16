@@ -51,7 +51,7 @@ blocks:
   cards:
   - title: 1:1 Coaching
     content: |-
-      #### **Trusted Partner**
+      ##### **Trusted Partner**
 
       I can help you focus on what matters and make a plan to get where you want to go.
     cta:
