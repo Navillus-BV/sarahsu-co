@@ -167,7 +167,6 @@ h6,
   grid-template-columns: 1fr calc(100% - 3rem) 1fr;
   column-gap: 1.5rem;
   row-gap: var(--container-row-gap);
-  padding-bottom: var(--container-row-gap);
 }
 
 .container > * {
