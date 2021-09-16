@@ -7,7 +7,7 @@ blocks:
   cta:
     url: "/services"
     text: Let's chat
-  title: Need a little inspiration?
+  title: Looking for a little inspiration?
   content: ''
   image:
     alt: Sarah Sullivan
