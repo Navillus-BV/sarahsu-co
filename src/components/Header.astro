@@ -15,7 +15,7 @@ const pages = getPages(allPages, menu.pages)
 ---
 
 <header>
-  <a href='/' class='h5' rel='home'>
+  <a href='/' class='h5 nohover' rel='home'>
     <Hummingbird width='4em' height='4em' opacity={0.4} theme="secondary" />
     {site.title}
   </a>
@@ -29,7 +29,7 @@ const pages = getPages(allPages, menu.pages)
     <ul>
       {pages.map(({ title, href }) => (
         <li>
-          <a href={href}>{title}</a>
+          <a class='alt' href={href}>{title}</a>
         </li>
       ))}
 

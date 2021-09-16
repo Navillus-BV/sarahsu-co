@@ -29,7 +29,7 @@ const legalPages = getPages(allPages, footer.legal_pages)
       ))}
     </div>
 
-    <a href='/' alt={site.title} rel="home">
+    <a class='nohover' href='/' alt={site.title} rel="home">
       <Hummingbird width="6rem" height="6rem" theme="secondary" opacity={0.5} />
       {site.title}
     </a>
@@ -41,7 +41,7 @@ const legalPages = getPages(allPages, footer.legal_pages)
     <br>
 
     <small>
-      <a href="https://www.pexels.com/photo/aurora-borealis-1938351/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+      <a class='alt' href="https://www.pexels.com/photo/aurora-borealis-1938351/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
         Aurora Borealis photo by <b>Tobias Bjørkli</b> from <b>Pexels</b>
       </a>
     </small>
@@ -50,7 +50,7 @@ const legalPages = getPages(allPages, footer.legal_pages)
 
 <style lang='scss'>
   footer {
-    background-color: var(--chisel-primary);
+    background: var(--primary-gradient);
     color: var(--chisel-neutral-50);
     text-align: center;
     margin-top: var(--container-row-gap);

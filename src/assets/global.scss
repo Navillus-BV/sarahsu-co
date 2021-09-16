@@ -85,18 +85,28 @@
 
 a {
   color: inherit;
+
+  &.nohover:hover,
+  &.nohover:active {
+    color: inherit;
+  }
+
+  &:not(.button).alt:hover,
+  &:not(.button).alt:active {
+    color: inherit;
+    text-decoration: underline;
+  }
 }
 
 button,
 .button {
   background: var(--primary-gradient);
-  border: none;
+  border-color: var(--primary-gradient);
   font-size: var(--chisel-h5);
 
   &:hover,
   &:active {
     background: var(--chisel-neutral-50);
-    border-color: var(--chisel-primary);
     color: var(--chisel-primary);
   }
 }
@@ -119,6 +129,12 @@ button.alt,
   background: var(--chisel-neutral-50);
   border-color: var(--chisel-neutral-50);
   color: var(--chisel-secondary);
+
+  &:hover,
+  &:active {
+    background: var(--chisel-primary);
+    color: var(--chisel-neutral-50);
+  }
 }
 
 h1,
@@ -213,11 +229,5 @@ h6,
   h6,
   .h6 {
     text-align: start;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  :root {
-    font-size: 125%;
   }
 }
