@@ -26,9 +26,6 @@ fields:
     config:
       required: false
     label: URL
-  - name: primary
-    type: boolean
-    label: Primary
   label: Call to Action
 pages:
 - src/data/menu.json
