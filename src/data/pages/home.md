@@ -69,7 +69,7 @@ blocks:
       primary: false
   - title: Collaboration
     content: |-
-      ##### **Your Creative Catalyst**
+      ##### **Creative Catalyst**
 
       I can bring a fresh perspective to new or ongoing projects to generate ideas and insights.
     cta:
