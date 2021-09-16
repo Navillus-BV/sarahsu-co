@@ -63,11 +63,13 @@ blocks:
       text: Learn more
       url: "/services"
       primary: true
-  - title: Corporate Packages
-    content: Looking to supplement your L&D offerings with personalized experiences
-      that truly empower employees? I can help!
+  - title: Collaboration
+    content: |-
+      **Looking for a creative catalyst?**
+
+      I can bring a fresh perspective to new or ongoing projects to generate ideas and insights.
     cta:
-      text: Find out more
+      text: Learn more
       url: "/services"
       primary: true
   subtitle: Services
