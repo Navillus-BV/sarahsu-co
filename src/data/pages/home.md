@@ -46,25 +46,6 @@ blocks:
   - text: Learn more
     url: "/about"
   theme: primary
-- template: imageblock
-  image:
-    src: "../assets/images/philosophy.png"
-    alt: Graphic showing the connection from focus to exploration
-  title: How I approach coaching & life
-  subtitle: My philosophy
-  subtitleIcon: false
-  content: "Everything is connected.  \nLife is dynamic.  \nWhat I offer clients is
-    my time and full attention so that we can create, together,  \nNo judgment."
-  cta:
-    text: More about me
-    url: "/about"
-  flipped: true
-  muted: true
-  ctas:
-  - text: Learn more
-    url: "/about"
-    primary: true
-  theme: white
 - template: cardblock
   title: How we can work together
   cards:
@@ -72,7 +53,7 @@ blocks:
     content: This is your time. We’ll clarify what matters to you and work together
       to identify concrete steps to help get you where you want to go.
     cta:
-      text: Find out more
+      text: Learn more
       url: "/services"
       primary: true
   - title: Group Coaching & Workshops
