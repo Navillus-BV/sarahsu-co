@@ -32,14 +32,14 @@ blocks:
   image:
     src: "../assets/images/sarah.jpg"
     alt: Sarah Sullivan
-  title: Curious and curiouser.
+  title: Getting from here to there.
   muted: false
   content: |-
-    Hi, I’m Sarah – I follow my curiosity and do my best to integrate and apply what I learn in pursuit of wisdom and wonder.
+    Hi, I’m Sarah Sullivan! My superpower is navigating the “space between” (e.g. ideas, people, behaviors, stages) and making magic happen in the process.
 
-    My background and professional experience are rooted in psychology and human development, but I have a wide range of interests and feel most alive when I’m helping others imagine what’s possible and how.
+    Life happens at the edges – between ourselves and those around us, between what we know and what we don’t, between where we are and where we want to be.
 
-    It’s kind of tough to get to know someone from a little blurb, so here are two ways to get more context…
+    I help people (like you!) find their own unique ways to navigate these spaces and get where they want to go in the process
   subtitle: About me
   subtitleIcon: false
   ctas:
@@ -47,7 +47,7 @@ blocks:
     url: "/about"
   theme: primary
 - template: cardblock
-  title: How we can work together
+  title: Anything is possible.
   cards:
   - title: 1:1 Coaching
     content: |-
@@ -76,7 +76,7 @@ blocks:
       text: Learn more
       url: "/services"
       primary: false
-  subtitle: Services
+  subtitle: Work with Me
 href: "/"
 
 ---
