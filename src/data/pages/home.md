@@ -50,8 +50,8 @@ blocks:
   title: Anything is possible.
   cards:
   - title: 1:1 Coaching
-    content: "**Looking for a trusted Partner?** I can help you focus on what matters
-      and make a plan to get where you want to go."
+    content: "**Looking for a trusted Partner?** \n\nI can help you focus on what
+      matters and make a plan to get where you want to go."
     cta:
       text: Find out more
       url: "/services"
