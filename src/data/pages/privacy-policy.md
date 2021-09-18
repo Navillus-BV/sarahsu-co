@@ -5,7 +5,7 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
-    url: "/about"
+    url: "/"
     text: Back to Home
   title: Privacy Policy | sarahsu.co
   image:
