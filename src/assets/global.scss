@@ -1,6 +1,28 @@
 @use 'chisel.css/dist/chisel.css';
 @use '@fontsource/montserrat/scss/mixins' as Montserrat;
 
+/**
+ * @license
+ * MyFonts Webfont Build ID 4182071, 2021-09-18T12:38:46-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: ModernLove-Regular by Resistenza
+ * URL: https://www.myfonts.com/fonts/resistenza/modern-love/regular/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Paco Gonz&amp;#x00E1;lez &amp;amp; Giuseppe Salerno. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3fd037");
+
 @include Montserrat.fontFace(
   $weight: 500,
   $display: fallback,
@@ -14,9 +36,9 @@
 );
 
 @font-face {
-  font-family: Modern Love;
-  src: url("/webfonts/Fontspring-DEMO-modernlove-regular.otf")
-    format("opentype");
+  font-family: "ModernLove-Regular";
+  src: url("/webfonts/ModernLoveRegular/font.woff2") format("woff2"),
+    url("webFonts/ModernLoveRegular/font.woff") format("woff");
 }
 
 :root {
@@ -30,7 +52,7 @@
   --font-family-base: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --font-family-display: Modern Love, Georgia, Times, serif;
+  --font-family-display: ModernLove-Regular, Georgia, Times, serif;
 
   --width-prose: 60ch;
   --width-container: 1200px;
