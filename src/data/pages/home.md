@@ -39,7 +39,7 @@ blocks:
 
     Life happens at the edges – between what we know and what we don’t, between where we are and where we want to be.
 
-    I help people (like you!) find their own unique ways to navigate these spaces and get where they want to go in the process
+    I help people (like you!) find their own unique ways to navigate these spaces and get where they want to go in the process.
   subtitle: About me
   subtitleIcon: false
   ctas:
