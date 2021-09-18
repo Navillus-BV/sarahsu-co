@@ -71,7 +71,7 @@ blocks:
     content: |-
       **Looking for a creative catalyst?**
 
-      I can bring a fresh perspective to new or ongoing projects to generate ideas and insights.
+      I can bring a fresh perspective to new or ongoing projects to help you generate ideas and insights.
     cta:
       text: Find out more
       url: "/services"
