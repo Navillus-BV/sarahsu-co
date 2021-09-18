@@ -7,7 +7,7 @@ blocks:
   cta:
     url: "/services"
     text: Let's chat
-  title: Need a little inspiration?
+  title: Looking for a little inspiration?
   content: ''
   image:
     alt: Sarah Sullivan
@@ -35,9 +35,9 @@ blocks:
   title: Getting from here to there.
   muted: false
   content: |-
-    Hi, I’m Sarah Sullivan! My superpower is navigating the “space between” (e.g. ideas, people, behaviors, stages) and making magic happen in the process.
+    Hi, I’m Sarah - My superpower is navigating the “space between” (e.g. ideas, people, behaviors, stages) and making magic happen in the process.
 
-    Life happens at the edges – between ourselves and those around us, between what we know and what we don’t, between where we are and where we want to be.
+    Life happens at the edges – between what we know and what we don’t, between where we are and where we want to be.
 
     I help people (like you!) find their own unique ways to navigate these spaces and get where they want to go in the process
   subtitle: About me
@@ -50,12 +50,10 @@ blocks:
   title: Anything is possible.
   cards:
   - title: 1:1 Coaching
-    content: |-
-      **Looking for a trusted partner?**
-
-      I can help you focus on what matters and make a plan to get where you want to go.
+    content: "**Looking for a trusted Partner?** \n\nI can help you focus on what
+      matters and make a plan to get where you want to go."
     cta:
-      text: Learn more
+      text: Find out more
       url: "/services"
       primary: false
   - title: Team Coaching
@@ -64,7 +62,7 @@ blocks:
 
       I can help you and your team leverage your unique strengths to get results with less effort.
     cta:
-      text: Learn more
+      text: Find out more
       url: "/services"
       primary: false
   - title: Collaboration
@@ -73,7 +71,7 @@ blocks:
 
       I can bring a fresh perspective to new or ongoing projects to generate ideas and insights.
     cta:
-      text: Learn more
+      text: Find out more
       url: "/services"
       primary: false
   subtitle: Work with Me
