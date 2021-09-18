@@ -60,9 +60,11 @@ const primary = theme === 'primary'
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 'title' 'image' 'content' 'footer';
+    gap: var(--spacer-md);
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    max-width: var(--width-prose);
 
     & :global(ul) {
       list-style: none;
@@ -105,7 +107,6 @@ const primary = theme === 'primary'
   }
 
   main {
-    padding-top: var(--spacer-md);
     grid-area: content;
   }
 
@@ -114,8 +115,6 @@ const primary = theme === 'primary'
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 25rem;
-    margin: var(--spacer-md) auto 0;
 
     & :not(:last-child) {
       margin-bottom: var(--spacer-sm);
@@ -132,6 +131,7 @@ const primary = theme === 'primary'
       grid-template-areas: 'image title' 'image content' 'image footer';
       column-gap: var(--spacer-lg);
       text-align: start;
+      max-width: unset;
     }
 
     article :global(.title) {
