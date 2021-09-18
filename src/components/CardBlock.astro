@@ -1,4 +1,5 @@
 ---
+  import BlockTitle from './BlockTitle.astro'
   import Card from './Card.astro'
   import Icon from './Icon.astro'
 
@@ -13,13 +14,7 @@
 <section>
   <Icon icon='chevron-right' size={64} alt='' />
 
-  <h2 class='text-gradient'>
-    {title}
-  </h2>
-
-  {subtitle && (
-    <p>{subtitle}</p>
-  )}
+  <BlockTitle title={title} subtitle={subtitle} />
 
   <main>
     {cards.map((card) => (<Card data={card} />))}
@@ -51,31 +46,15 @@
     }
   }
 
-  h2 {
-    order: 2;
-    position: relative;
-    margin: 0;
-    text-align: center;
-    margin-bottom: var(--spacer-md);
-    color: var(--chisel-primary);
-  }
-
-  p {
-    order: 1;
-    font-weight: 400;
-    text-size: var(--chisel-h5);
-    font-family: var(--font-family-base);
-    text-transform: uppercase;
-    text-align: center;
-  }
-
   main {
     order: 3;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacer-md);
+    align-items: center;
 
-    & :global(> *:not(:last-child)) {
-      margin-bottom: var(--spacer-md);
+    & > :global(*) {
+      justify-self: center;
     }
 
     & :global(b) {
@@ -83,18 +62,9 @@
     }
   }
 
-  @media screen and (min-width: 979px) {
+  @media screen and (min-width: 1080px) {
     main {
-      flex-direction: row;
-
-      & > :global(*) {
-        flex-basis: 100%;
-      }
-
-      & > :global(*:not(:last-child)) {
-        margin-bottom: 0;
-        margin-right: var(--spacer-md);
-      }
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 

@@ -1,0 +1,48 @@
+---
+import clsx from 'clsx'
+import Hummingbird from './Hummingbird.astro'
+
+interface Props {
+  title?: string
+  subtitle?: string
+  subtitleIcon?: boolean
+  alt?: boolean
+  class?: string
+}
+
+const { title, subtitle, subtitleIcon, alt, class: className = '' } = Astro.props as Props
+---
+
+{(title || subtitle) && (
+  <h2 class={`${className} ${clsx({ 'text-gradient': !alt && !subtitle, h5: subtitle })}`}>
+    {subtitle || title}
+    {subtitle && subtitleIcon && (
+      <Hummingbird width='3rem' height='3rem' opacity={0.5} theme='secondary' />
+    )}
+  </h2>
+)}
+
+{(title && subtitle && (
+  <h3 class={`h2 ${className} ${clsx({ 'text-gradient': !alt })}`}>{title}</h3>
+))}
+
+<style>
+  .h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-weight: 400;
+    font-family: var(--font-family-base);
+    text-transform: uppercase;
+  }
+
+  .h5 :global(svg) {
+    margin-left: var(--spacer-sm);
+    margin-right: calc(-3rem - var(--spacer-sm));
+  }
+
+  h3 {
+    margin: var(--spacer-xs) 0 var(--spacer-md);
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import clsx from 'clsx'
+import BlockTitle from './BlockTitle.astro'
 import Icon from './Icon.astro'
 import { mdToHtml } from '../utils/markdown'
 
@@ -19,10 +20,7 @@ const primary = theme === 'primary'
     <div class='wrapper'>
       <Icon icon='chevron-right' alt='' size={64} />
 
-      <h2 class={clsx({ 'text-gradient': !primary })}>{title}</h2>
-      {subtitle && (
-        <h3>{subtitle}</h3>
-      )}
+      <BlockTitle title={title} subtitle={subtitle} alt={primary} />
 
       <main>
         {contentHtml}
@@ -71,24 +69,6 @@ const primary = theme === 'primary'
         right: -8rem;
       }
     }
-  }
-
-  h2, h3 {
-    margin: 0;
-  }
-
-  h2 {
-    order: 2;
-    text-align: center;
-  }
-
-  h3 {
-    order: 1;
-    margin-bottom: var(--spacer-sm);
-    font-size: var(--chisel-h5);
-    font-family: var(--font-family-base);
-    font-weight: 400;
-    text-transform: uppercase;
   }
 
   main {
