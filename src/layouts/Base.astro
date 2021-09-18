@@ -8,13 +8,17 @@ interface Props {
   description: string
   image: string
   canonicalURL: URL
+  pathname: string
+  showHeader: boolean
 }
 
 const {
   title,
   description,
   image,
-  canonicalURL
+  canonicalURL,
+  pathname,
+  showHeader
 } = Astro.props as Props
 ---
 
@@ -33,6 +37,12 @@ const {
       Skip to content
     </a>
 
+    {showHeader && (
+      <div class='container'>
+        <Header pathname={pathname} />
+      </div>
+    )}
+
     <main class="container" id="main">
       <slot />
     </main>
@@ -41,8 +51,27 @@ const {
   </body>
 </html>
 
+<script hoist>
+  function update() {
+    if (!document || !document.documentElement) {
+      return;
+    }
+
+    document.documentElement.style.setProperty(
+      "--app-height",
+      `${window.innerHeight}px`
+    );
+  }
+
+  window.addEventListener("resize", update);
+  update();
+</script>
+
 <style lang="scss">
   body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: var(--app-height);
     font-family: var(--font-family-base);
     line-height: 1.5;
   }

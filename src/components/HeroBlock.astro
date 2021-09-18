@@ -13,22 +13,6 @@ const { title, cta, content, image } = data
 const contentHtml = mdToHtml(content)
 ---
 
-<script hoist>
-  function update() {
-    if (!document || !document.documentElement) {
-      return;
-    }
-
-    document.documentElement.style.setProperty(
-      "--app-height",
-      `${window.innerHeight}px`
-    );
-  }
-
-  window.addEventListener("resize", update);
-  update();
-</script>
-
 <section class='full-bleed'>
   <img aria-hidden="true" alt={image.alt} src={Astro.resolve(image.src)} />
 

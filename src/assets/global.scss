@@ -33,6 +33,7 @@
   --font-family-display: Modern Love, Georgia, Times, serif;
 
   --width-prose: 60ch;
+  --width-container: 1200px;
 
   --primary-gradient: linear-gradient(
     to top right,
@@ -206,7 +207,7 @@ h6,
   }
 
   .container {
-    grid-template-columns: 1fr min(100% - 6rem, 1200px) 1fr;
+    grid-template-columns: 1fr min(100% - 6rem, var(--width-container)) 1fr;
     column-gap: 3rem;
   }
 }
