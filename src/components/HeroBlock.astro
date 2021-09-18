@@ -33,7 +33,7 @@ const contentHtml = mdToHtml(content)
   <img aria-hidden="true" alt={image.alt} src={Astro.resolve(image.src)} />
 
   <div class='container'>
-    <Header pathname="/" />
+    <Header pathname="/" alt />
 
     <div class='wrapper'>
       <h1>{title}</h1>
@@ -57,7 +57,7 @@ const contentHtml = mdToHtml(content)
 <style lang='scss'>
   section {
     position: relative;
-    padding: var(--spacer-sm) 0;
+    padding: 0 0 var(--spacer-sm);
     color: var(--chisel-neutral-50);
     height: 100vh;
     max-height: var(--app-height);
@@ -133,7 +133,7 @@ const contentHtml = mdToHtml(content)
 
   @media screen and (min-width: 979px) {
     section {
-      padding: var(--spacer-md) 0;
+      padding: 0 0 var(--spacer-md);
     }
 
     .wrapper {

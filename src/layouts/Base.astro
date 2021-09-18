@@ -7,7 +7,6 @@ interface Props {
   title: string
   description: string
   image: string
-  pathname?: string
   canonicalURL: URL
 }
 
@@ -15,7 +14,6 @@ const {
   title,
   description,
   image,
-  pathname,
   canonicalURL
 } = Astro.props as Props
 ---

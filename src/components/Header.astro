@@ -1,4 +1,5 @@
 ---
+import clsx from 'clsx'
 import Hummingbird from './Hummingbird.astro'
 import menu from '../data/menu.json'
 import site from '../data/site.json'
@@ -6,7 +7,10 @@ import { getPages } from '../utils/pages'
 
 interface Props {
   pathname: string
+  alt?: boolean
 }
+
+const { alt } = Astro.props as Props
 
 const allPages = Astro.fetchContent('../data/pages/*.md')
 
@@ -14,9 +18,9 @@ const pages = getPages(allPages, menu.pages)
   .map(({ title, href }) => ({ title, href }))
 ---
 
-<header>
+<header class={clsx({ alt })}>
   <a href='/' class='h5 nohover' rel='home'>
-    <Hummingbird width='4em' height='4em' opacity={0.4} theme="secondary" />
+    <Hummingbird width='4em' height='4em' opacity={0.4} theme={alt ? 'secondary' : 'gradient'} />
     {site.title}
   </a>
 
@@ -34,7 +38,7 @@ const pages = getPages(allPages, menu.pages)
       ))}
 
       {menu.cta && (
-        <a class="button secondary" href={menu.cta.url}>{menu.cta.text}</a>
+        <a class={clsx({ button: true, secondary: alt })} href={menu.cta.url}>{menu.cta.text}</a>
       )}
     </ul>
   </nav>
@@ -42,13 +46,19 @@ const pages = getPages(allPages, menu.pages)
 
 <style lang='scss'>
   header {
+    --header-color: var(--chisel-neutral-900);
+    color: var(--header-color);
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-areas: 'brand . menu' 'nav nav nav';
     align-items: center;
     justify-content: space-between;
     padding: var(--spacer-sm) 0;
-    color: var(--chisel-neutral-50);
+    margin-top: var(--spacer-sm);
+  }
+
+  header.alt {
+    --header-color: var(--chisel-neutral-50);
   }
 
   a {
@@ -65,6 +75,7 @@ const pages = getPages(allPages, menu.pages)
     top: 50%;
     left: 50%;
     transform: translate(-50%, -55%) scaleX(-1);
+    z-index: -1;
   }
 
   label[for=menubtn] {
@@ -79,13 +90,13 @@ const pages = getPages(allPages, menu.pages)
     padding: 0;
     margin: 0;
     background: transparent;
-    border: 2px solid var(--chisel-neutral-50);
+    border: 2px solid var(--header-color);
     box-shadow: var(--shadow);
 
     & span {
       width: 50%;
       height: 1px;
-      background: var(--chisel-neutral-50);
+      background: var(--header-color);
     }
 
     & span:before, & span:after {
@@ -93,7 +104,7 @@ const pages = getPages(allPages, menu.pages)
       display: block;
       width: 100%;
       height: 1px;
-      background: var(--chisel-neutral-50);
+      background: var(--header-color);
     }
 
     & span:before {
@@ -137,6 +148,7 @@ const pages = getPages(allPages, menu.pages)
 
     header {
       grid-template-areas: 'brand . nav';
+      margin-top: var(--spacer-md);
     }
 
     [rel=home] {

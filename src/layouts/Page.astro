@@ -2,6 +2,7 @@
 import Layout from './Base.astro'
 
 import CardBlock from '../components/CardBlock.astro'
+import Header from '../components/Header.astro'
 import HeroBlock from '../components/HeroBlock.astro'
 import ImageBlock from '../components/ImageBlock.astro'
 import NewsletterBlock from '../components/NewsletterBlock.astro'
@@ -11,31 +12,37 @@ interface Props {
   content: CMS.Page
 }
 
-const { content } = Astro.props as Props;
-const { title, description, image, blocks } = content;
+const { content } = Astro.props as Props
+const { title, description, image, blocks } = content
+
+const hasHeroBlock = blocks.some(isHeroBlock)
 
 function isCardBlock(block: CMS.Block): block is CMS.CardBlock {
-  return block.template === "cardblock";
+  return block.template === "cardblock"
 }
 
 function isHeroBlock(block: CMS.Block): block is CMS.HeroBlock {
-  return block.template === "heroblock";
+  return block.template === "heroblock"
 }
 
 function isImageBlock(block: CMS.Block): block is CMS.ImageBlock {
-  return block.template === "imageblock";
+  return block.template === "imageblock"
 }
 
 function isNewsletterBlock(block: CMS.Block): block is CMS.NewsletterBlock {
-  return block.template === "newsletterblock";
+  return block.template === "newsletterblock"
 }
 
 function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
-  return block.template === "textblock";
+  return block.template === "textblock"
 }
 ---
 
-<Layout title={title} description={description} image={image} pathname={Astro.request.url.pathname} canonicalURL={Astro.request.canonicalURL}>
+<Layout title={title} description={description} image={image} canonicalURL={Astro.request.canonicalURL}>
+  {!hasHeroBlock && (
+    <Header pathname={Astro.request.url.pathname} />
+  )}
+
   {blocks.map((block) => {
     if (isCardBlock(block)) {
       return (<CardBlock data={block} />);
