@@ -1,7 +1,7 @@
 ---
-title: Home
-description: Coaching for Curious and Creative People | Sarah Sullivan
-image: "../assets/images/aurora-borealis.jpg"
+title: Coaching for Curious and Creative People
+description: ''
+image: ''
 blocks:
 - template: heroblock
   cta:
