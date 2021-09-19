@@ -67,7 +67,7 @@ declare namespace CMS {
     template: "heroblock";
     title: string;
     content: Markdown;
-    image: Image;
+    image?: Image;
     cta: CallToAction;
   }
 
