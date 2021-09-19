@@ -1,7 +1,6 @@
 {
   "pages": [
     "src/data/pages/coaching.md",
-    "src/data/pages/team-coaching.md",
     "src/data/pages/collaboration.md",
     "src/data/pages/about.md"
   ],
