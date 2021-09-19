@@ -41,12 +41,12 @@ fields:
   - name: text
     type: text
     config:
-      required: true
+      required: false
     label: Text
   - name: url
     type: text
     config:
-      required: true
+      required: false
     label: URL
     default: "/about"
   label: Call to Action
