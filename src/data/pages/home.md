@@ -49,7 +49,7 @@ blocks:
 - template: cardblock
   title: Anything is possible.
   cards:
-  - title: 1-on-1 Coaching
+  - title: Individual Coaching
     content: |-
       **Looking for a trusted partner?**
 
