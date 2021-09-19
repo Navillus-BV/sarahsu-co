@@ -21,7 +21,7 @@ blocks:
     src: "../assets/images/library.jpg"
     alt: Image of lots of books on tall white shelves
   title: 1-1 Coaching
-  subtitle: Test Subtitle
+  subtitle: When you need a trusted partner...
   subtitleIcon: false
   flipped: false
   content: Test content
@@ -31,7 +31,7 @@ blocks:
   image:
     src: "../assets/images/library.jpg"
     alt: Lots of books on tall white shelves
-  subtitle: Test subtitle
+  subtitle: When you need a group guide...
   title: Team Coaching
   content: Test content
   subtitleIcon: false
@@ -43,7 +43,7 @@ blocks:
     src: "../assets/images/library.jpg"
     alt: Lots of books on tall white shelves
   title: Collaboration
-  subtitle: Test subtitle
+  subtitle: When you need a creative catalyst...
   content: Test content
   subtitleIcon: false
   flipped: false
