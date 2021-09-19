@@ -7,7 +7,7 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: cardblock
   title: Anything is possible!
-  subtitle: Work with Me
+  subtitle: ''
   cards:
   - title: 1-1 Coaching
     content: |-
