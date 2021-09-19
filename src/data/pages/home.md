@@ -57,7 +57,7 @@ blocks:
       I can help you focus on what matters and make a plan to get where you want to go.
     cta:
       text: Find out how
-      url: "/"
+      url: "/coaching"
       primary: false
   - title: Team Coaching
     content: |-
@@ -66,7 +66,7 @@ blocks:
       I can help you and your team leverage your unique strengths to get results with less effort.
     cta:
       text: Find out how
-      url: "/services"
+      url: "/teamcoaching"
       primary: false
   - title: Collaboration
     content: |-
@@ -75,7 +75,7 @@ blocks:
       I can bring a fresh perspective to new or ongoing projects to help you generate ideas and insights.
     cta:
       text: Find out how
-      url: "/services"
+      url: "/collaboration"
       primary: false
   subtitle: Work with Me
 href: "/"
