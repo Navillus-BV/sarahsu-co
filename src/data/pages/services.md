@@ -5,10 +5,15 @@ description: I help curious and creative people find unique ways to navigate lif
   and get where they want to go in the process.
 image: "../assets/images/thumbnail2.png"
 blocks:
-- template: cardblock
-  title: Choose your adventure!
-  subtitle: ''
-  cards: []
+- template: heroblock
+  cta:
+    url: "/workwithme"
+    text: See below
+  title: Choose Your Adventure
+  content: ''
+  image:
+    alt: ''
+    src: ''
 - template: imageblock
   theme: white
   image:
