@@ -1,7 +1,7 @@
 ---
 title: Coaching for Curious and Creative People
 description: ''
-image: ''
+image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
