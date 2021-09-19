@@ -5,6 +5,17 @@ description: I help curious and creative people find unique ways to navigate lif
   and get where they want to go in the process.
 image: "../assets/images/thumbnail2.png"
 blocks:
+- template: imageblock
+  theme: primary
+  image:
+    src: "../assets/images/library.jpg"
+    alt: Image of lots of books on tall white shelves
+  title: Test Title
+  subtitle: Test Subtitle
+  subtitleIcon: false
+  flipped: false
+  content: Test content
+  ctas: []
 - template: cardblock
   title: " "
   subtitle: ''
