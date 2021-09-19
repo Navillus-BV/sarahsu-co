@@ -1,7 +1,7 @@
 ---
 href: "/collaboration"
 title: Collaboration
-description: TODO
+description: ''
 image: ''
 blocks:
 - template: heroblock
