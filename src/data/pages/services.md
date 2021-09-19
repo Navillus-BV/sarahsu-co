@@ -10,8 +10,8 @@ blocks:
     text: Back to Home
   title: Work with Me
   image:
-    src: "../assets/images/comingsoon.png"
-    alt: Work with Me | sarahsu.co
+    src: ''
+    alt: ''
   content: ''
 
 ---
