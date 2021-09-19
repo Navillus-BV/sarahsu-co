@@ -1,7 +1,7 @@
 ---
 href: "/services"
 title: Work with Me
-description: Work with Me | Anything is possible!
+description: ''
 image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
