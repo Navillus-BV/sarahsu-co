@@ -8,7 +8,7 @@ blocks:
   cta:
     url: "/"
     text: Back to Home
-  title: Work with Me
+  title: Coming soon!
   image:
     src: ''
     alt: ''
