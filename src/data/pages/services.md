@@ -10,8 +10,8 @@ blocks:
     url: "/contact"
     text: Message Me
   title: Choose Your Adventure
-  content: And if you don't see what you're looking for, drop me a note so we can
-    figure out what's possible!
+  content: Don't see what you're looking for? Drop me a note so we can figure out
+    what's possible!
   image:
     alt: ''
     src: "../assets/images/aurora-borealis.jpg"
