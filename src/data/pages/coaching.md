@@ -3,7 +3,7 @@ href: "/coaching"
 title: 1-1 Coaching
 description: I help curious and creative people find unique ways to navigate life
   and get where they want to go in the process.
-image: "../assets/images/thumbnail2.png"
+image: "../assets/images/thumbnail3.png"
 blocks:
 - template: heroblock
   cta:
