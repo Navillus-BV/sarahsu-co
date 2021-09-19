@@ -1,8 +1,8 @@
 {
   "pages": [
-    "src/data/pages/services.md",
-    "src/data/pages/about.md",
-    "src/data/pages/extras.md"
+    "src/data/pages/coaching.md",
+    "src/data/pages/collaboration.md",
+    "src/data/pages/about.md"
   ],
   "cta": {
     "text": "Book a call",
