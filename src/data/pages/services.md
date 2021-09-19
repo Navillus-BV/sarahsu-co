@@ -29,7 +29,7 @@ blocks:
 - template: imageblock
   theme: white
   image:
-    src: "../assets/images/library.jpg"
+    src: "../assets/images/pexels-photo-3503098.jpeg"
     alt: Lots of books on tall white shelves
   subtitle: When you need a group guide...
   title: Team Coaching
@@ -40,7 +40,7 @@ blocks:
 - template: imageblock
   theme: white
   image:
-    src: "../assets/images/library.jpg"
+    src: "../assets/images/pexels-photo-167080.jpeg"
     alt: Lots of books on tall white shelves
   title: Collaboration
   subtitle: Need a creative spark?
