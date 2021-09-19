@@ -1,6 +1,6 @@
 ---
 title: Home
-description: Coaching for Curious and Creative People
+description: Coaching for Curious and Creative People | Sarah Sullivan
 image: "../assets/images/aurora-borealis.jpg"
 blocks:
 - template: heroblock
@@ -39,7 +39,7 @@ blocks:
 
     Life happens at the edges – between what we know and what we don’t, between where we are and where we want to be.
 
-    I help people (like you!) find their own unique ways to navigate these spaces and get where they want to go in the process
+    I help people (like you!) find their own unique ways to navigate these spaces and get where they want to go in the process.
   subtitle: About me
   subtitleIcon: false
   ctas:
@@ -49,9 +49,11 @@ blocks:
 - template: cardblock
   title: Anything is possible.
   cards:
-  - title: 1:1 Coaching
-    content: "**Looking for a trusted Partner?** \n\nI can help you focus on what
-      matters and make a plan to get where you want to go."
+  - title: 1-on-1 Coaching
+    content: |-
+      **Looking for a trusted partner?**
+
+      I can help you focus on what matters and make a plan to get where you want to go.
     cta:
       text: Find out more
       url: "/services"
@@ -69,7 +71,7 @@ blocks:
     content: |-
       **Looking for a creative catalyst?**
 
-      I can bring a fresh perspective to new or ongoing projects to generate ideas and insights.
+      I can bring a fresh perspective to new or ongoing projects to help you generate ideas and insights.
     cta:
       text: Find out more
       url: "/services"
