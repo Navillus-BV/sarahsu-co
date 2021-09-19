@@ -28,7 +28,7 @@ blocks:
   theme: white
   ctas:
   - text: Work with me
-    url: "/schedule"
+    url: "/workwithme"
 - template: imageblock
   image:
     src: "../assets/images/sarah.jpg"
