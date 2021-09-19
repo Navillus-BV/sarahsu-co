@@ -8,16 +8,22 @@ fields:
   config:
     required: true
   label: Title
+  description: The title of the page shown in search results and browser tabs. " •
+    Sarah Sullivan" is appended to this by default
 - name: description
   type: text
   config:
     required: false
   label: Description
+  description: The description text shown in search results and page shares.  If not
+    provided, the description text from "Global Settings &gt; Site" will be used
 - name: image
   type: file
   config:
     maxSize: 64
   label: Image
+  description: The image shown in page shares.  If not provided, the image from "Global
+    Settings &gt; Site" is used
 - name: href
   type: text
   config:
