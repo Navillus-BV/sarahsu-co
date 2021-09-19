@@ -7,7 +7,7 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
-    url: "/workwithme"
+    url: "/contact"
     text: See below
   title: Choose Your Adventure
   content: And if you don't see what you're looking for, drop me a note so we can
