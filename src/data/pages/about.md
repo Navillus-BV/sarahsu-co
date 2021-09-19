@@ -7,8 +7,8 @@ image: "../assets/images/sarah.jpg"
 blocks:
 - template: heroblock
   cta:
-    url: "/"
-    text: Back to Home
+    url: ''
+    text: ''
   title: Coming soon!
   image:
     src: ''
