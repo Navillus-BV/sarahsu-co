@@ -10,7 +10,10 @@ blocks:
     url: "/workwithme"
     text: See below
   title: Choose Your Adventure
-  content: ''
+  content: |-
+    You're here! Awesome. Read on to find the type of partnership that best suits your situation.
+
+    And if you don't see what you're looking for, drop me a note so we can figure out what's possible.
   image:
     alt: ''
     src: "../assets/images/aurora-borealis.jpg"
