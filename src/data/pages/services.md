@@ -26,7 +26,7 @@ blocks:
   content: Test content
   ctas: []
 - template: imageblock
-  theme: primary
+  theme: white
   image:
     src: "../assets/images/pexels-photo-3503098.jpeg"
     alt: Lots of books on tall white shelves
