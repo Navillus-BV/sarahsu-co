@@ -1,0 +1,26 @@
+---
+label: Site Settings
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: url
+  label: url
+- type: text
+  name: domain
+  label: domain
+- type: text
+  name: author
+  label: author
+- type: field_group
+  name: social
+  label: social
+  fields:
+  - type: text
+    name: twitter_card
+    label: twitter_card
