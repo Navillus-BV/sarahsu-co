@@ -6,7 +6,7 @@ description: I help curious and creative people find unique ways to navigate lif
 image: "../assets/images/thumbnail2.png"
 blocks:
 - template: imageblock
-  theme: primary
+  theme: white
   image:
     src: "../assets/images/library.jpg"
     alt: Image of lots of books on tall white shelves
@@ -15,6 +15,28 @@ blocks:
   subtitleIcon: false
   flipped: false
   content: Test content
+  ctas: []
+- template: imageblock
+  theme: white
+  image:
+    src: "../assets/images/library.jpg"
+    alt: Lots of books on tall white shelves
+  subtitle: Test subtitle
+  title: Team Coaching
+  content: Test content
+  subtitleIcon: false
+  flipped: false
+  ctas: []
+- template: imageblock
+  theme: white
+  image:
+    src: "../assets/images/library.jpg"
+    alt: Lots of books on tall white shelves
+  title: Collaboration
+  subtitle: Test subtitle
+  content: Test content
+  subtitleIcon: false
+  flipped: false
   ctas: []
 - template: cardblock
   title: " "
