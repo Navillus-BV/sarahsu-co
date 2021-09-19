@@ -7,11 +7,10 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
-    url: "/contact"
-    text: Message Me
+    url: ''
+    text: ''
   title: Choose Your Adventure
-  content: Don't see what you're looking for? Drop me a note so we can figure out
-    what's possible!
+  content: ''
   image:
     alt: ''
     src: "../assets/images/pexels-pixabay-161173.jpeg"
