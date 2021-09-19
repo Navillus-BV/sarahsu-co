@@ -14,7 +14,7 @@ blocks:
     what's possible!
   image:
     alt: ''
-    src: "../assets/images/aurora-borealis.jpg"
+    src: "../assets/images/pexels-pixabay-161173.jpeg"
 - template: imageblock
   theme: white
   image:
