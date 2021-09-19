@@ -57,7 +57,7 @@ blocks:
       I can help you focus on what matters and make a plan to get where you want to go.
     cta:
       text: Find out how
-      url: "/services"
+      url: "/"
       primary: false
   - title: Team Coaching
     content: |-
