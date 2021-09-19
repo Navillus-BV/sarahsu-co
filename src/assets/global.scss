@@ -164,6 +164,27 @@ button.alt,
   }
 }
 
+button.icon,
+.button.icon {
+  height: var(--spacer-md);
+  width: var(--spacer-md);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-color: transparent;
+  color: inherit;
+  border-radius: 9999px;
+
+  &:hover,
+  &:active {
+    background: transparent;
+    color: inherit;
+    border-color: currentColor;
+  }
+}
+
 h1,
 .h1,
 h2,

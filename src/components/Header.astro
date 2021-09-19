@@ -1,6 +1,7 @@
 ---
 import clsx from 'clsx'
 import Hummingbird from './Hummingbird.astro'
+import Icon from './Icon.astro'
 import menu from '../data/menu.json'
 import site from '../data/site.json'
 import { getPages } from '../utils/pages'
@@ -18,7 +19,51 @@ const pages = getPages(allPages, menu.pages)
   .map(({ title, href }) => ({ title, href }))
 ---
 
-<header class={clsx({ alt })}>
+<script hoist>
+  const headerElem = document.getElementById('header')
+  const inputElem = document.getElementById('menubtn')
+  const navElem = document.querySelector('#header nav')
+  const closeElem = document.querySelector('#header nav button.icon')
+
+  headerElem.classList.add('js')
+
+  const onClick = (event) => {
+    if (clickedOutside(event)) {
+      close()
+    }
+  }
+
+  const clickedOutside = (event) => {
+    return navElem && !navElem.contains(event.target)
+  }
+
+  const close = () => {
+    inputElem.checked = false
+    onClose()
+  }
+
+  const onOpen = () => {
+    document.documentElement.classList.add('overlay-visible')
+    document.documentElement.addEventListener('click', onClick, true)
+    closeElem.addEventListener('click', close)
+  }
+
+  const onClose = () => {
+    document.documentElement.classList.remove('overlay-visible')
+    document.documentElement.removeEventListener('click', onClick, true)
+    closeElem.removeEventListener('click', close)
+  }
+
+  inputElem.addEventListener('change', (event) => {
+    if (event.target.checked) {
+      onOpen()
+    } else {
+      onClose()
+    }
+  })
+</script>
+
+<header class={clsx({ alt })} id='header'>
   <a href='/' class='h5 nohover' rel='home'>
     <Hummingbird width='4em' height='4em' opacity={0.4} theme={alt ? 'secondary' : 'gradient'} />
     {site.title}
@@ -29,7 +74,11 @@ const pages = getPages(allPages, menu.pages)
     <span></span>
   </label>
 
+  <div id='backdrop'></div>
   <nav>
+    <button class='icon'>
+      <Icon icon='close' alt='Close menu' />
+    </button>
     <ul>
       {pages.map(({ title, href }) => (
         <li>
@@ -120,6 +169,10 @@ const pages = getPages(allPages, menu.pages)
     display: none;
     grid-area: nav;
 
+    & button.icon {
+      display: none;
+    }
+
     & ul {
       list-style: none;
       text-align: center;
@@ -139,6 +192,66 @@ const pages = getPages(allPages, menu.pages)
 
   #menubtn:checked ~ nav {
     display: block;
+  }
+
+  @media screen and (max-width: 979px) {
+    header.js {
+      grid-template-areas: 'brand . menu';
+
+      & nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 90vw;
+        max-width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--chisel-primary);
+        will-change: transform;
+        transform: translate(100%, 0);
+        transition: transform 250ms ease;
+        z-index: 2;
+
+        & button.icon {
+          display: flex;
+          position: absolute;
+          top: var(--spacer-sm);
+          right: var(--spacer-sm);
+        }
+
+        & li {
+          font-size: var(--chisel-h5);
+          margin-bottom: var(--spacer-sm);
+
+          &:last-of-type {
+            margin-bottom: var(--spacer-md);
+          }
+        }
+      }
+
+      & #menubtn:checked ~ nav {
+        display: flex;
+        transform: translate(0, 0);
+      }
+
+      & #menubtn:checked ~ #backdrop {
+        display: block;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  #backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--chisel-neutral-900);
+    z-index: 1;
   }
 
   @media screen and (min-width: 979px) {
