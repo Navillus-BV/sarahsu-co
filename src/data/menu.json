@@ -1,11 +1,12 @@
 {
   "pages": [
-    "src/data/pages/coaching.md",
-    "src/data/pages/collaboration.md",
-    "src/data/pages/about.md"
+    "src/data/pages/services.md",
+    "src/data/pages/about.md",
+    "src/data/pages/extras.md"
   ],
   "cta": {
     "text": "Book a call",
-    "page": "src/data/pages/collaboration.md"
+    "page": "src/data/pages/collaboration.md",
+    "url": "/"
   }
 }
