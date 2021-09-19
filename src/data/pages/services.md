@@ -13,7 +13,7 @@ blocks:
   content: ''
   image:
     alt: ''
-    src: ''
+    src: "../assets/images/aurora-borealis.jpg"
 - template: imageblock
   theme: white
   image:
