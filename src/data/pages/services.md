@@ -5,15 +5,6 @@ description: I help curious and creative people find unique ways to navigate lif
   and get where they want to go in the process.
 image: "../assets/images/thumbnail2.png"
 blocks:
-- template: heroblock
-  cta:
-    url: "/"
-    text: Back to Home
-  title: Coming soon!
-  image:
-    src: ''
-    alt: ''
-  content: ''
 - template: textblock
   theme: white
   title: Let's make some magic together!
