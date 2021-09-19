@@ -18,10 +18,10 @@ blocks:
 - template: imageblock
   theme: white
   image:
-    src: "../assets/images/library.jpg"
+    src: "../assets/images/pexels-photo-2740956.jpeg"
     alt: Image of lots of books on tall white shelves
   title: 1-1 Coaching
-  subtitle: When you need a trusted partner...
+  subtitle: Looking for a trusted partner?
   subtitleIcon: false
   flipped: false
   content: Test content
@@ -43,7 +43,7 @@ blocks:
     src: "../assets/images/library.jpg"
     alt: Lots of books on tall white shelves
   title: Collaboration
-  subtitle: When you need a creative catalyst...
+  subtitle: Need a creative spark?
   content: Test content
   subtitleIcon: false
   flipped: false
