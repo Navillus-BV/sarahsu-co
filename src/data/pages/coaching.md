@@ -1,6 +1,6 @@
 ---
 href: "/coaching"
-title: 1:1 Coaching
+title: Coaching
 description: ''
 image: ''
 blocks:
