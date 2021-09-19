@@ -30,7 +30,7 @@ const legalPages = getPages(allPages, footer.legal_pages)
     </div>
 
     <a class='nohover' href='/' alt={site.title} rel="home">
-      <Hummingbird width="6rem" height="6rem" theme="secondary" opacity={0.5} />
+      <Hummingbird width="96" height="96" theme="secondary" opacity={0.5} />
       {site.title}
     </a>
 
@@ -107,6 +107,12 @@ const legalPages = getPages(allPages, footer.legal_pages)
   @media screen and (min-width: 640px) {
     div a {
       font-size: var(--chisel-p);
+    }
+  }
+
+  @media screen and (min-width: 979px) {
+    [rel=home] :global(svg) {
+      transform: translate(-50%, -45%) scale(-1.2, 1.2);
     }
   }
 </style>

@@ -17,7 +17,7 @@ const { title, subtitle, subtitleIcon, alt, class: className = '' } = Astro.prop
   <h2 class={`${className} ${clsx({ 'text-gradient': !alt && !subtitle, h5: subtitle })}`}>
     {subtitle || title}
     {subtitle && subtitleIcon && (
-      <Hummingbird width='3rem' height='3rem' opacity={0.5} theme='secondary' />
+      <Hummingbird width='48' height='48' opacity={0.5} theme='secondary' />
     )}
   </h2>
 )}

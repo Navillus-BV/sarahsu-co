@@ -65,7 +65,7 @@ const pages = getPages(allPages, menu.pages)
 
 <header class={clsx({ alt })} id='header'>
   <a href='/' class='h5 nohover' rel='home'>
-    <Hummingbird width='4em' height='4em' opacity={0.4} theme={alt ? 'secondary' : 'gradient'} />
+    <Hummingbird width='72' height='72' opacity={0.4} theme={alt ? 'secondary' : 'gradient'} />
     {site.title}
   </a>
 
@@ -266,6 +266,10 @@ const pages = getPages(allPages, menu.pages)
 
     [rel=home] {
       font-size: var(--chisel-h4);
+
+      & :global(svg) {
+        transform: translate(-50%, -55%) scale(-1.5, 1.5);
+      }
     }
 
     nav {
