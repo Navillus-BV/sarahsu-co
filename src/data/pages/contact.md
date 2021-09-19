@@ -10,7 +10,7 @@ blocks:
     url: "/"
     text: Back to Home
   title: Coming soon!
-  content: ''
+  content: In the meantime, feel free to contact me directly at sarah@sarahsu.co!
   image:
     alt: ''
     src: ''
