@@ -24,8 +24,13 @@ const pages = getPages(allPages, menu.pages)
   const inputElem = document.getElementById('menubtn')
   const navElem = document.querySelector('#header nav')
   const closeElem = document.querySelector('#header nav button.icon')
+  const ctaElem = document.querySelector('#header nav a.button')
 
   headerElem.classList.add('js')
+
+  if (ctaElem) {
+    ctaElem.classList.add('secondary')
+  }
 
   const onClick = (event) => {
     if (clickedOutside(event)) {
@@ -209,6 +214,7 @@ const pages = getPages(allPages, menu.pages)
         align-items: center;
         justify-content: center;
         background-color: var(--chisel-primary);
+        color: var(--chisel-neutral-50);
         will-change: transform;
         transform: translate(100%, 0);
         transition: transform 250ms ease;
