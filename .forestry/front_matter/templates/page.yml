@@ -48,7 +48,6 @@ pages:
 - src/data/pages/coaching.md
 - src/data/pages/collaboration.md
 - src/data/pages/contact.md
-- src/data/pages/extras.md
 - src/data/pages/musings.md
 - src/data/pages/services.md
 - src/data/pages/team-coaching.md
