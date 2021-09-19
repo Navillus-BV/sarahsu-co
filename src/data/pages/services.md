@@ -6,8 +6,8 @@ description: I help curious and creative people find unique ways to navigate lif
 image: "../assets/images/thumbnail2.png"
 blocks:
 - template: cardblock
-  title: Anything is possible!
-  subtitle: ''
+  title: " "
+  subtitle: Choose Your Adventure
   cards:
   - title: 1-1 Coaching
     content: |-
