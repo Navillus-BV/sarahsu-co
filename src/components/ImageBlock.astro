@@ -161,6 +161,23 @@ const primary = theme === 'primary'
       align-self: start;
     }
 
-    /** TODO: flipped */
+    .flipped article {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: 'title image' 'content image' 'footer image';
+      text-align: end;
+
+      & header {
+        justify-self: end;
+
+        & :global(*) {
+          text-align: end;
+          justify-content: end;
+        }
+      }
+
+      & footer {
+        justify-content: end;
+      }
+    }
   }
 </style>
