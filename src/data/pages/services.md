@@ -2,7 +2,7 @@
 href: "/services"
 title: Work with Me
 description: ''
-image: "../assets/images/thumbnail2.png"
+image: ''
 blocks:
 - template: heroblock
   cta:
