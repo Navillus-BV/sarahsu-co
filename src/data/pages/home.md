@@ -1,6 +1,7 @@
 ---
 title: Coaching for Curious and Creative People
-description: ''
+description: I help curious and creative people find unique ways to navigate life
+  and get where they want to go in the process.
 image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
@@ -39,7 +40,7 @@ blocks:
 
     Life happens at the edges – between what we know and what we don’t, between where we are and where we want to be.
 
-    I help people (like you!) find their own unique ways to navigate these spaces and get where they want to go in the process.
+    I help curious and creative people find their own unique ways to navigate these spaces and get where they want to go in the process.
   subtitle: About me
   subtitleIcon: false
   ctas:
@@ -55,7 +56,7 @@ blocks:
 
       I can help you focus on what matters and make a plan to get where you want to go.
     cta:
-      text: Find out more
+      text: Find out how
       url: "/services"
       primary: false
   - title: Team Coaching
@@ -64,7 +65,7 @@ blocks:
 
       I can help you and your team leverage your unique strengths to get results with less effort.
     cta:
-      text: Find out more
+      text: Find out how
       url: "/services"
       primary: false
   - title: Collaboration
@@ -73,7 +74,7 @@ blocks:
 
       I can bring a fresh perspective to new or ongoing projects to help you generate ideas and insights.
     cta:
-      text: Find out more
+      text: Find out how
       url: "/services"
       primary: false
   subtitle: Work with Me
