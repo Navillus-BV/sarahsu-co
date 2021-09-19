@@ -10,7 +10,8 @@ blocks:
     url: "/"
     text: Back to Home
   title: Coming soon!
-  content: ''
+  content: Until this page is updated, feel free to reach contact me about what you're
+    looking for!
   image:
     alt: ''
     src: ''
