@@ -6,7 +6,7 @@ description: I help curious and creative people find unique ways to navigate lif
 image: "../assets/images/thumbnail2.png"
 blocks:
 - template: cardblock
-  title: Let's make some magic together!
+  title: Let's make some magic happen!
   subtitle: ''
   cards:
   - title: 1-1 Coaching
