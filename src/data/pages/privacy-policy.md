@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
-description: Privacy Policy | sarahsu.co
-image: "../assets/images/thumbnail2.png"
+description: ''
+image: ''
 blocks:
 - template: heroblock
   cta:
