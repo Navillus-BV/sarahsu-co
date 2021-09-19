@@ -14,5 +14,11 @@ blocks:
     src: ''
     alt: ''
   content: ''
+- template: textblock
+  theme: white
+  title: Let's make some magic together!
+  content: " "
+  subtitle: ''
+  ctas: []
 
 ---
