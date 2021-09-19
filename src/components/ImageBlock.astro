@@ -41,7 +41,7 @@ const primary = theme === 'primary'
       {ctas.length > 0 && (
         <footer class={clsx({ multi: ctas.length > 1 })}>
           {ctas.map(({ text, url }) => (
-            <a class="button alt" href={url}>{text}</a>
+            <a class={`button ${clsx({ secondary: primary })}`} href={url}>{text}</a>
           ))}
         </footer>
       )}

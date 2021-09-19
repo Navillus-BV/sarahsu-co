@@ -27,7 +27,7 @@ const primary = theme === 'primary'
       </main>
 
       {ctas.map(({ url, text }) => (
-        <a class={clsx({ button: true, alt: primary })} href={url}>{text}</a>
+        <a class={clsx({ button: true, secondary: primary })} href={url}>{text}</a>
       ))}
 
       <Icon icon='chevron-left' alt='' size={64} />
