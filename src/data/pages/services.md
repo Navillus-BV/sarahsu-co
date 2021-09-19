@@ -8,7 +8,7 @@ blocks:
 - template: heroblock
   cta:
     url: "/contact"
-    text: See below
+    text: Message Me
   title: Choose Your Adventure
   content: And if you don't see what you're looking for, drop me a note so we can
     figure out what's possible!
