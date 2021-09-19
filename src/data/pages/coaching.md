@@ -1,7 +1,7 @@
 ---
 href: "/coaching"
 title: Coaching
-description: TODO
+description: ''
 image: ''
 blocks:
 - template: heroblock
