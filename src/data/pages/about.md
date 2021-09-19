@@ -2,13 +2,13 @@
 href: "/about"
 title: About
 description: About | sarahsu.co
-image: "../assets/images/comingsoon.png"
+image: ''
 blocks:
 - template: heroblock
   cta:
     url: "/"
     text: Back to Home
-  title: About | sarahsu.co
+  title: Coming soon!
   image:
     src: "../assets/images/comingsoon.png"
     alt: About | sarahsu.co
