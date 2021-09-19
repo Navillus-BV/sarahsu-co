@@ -7,10 +7,10 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
-    url: "/"
-    text: Back to Home
+    url: ''
+    text: ''
   title: Coming soon!
-  content: In the meantime, feel free to contact me directly at sarah@sarahsu.co!
+  content: In the meantime, feel free to contact me directly at **sarah@sarahsu.co**!
   image:
     alt: ''
     src: ''
