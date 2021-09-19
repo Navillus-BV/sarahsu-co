@@ -1,7 +1,7 @@
 ---
 href: "/about"
 title: About
-description: About | sarahsu.co
+description: ''
 image: ''
 blocks:
 - template: heroblock
