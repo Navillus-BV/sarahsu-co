@@ -11,8 +11,8 @@ blocks:
     text: Back to Home
   title: Coming soon!
   image:
-    src: "../assets/images/comingsoon.png"
-    alt: About | sarahsu.co
+    src: ''
+    alt: ''
   content: ''
 
 ---
