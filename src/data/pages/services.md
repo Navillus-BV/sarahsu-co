@@ -7,7 +7,7 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: cardblock
   title: " "
-  subtitle: Choose Your Adventure
+  subtitle: ''
   cards:
   - title: 1-1 Coaching
     content: |-
