@@ -30,12 +30,15 @@ blocks:
   image:
     src: "../assets/images/pexels-photo-3503098.jpeg"
     alt: Lots of books on tall white shelves
-  subtitle: When you need a group guide...
+  subtitle: Looking for a group guide?
   title: Team Coaching
   content: Test content
   subtitleIcon: false
-  flipped: true
-  ctas: []
+  flipped: false
+  ctas:
+  - text: Learn more
+    url: "/teamcoaching"
+    primary: false
 - template: imageblock
   theme: white
   image:

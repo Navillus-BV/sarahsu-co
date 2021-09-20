@@ -11,7 +11,7 @@ blocks:
     text: ''
   title: Coming soon!
   image:
-    src: ''
+    src: "../assets/images/pexels-benjamin-suter-3617500.jpeg"
     alt: ''
   content: ''
 
