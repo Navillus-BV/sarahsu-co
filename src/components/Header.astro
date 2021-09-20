@@ -243,21 +243,23 @@ const pages = getPages(allPages, menu.pages)
       }
 
       & #menubtn:checked ~ #backdrop {
-        display: block;
+        pointer-events: initial;
         opacity: 0.5;
       }
     }
   }
 
   #backdrop {
-    display: none;
+    pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: var(--chisel-neutral-900);
+    opacity: 0;
     z-index: 1;
+    transition: opacity 250ms ease;
   }
 
   @media screen and (min-width: 979px) {
