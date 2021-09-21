@@ -24,8 +24,15 @@ blocks:
       placeholder: ''
       required: true
       type: text
-    footnote: asdf
+    - id: message
+      title: Message
+      placeholder: ''
+      required: true
+      type: text
+    footnote: ''
   title: Send me an email.
   title_icon: false
+  description: 'Just fill out the form below or email me here: [sarah@sarahsu.co](mailto:sarah@sarahsu.co
+    "sarah@sarahsu.co")'
 
 ---
