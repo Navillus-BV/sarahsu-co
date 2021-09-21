@@ -17,8 +17,8 @@ blocks:
 - template: imageblock
   theme: white
   image:
-    src: "../assets/images/pexels-photo-2740956.jpeg"
-    alt: Image of lots of books on tall white shelves
+    src: ''
+    alt: Empty
   title: 1-1 Coaching
   subtitle: Looking for a trusted partner?
   subtitleIcon: false
