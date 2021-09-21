@@ -24,7 +24,10 @@ blocks:
   subtitleIcon: false
   flipped: false
   content: Test content
-  ctas: []
+  ctas:
+  - text: Book a Call
+    url: https://tidycal.com/sarahsu
+    primary: false
 - template: imageblock
   theme: white
   image:
