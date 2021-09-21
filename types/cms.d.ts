@@ -47,7 +47,7 @@ declare namespace CMS {
       type: string;
     }[];
     submitText: string;
-    footnote: string;
+    footnote?: string;
   }
 
   interface Card {
@@ -83,11 +83,22 @@ declare namespace CMS {
     ctas: CallToAction[];
   }
 
-  interface NewsletterBlock {
-    template: "newsletterblock";
+  interface FormBlock {
+    template: "formblock";
     title: string;
-    titleIcon: boolean;
-    form: Form;
+    description?: Markdown;
+    submitText: string;
+    footnote?: string;
+    rows: {
+      title?: string;
+      fields: {
+        id: string;
+        title: string;
+        placeholder: string;
+        required: boolean;
+        type: "text" | "email" | "number" | "date" | "textarea";
+      }[];
+    }[];
   }
 
   interface TextBlock {
@@ -99,7 +110,7 @@ declare namespace CMS {
     ctas: CallToAction[];
   }
 
-  type Block = CardBlock | HeroBlock | ImageBlock | NewsletterBlock | TextBlock;
+  type Block = CardBlock | HeroBlock | ImageBlock | TextBlock | FormBlock;
 
   interface Page {
     title: string;

@@ -2,10 +2,9 @@
 import Layout from './Base.astro'
 
 import CardBlock from '../components/CardBlock.astro'
-import Header from '../components/Header.astro'
 import HeroBlock from '../components/HeroBlock.astro'
 import ImageBlock from '../components/ImageBlock.astro'
-import NewsletterBlock from '../components/NewsletterBlock.astro'
+import FormBlock from '../components/FormBlock.astro'
 import TextBlock from '../components/TextBlock.astro'
 
 interface Props {
@@ -21,16 +20,16 @@ function isCardBlock(block: CMS.Block): block is CMS.CardBlock {
   return block.template === "cardblock"
 }
 
+function isFormBlock(block: CMS.Block): block is CMS.FormBlock {
+  return block.template === "formblock"
+}
+
 function isHeroBlock(block: CMS.Block): block is CMS.HeroBlock {
   return block.template === "heroblock"
 }
 
 function isImageBlock(block: CMS.Block): block is CMS.ImageBlock {
   return block.template === "imageblock"
-}
-
-function isNewsletterBlock(block: CMS.Block): block is CMS.NewsletterBlock {
-  return block.template === "newsletterblock"
 }
 
 function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
@@ -51,10 +50,10 @@ function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
       return (<CardBlock data={block} />);
     } else if (isHeroBlock(block)) {
       return (<HeroBlock data={block} />);
+    } else if (isFormBlock(block)) {
+      return (<FormBlock data={block} />);
     } else if (isImageBlock(block)) {
       return (<ImageBlock data={block} />);
-    } else if (isNewsletterBlock(block)) {
-      return (<NewsletterBlock data={block} />);
     } else if (isTextBlock(block)) {
       return (<TextBlock data={block} />);
     }

@@ -1,0 +1,109 @@
+---
+import { mdToHtml } from '../utils/markdown'
+
+interface Props {
+  data: CMS.FormBlock
+}
+
+const { data } = Astro.props as Props
+const { title, description, submitText, footnote, rows } = data
+
+const descriptionHtml = mdToHtml(description)
+const footnoteHtml = mdToHtml(footnote)
+---
+
+<section>
+  <h2>{title}</h2>
+
+  {descriptionHtml}
+
+  <form>
+    {rows.map((row) => (
+      <div class='row'>
+        {row.fields.map((field) => (
+          <div>
+            <label for={field.id}>{field.title}{field.required && ' *'}</label>
+            {field.type === 'textarea' ? (
+              <textarea rows='4' name={field.id} id={field.id} />
+            ) : (
+              <input type={field.type} name={field.id} id={field.id} required={field.required} />
+            )}
+          </div>
+        ))}
+      </div>
+    ))}
+
+    <button type='submit'>{submitText}</button>
+  </form>
+
+  {footnoteHtml && (
+    <small>{footnoteHtml}</small>
+  )}
+</section>
+
+<style lang='scss'>
+  section {
+    padding-top: var(--container-row-gap);
+    max-width: var(--width-prose);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: var(--chisel-h3);
+    font-family: var(--font-family-base);
+    text-align: center;
+  }
+
+  form {
+    text-align: start;
+    margin-top: var(--spacer-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-sm);
+
+    & .row {
+      display: flex;
+      gap: var(--spacer-xs);
+
+      & * {
+        flex: 1;
+      }
+    }
+  }
+
+  section :global(a) {
+    text-decoration: none;
+    color: var(--chisel-secondary);
+  }
+
+  label {
+    font-weight: 400;
+    margin-bottom: var(--spacer-tiny);
+  }
+
+  input, textarea {
+    background: var(--chisel-neutral-100);
+
+    &:focus {
+      outline: none;
+      background: var(--chisel-neutral-50);
+    }
+  }
+
+  small {
+    display: block;
+    text-align: center;
+    margin: var(--spacer-sm) auto 0;
+  }
+
+  small :global(a) {
+    color: var(--chisel-primary);
+  }
+
+  @media (min-width: 640px) {
+    form {
+      gap: var(--spacer-md);
+    }
+  }
+</style>
