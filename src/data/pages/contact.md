@@ -5,14 +5,27 @@ description: I help curious and creative people find unique ways to navigate lif
   and get where they want to go in the process.
 image: "../assets/images/thumbnail2.png"
 blocks:
-- template: heroblock
-  cta:
-    url: ''
-    text: ''
-  title: Coming soon!
-  content: In the meantime, feel free to contact me directly at **sarah@sarahsu.co**!
-  image:
-    alt: ''
-    src: ''
+- template: newsletterblock
+  form:
+    submitText: Send
+    fields:
+    - id: first_name
+      title: First name
+      placeholder: ''
+      required: true
+      type: text
+    - id: last_name
+      title: Last name
+      required: false
+      type: text
+      placeholder: ''
+    - id: email
+      title: Email
+      placeholder: ''
+      required: true
+      type: text
+    footnote: asdf
+  title: Send me an email.
+  title_icon: false
 
 ---
