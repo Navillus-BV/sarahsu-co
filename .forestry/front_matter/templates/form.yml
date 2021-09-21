@@ -1,4 +1,96 @@
 ---
 label: Form
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
+- name: submitText
+  type: text
+  config:
+    required: true
+  label: Submit Text
+- name: footnote
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Footnote
+- name: rows
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: fields
+    type: field_group_list
+    fields:
+    - name: id
+      type: text
+      config:
+        required: true
+      label: ID
+      description: 'Unique identifier for the input field, ex: "name" or "email"'
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+      description: This is a description of the input field used for accessibility,
+        but currently it is not visible on the page.
+    - name: placeholder
+      type: text
+      config:
+        required: false
+      label: Placeholder Text
+      description: If provided, the placeholder text will be shown when no text has
+        been entered.<br><br>You probably want to use the Title instead, placeholders
+        aren't as accessible since they hidden when any text is provided.
+    - name: required
+      type: boolean
+      label: Required
+      description: True if the field must be filled in before submitting the form,
+        false if it is optional
+    - name: type
+      type: select
+      default: text
+      config:
+        required: true
+        options:
+        - text
+        - email
+        - number
+        - date
+        - textarea
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Input Type
+    config:
+      min: 1
+      max: 
+      labelField: 
+    label: Input Fields
+  config:
+    min: 1
+    max: 3
+    labelField: 
+  label: Input Rows
