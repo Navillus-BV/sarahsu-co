@@ -38,7 +38,7 @@ fields:
   - cardblock
   - imageblock
   - textblock
-  - newsletterblock
+  - form
   config:
     min: 
     max: 
