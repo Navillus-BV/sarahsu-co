@@ -86,6 +86,7 @@ declare namespace CMS {
   interface FormBlock {
     template: "formblock";
     title: string;
+    id: string;
     description?: Markdown;
     submitText: string;
     footnote?: string;
