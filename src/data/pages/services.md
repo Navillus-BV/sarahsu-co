@@ -45,10 +45,13 @@ blocks:
     src: "../assets/images/pexels-photo-167080.jpeg"
     alt: Lots of books on tall white shelves
   title: Collaboration
-  subtitle: Need a creative spark?
+  subtitle: Looking for a creative catalyst?
   content: Test content
   subtitleIcon: false
   flipped: false
-  ctas: []
+  ctas:
+  - text: Book a Call
+    url: https://tidycal.com/sarahsu
+    primary: false
 
 ---
