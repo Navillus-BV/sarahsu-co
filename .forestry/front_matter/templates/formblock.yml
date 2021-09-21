@@ -8,6 +8,14 @@ fields:
   config:
     required: true
   label: Title
+- name: id
+  type: text
+  config:
+    required: true
+  label: ID
+  description: This ID is used to track which form a submission was sent from (e.g.
+    "contact").<br><br>Don't change the ID once the form is live and has received
+    submissions!
 - name: description
   type: textarea
   default: ''
