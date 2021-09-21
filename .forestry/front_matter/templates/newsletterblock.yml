@@ -60,6 +60,7 @@ fields:
         - email
         - number
         - date
+        - textarea
         source:
           type: simple
           section: 
