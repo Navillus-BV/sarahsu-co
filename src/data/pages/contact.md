@@ -13,16 +13,6 @@ blocks:
   rows:
   - title: Name
     fields:
-    - id: message
-      title: Message
-      placeholder: ''
-      required: true
-      type: textarea
-    - id: email
-      title: Email
-      placeholder: ''
-      required: true
-      type: email
     - id: first_name
       title: First Name
       placeholder: ''
