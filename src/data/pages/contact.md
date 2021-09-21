@@ -7,7 +7,7 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: formblock
   title: Send me an email.
-  description: 'Just fill out the form below or email me here: [sarah@sarahsu.co](mailto:hello@sarahsu.co
+  description: 'Just fill out the form below or email me here: [hello@sarahsu.co](mailto:hello@sarahsu.co
     "hello@sarahsu.co")'
   submitText: Send
   rows:
