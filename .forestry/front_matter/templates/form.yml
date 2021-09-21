@@ -42,12 +42,6 @@ fields:
   - name: fields
     type: field_group_list
     fields:
-    - name: id
-      type: text
-      config:
-        required: true
-      label: ID
-      description: 'Unique identifier for the input field, ex: "name" or "email"'
     - name: title
       type: text
       config:
@@ -55,6 +49,12 @@ fields:
       label: Title
       description: This is a description of the input field used for accessibility,
         but currently it is not visible on the page.
+    - name: id
+      type: text
+      config:
+        required: true
+      label: ID
+      description: 'Unique identifier for the input field, ex: "name" or "email"'
     - name: placeholder
       type: text
       config:
@@ -88,7 +88,7 @@ fields:
     config:
       min: 1
       max: 
-      labelField: 
+      labelField: title
     label: Input Fields
   config:
     min: 1
