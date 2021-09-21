@@ -19,7 +19,7 @@ blocks:
   image:
     src: "../assets/images/1-1coachingimage.png"
     alt: Empty
-  title: 1-1 Coaching
+  title: ''
   subtitle: Looking for a trusted partner?
   subtitleIcon: false
   flipped: false
