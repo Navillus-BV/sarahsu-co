@@ -17,7 +17,7 @@ blocks:
 - template: imageblock
   theme: white
   image:
-    src: ''
+    src: "../assets/images/1-1coaching.png"
     alt: Empty
   title: 1-1 Coaching
   subtitle: Looking for a trusted partner?
