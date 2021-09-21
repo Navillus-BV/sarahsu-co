@@ -28,7 +28,7 @@ blocks:
       title: Message
       placeholder: ''
       required: true
-      type: text
+      type: textarea
     footnote: ''
   title: Send me an email.
   title_icon: false
