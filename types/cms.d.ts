@@ -44,7 +44,7 @@ declare namespace CMS {
       title: string;
       placeholder: string;
       required: boolean;
-      type: "text" | "email" | "number" | "date" | "textarea";
+      type: string;
     }[];
     submitText: string;
     footnote: string;
@@ -86,7 +86,7 @@ declare namespace CMS {
   interface NewsletterBlock {
     template: "newsletterblock";
     title: string;
-    description?: Markdown;
+    titleIcon: boolean;
     form: Form;
   }
 
