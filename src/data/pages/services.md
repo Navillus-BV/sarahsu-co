@@ -36,8 +36,8 @@ blocks:
   subtitleIcon: false
   flipped: false
   ctas:
-  - text: Learn more
-    url: "/teamcoaching"
+  - text: Book a Call
+    url: https://tidycal.com/sarahsu
     primary: false
 - template: imageblock
   theme: white
