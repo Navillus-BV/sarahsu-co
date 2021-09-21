@@ -23,6 +23,20 @@ blocks:
       placeholder: ''
       required: false
       type: text
+  - fields:
+    - id: email
+      placeholder: ''
+      required: true
+      type: email
+      title: Email
+    title: Email
+  - title: Message
+    fields:
+    - id: message
+      title: Message
+      placeholder: ''
+      required: true
+      type: textarea
   footnote: ''
 
 ---
