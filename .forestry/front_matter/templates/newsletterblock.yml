@@ -8,10 +8,15 @@ fields:
   config:
     required: false
   label: Title
-- name: title_icon
-  type: boolean
-  label: Title Icon
-  description: Whether or not to show the hummingbird icon next to the title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
 - name: form
   type: field_group
   config: {}
@@ -77,7 +82,7 @@ fields:
     type: textarea
     default: ''
     config:
-      required: true
+      required: false
       wysiwyg: true
       schema:
         format: markdown
