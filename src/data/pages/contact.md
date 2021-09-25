@@ -6,7 +6,7 @@ description: I help curious and creative people find unique ways to navigate lif
 image: "../assets/images/thumbnail2.png"
 blocks:
 - template: formblock
-  title: Get in touch!
+  title: Send me a message!
   description: 'Just fill out the form below or email me here: [hello@sarahsu.co](mailto:hello@sarahsu.co
     "hello@sarahsu.co")'
   submitText: Send
