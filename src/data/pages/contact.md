@@ -14,9 +14,14 @@ blocks:
   - title: Name
     fields:
     - id: first_name
-      title: Name
+      title: First Name
       placeholder: ''
       required: true
+      type: text
+    - id: last_name
+      title: Last Name
+      placeholder: ''
+      required: false
       type: text
   - fields:
     - id: email
