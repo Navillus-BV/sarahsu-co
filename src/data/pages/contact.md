@@ -13,15 +13,10 @@ blocks:
   rows:
   - title: Name
     fields:
-    - id: first_name
-      title: First Name
+    - id: name
+      title: Name
       placeholder: ''
       required: true
-      type: text
-    - id: last_name
-      title: Last Name
-      placeholder: ''
-      required: false
       type: text
   - fields:
     - id: email
