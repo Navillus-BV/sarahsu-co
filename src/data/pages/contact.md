@@ -14,7 +14,7 @@ blocks:
   - title: Name
     fields:
     - id: first_name
-      title: First Name
+      title: Name
       placeholder: ''
       required: true
       type: text
