@@ -7,13 +7,13 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
-    url: "/about"
+    url: ''
     text: ''
   image:
     src: "../assets/images/aurora-borealis.jpg"
     alt: Northern lights
-  title: Work with Me
-  content: Choose Your Adventure
+  title: Choose Your Adventure
+  content: ''
 - template: textblock
   theme: white
   title: Work with Me
