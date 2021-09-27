@@ -7,13 +7,19 @@ image: "../assets/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
-    url: ''
+    url: "/about"
     text: ''
-  title: Choose Your Adventure
-  content: ''
   image:
-    alt: ''
-    src: "../assets/images/pexels-pixabay-161173.jpeg"
+    src: "../assets/images/aurora-borealis.jpg"
+    alt: Northern lights
+  title: Work with Me
+  content: Choose Your Adventure
+- template: textblock
+  theme: white
+  title: Work with Me
+  content: 'Choose your adventure '
+  subtitle: ''
+  ctas: []
 - template: imageblock
   theme: white
   image:
