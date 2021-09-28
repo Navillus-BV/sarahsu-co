@@ -10,7 +10,7 @@ blocks:
     url: ''
     text: ''
   image:
-    src: "../assets/images/pexels-photo-6304755.jpeg"
+    src: "../assets/images/photo-1507608869274-d3177c8bb4c7.jpeg"
     alt: Northern lights
   title: Choose Your Adventure
   content: ''
