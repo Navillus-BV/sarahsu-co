@@ -10,16 +10,10 @@ blocks:
     url: ''
     text: ''
   image:
-    src: "../assets/images/aurora-borealis.jpg"
+    src: "../assets/images/pexels-photo-6304755.jpeg"
     alt: Northern lights
   title: Choose Your Adventure
   content: ''
-- template: textblock
-  theme: white
-  title: Work with Me
-  content: 'Choose your adventure '
-  subtitle: ''
-  ctas: []
 - template: imageblock
   theme: white
   image:
