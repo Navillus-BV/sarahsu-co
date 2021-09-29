@@ -6,7 +6,7 @@ description: I help curious and creative people find unique ways to navigate lif
 image: "../assets/images/thumbnail2.png"
 blocks:
 - template: imageblock
-  theme: white
+  theme: primary
   image:
     src: "../assets/images/photo-1429743305873-d4065c15f93e.jpeg"
     alt: Paths in a forest
