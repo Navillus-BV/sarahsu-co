@@ -25,47 +25,19 @@ blocks:
   subtitleIcon: false
   flipped: false
   ctas: []
-- template: imageblock
-  theme: white
-  image:
-    src: "../assets/images/1-1coachingimage.png"
-    alt: Empty
-  title: ''
-  subtitle: Looking for a trusted partner?
-  subtitleIcon: false
-  flipped: false
-  content: Test content
-  ctas:
-  - text: Book a Call
-    url: https://tidycal.com/sarahsu
-    primary: false
-- template: imageblock
-  theme: white
-  image:
-    src: "../assets/images/pexels-photo-3503098.jpeg"
-    alt: Lots of books on tall white shelves
-  subtitle: Looking for a group guide?
-  title: Team Coaching
-  content: Test content
-  subtitleIcon: false
-  flipped: false
-  ctas:
-  - text: Book a Call
-    url: https://tidycal.com/sarahsu
-    primary: false
-- template: imageblock
-  theme: white
-  image:
-    src: "../assets/images/pexels-photo-167080.jpeg"
-    alt: Lots of books on tall white shelves
-  title: Collaboration
-  subtitle: Looking for a creative catalyst?
-  content: Test content
-  subtitleIcon: false
-  flipped: false
-  ctas:
-  - text: Book a Call
-    url: https://tidycal.com/sarahsu
-    primary: false
+- template: cardblock
+  cards:
+  - content: “The best moments in our lives, are not the passive, receptive, relaxing
+      times—although such experiences can also be enjoyable, if we have worked hard
+      to attain them. The best moments usually occur when a person’s body or mind
+      is stretched to its limits in a voluntary effort to accomplish something difficult
+      and worthwhile."
+    cta:
+      text: Book a Free Intro Call
+      url: https://tidycal.com/sarahsu
+      primary: false
+    title: Coaching
+  title: Coaching
+  subtitle: ''
 
 ---
