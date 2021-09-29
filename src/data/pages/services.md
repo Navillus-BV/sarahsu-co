@@ -21,8 +21,7 @@ blocks:
     she has built, higher than any she has built so far; for a swimmer, it could be
     trying to beat his own record; for a violinist, mastering an intricate musical
     passage. For each person there are thousands of opportunities, challenges to expand
-    ourselves.”  \n― **Mihaly Csikszentmihalyi,** [**Flow: The Psychology of Optimal
-    Experience**](https://www.goodreads.com/work/quotes/64339)"
+    ourselves.”  \n― **Mihaly Csikszentmihalyi**"
   subtitleIcon: false
   flipped: false
   ctas: []
