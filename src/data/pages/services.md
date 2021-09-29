@@ -37,6 +37,26 @@ blocks:
       url: https://tidycal.com/sarahsu
       primary: false
     title: Coaching
+  - title: Team Coaching
+    content: “The best moments in our lives, are not the passive, receptive, relaxing
+      times—although such experiences can also be enjoyable, if we have worked hard
+      to attain them. The best moments usually occur when a person’s body or mind
+      is stretched to its limits in a voluntary effort to accomplish something difficult
+      and worthwhile."
+    cta:
+      text: Book a Free Intro Call
+      url: https://tidycal.com/sarahsu
+      primary: false
+  - title: Collaboration
+    content: “The best moments in our lives, are not the passive, receptive, relaxing
+      times—although such experiences can also be enjoyable, if we have worked hard
+      to attain them. The best moments usually occur when a person’s body or mind
+      is stretched to its limits in a voluntary effort to accomplish something difficult
+      and worthwhile."
+    cta:
+      text: Book a Free Intro Call
+      url: https://tidycal.com/sarahsu
+      primary: false
   title: Coaching
   subtitle: ''
 
