@@ -20,7 +20,7 @@ const contentHtml = mdToHtml(content)
   </main>
 
   {cta && (
-    <a class={clsx({ button: true, primary: cta.primary, secondary: !cta.primary })} href={cta.url}>{cta.text}</a>
+    <a class={clsx({ button: true, small: true, primary: cta.primary, secondary: !cta.primary })} href={cta.url}>{cta.text}</a>
   )}
 </article>
 
@@ -34,8 +34,7 @@ const contentHtml = mdToHtml(content)
     align-items: center;
     text-align: center;
     border-radius: 0.5rem;
-    width: 100%;
-    max-width: 35ch;
+    max-width: 40ch;
   }
 
   h4 {
@@ -53,5 +52,9 @@ const contentHtml = mdToHtml(content)
   main {
     margin: var(--spacer-md) 0 var(--spacer-sm);
     flex: 1;
+  }
+
+  .button {
+    white-space: break-spaces;
   }
 </style>
