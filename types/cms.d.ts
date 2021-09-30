@@ -118,13 +118,7 @@ declare namespace CMS {
     description: string;
     image: string;
     blocks: Block[];
-  }
-
-  interface ContentPage {
-    title: string;
-    description: string;
-    image: string;
-    content: Markdown;
+    html?: string;
   }
 
   interface Menu {

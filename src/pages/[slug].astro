@@ -10,7 +10,10 @@ export async function getStaticPaths() {
         slug: page.href.slice(1)
       },
       props: {
-        page
+        page: {
+          ...page,
+          html: astro.html
+        }
       }
     }
   })

@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { content } = Astro.props as Props
-const { title, description, image, blocks } = content
+const { title, description, image, blocks, html } = content
 
 const hasHeroBlock = blocks.some(isHeroBlock)
 
@@ -58,4 +58,23 @@ function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
       return (<TextBlock data={block} />);
     }
   })}
+
+  {html && html.length && (
+    <section>
+      {html}
+    </section>
+  )}
 </Layout>
+
+<style lang='scss'>
+  section {
+    max-width: var(--width-prose);
+    margin: 0 auto;
+
+    & :global(h1, h2, h3, h4, h5, h6) {
+      font-family: var(--font-family-base);
+      text-align: start;
+      margin: 1.5em 0 0.5em;
+    }
+  }
+</style>
