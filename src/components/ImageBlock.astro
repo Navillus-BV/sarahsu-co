@@ -25,7 +25,7 @@ const contentHtml = mdToHtml(content)
 const primary = theme === 'primary'
 ---
 
-<section class={clsx({ 'full-bleed': true, flipped, primary })}>
+<section class={clsx({ 'full-bleed': true, footer: ctas.length > 0, flipped, primary })}>
   <div class='container'>
     <article>
       <header>
@@ -59,12 +59,16 @@ const primary = theme === 'primary'
   article {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 'title' 'image' 'content' 'footer';
+    grid-template-areas: 'title' 'image' 'content';
     gap: var(--spacer-md);
     align-items: center;
     text-align: center;
     margin: 0 auto;
     max-width: var(--width-prose);
+
+    &.footer {
+      grid-template-areas: 'title' 'image' 'content' 'footer';
+    }
 
     & :global(ul) {
       list-style: none;
@@ -128,10 +132,14 @@ const primary = theme === 'primary'
   @media screen and (min-width: 979px) {
     article {
       grid-template-columns: 1fr 2fr;
-      grid-template-areas: 'image title' 'image content' 'image footer';
-      column-gap: var(--spacer-lg);
+      grid-template-areas: 'image title' 'image content';
+      gap: 0 var(--spacer-lg);
       text-align: start;
       max-width: unset;
+
+      &.footer {
+        grid-template-areas: 'image title' 'image content' 'image footer';
+      }
     }
 
     article :global(.title) {

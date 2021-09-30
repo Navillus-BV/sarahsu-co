@@ -20,7 +20,7 @@ const contentHtml = mdToHtml(content)
   </main>
 
   {cta && (
-    <a class={clsx({ button: true, small: true, primary: cta.primary, secondary: !cta.primary })} href={cta.url}>{cta.text}</a>
+    <a class={clsx({ button: true, primary: cta.primary, secondary: !cta.primary })} href={cta.url}>{cta.text}</a>
   )}
 </article>
 

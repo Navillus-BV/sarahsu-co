@@ -27,17 +27,21 @@ const { title, subtitle, subtitleIcon, alt, class: className = '' } = Astro.prop
 ))}
 
 <style>
-  .h5 {
+  h2 {
+
+    margin: 0;
+  }
+
+  h2.h5 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
     font-weight: 400;
     font-family: var(--font-family-base);
     text-transform: uppercase;
   }
 
-  .h5 :global(svg) {
+  h2 :global(svg) {
     margin-left: var(--spacer-sm);
     margin-right: calc(-3rem - var(--spacer-sm));
   }

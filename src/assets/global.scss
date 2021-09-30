@@ -138,11 +138,6 @@ button,
   }
 }
 
-button.small,
-.button.small {
-  font-size: var(--chisel-h6);
-}
-
 button.secondary,
 .button.secondary {
   background: var(--chisel-primary-dark);
@@ -244,11 +239,6 @@ h6,
   .container {
     grid-template-columns: 1fr calc(100% - 4rem) 1fr;
     column-gap: 2rem;
-  }
-
-  button.small,
-  .button.small {
-    font-size: var(--chisel-p);
   }
 }
 
