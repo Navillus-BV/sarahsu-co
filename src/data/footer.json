@@ -1,6 +1,5 @@
 {
   "legal_pages": [
-    "src/data/pages/privacy-policy.md",
-    "src/data/pages/terms-conditions.md"
+    "src/data/pages/privacy-policy.md"
   ]
 }
