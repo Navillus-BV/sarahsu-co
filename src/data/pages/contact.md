@@ -6,22 +6,17 @@ description: I help curious and creative people find unique ways to navigate lif
 image: "../assets/images/thumbnail2.png"
 blocks:
 - template: formblock
-  title: Send me an email.
-  description: 'Just fill out the form below or email me here: [sarah@sarahsu.co](mailto:sarah@sarahsu.co
-    "sarah@sarahsu.co")'
+  title: Send me a message!
+  description: 'Just fill out the form below or email me here: [hello@sarahsu.co](mailto:hello@sarahsu.co
+    "hello@sarahsu.co")'
   submitText: Send
   rows:
   - title: Name
     fields:
-    - id: first_name
-      title: First Name
+    - id: name
+      title: Name
       placeholder: ''
       required: true
-      type: text
-    - id: last_name
-      title: Last Name
-      placeholder: ''
-      required: false
       type: text
   - fields:
     - id: email
