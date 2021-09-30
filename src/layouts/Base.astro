@@ -9,7 +9,7 @@ interface Props {
   image: string
   canonicalURL: URL
   pathname: string
-  showHeader: boolean
+  showHeader?: boolean
 }
 
 const {
@@ -18,7 +18,7 @@ const {
   image,
   canonicalURL,
   pathname,
-  showHeader
+  showHeader = true
 } = Astro.props as Props
 ---
 

@@ -120,6 +120,13 @@ declare namespace CMS {
     blocks: Block[];
   }
 
+  interface ContentPage {
+    title: string;
+    description: string;
+    image: string;
+    content: Markdown;
+  }
+
   interface Menu {
     pages: string[];
     cta?: CallToAction;
