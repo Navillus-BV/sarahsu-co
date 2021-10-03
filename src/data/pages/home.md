@@ -59,7 +59,7 @@ blocks:
       text: Find out how
       url: "/coaching"
       primary: false
-  - title: Consulting
+  - title: Organizational Consulting
     content: |-
       **Looking for perspective?**
 
