@@ -23,11 +23,12 @@ const {
 const contentHtml = mdToHtml(content)
 
 const primary = theme === 'primary'
+const hasFooter = ctas.length > 0
 ---
 
-<section class={clsx({ 'full-bleed': true, footer: ctas.length > 0, flipped, primary })}>
+<section class={clsx({ 'full-bleed': true, flipped, primary })}>
   <div class='container'>
-    <article>
+    <article class={clsx({ footer: hasFooter })}>
       <header>
         <BlockTitle title={title} subtitle={subtitle} alt={primary} subtitleIcon={subtitleIcon} class='title' />
       </header>

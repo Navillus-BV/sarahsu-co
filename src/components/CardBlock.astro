@@ -11,7 +11,7 @@
   const { title, subtitle, cards } = data
 ---
 
-<section>
+<section style={`--card-count: ${cards.length || 1}`}>
   <Icon icon='chevron-right' size={64} alt='' />
 
   <BlockTitle title={title} subtitle={subtitle} />
@@ -48,14 +48,19 @@
 
   main {
     order: 3;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--spacer-md);
     align-items: center;
     justify-content: center;
     margin-top: var(--spacer-md);
     align-items: center;
     padding-bottom: 12px;
+
+    & > :global(*) {
+      justify-self: center;
+      height: 100%;
+    }
 
     & :global(b) {
       color: var(--chisel-secondary);
@@ -64,7 +69,7 @@
 
   @media screen and (min-width: 1240px) {
     main {
-      flex-direction: row;
+      grid-template-columns: repeat(var(--card-count), 1fr);
     }
   }
 
