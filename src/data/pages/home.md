@@ -50,7 +50,7 @@ blocks:
 - template: cardblock
   title: Anything is possible.
   cards:
-  - title: Coaching
+  - title: 1-1 & Team Coaching
     content: |-
       **Looking for a trusted partner?**
 
