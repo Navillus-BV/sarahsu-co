@@ -59,9 +59,9 @@ blocks:
       text: Find out how
       url: "/coaching"
       primary: false
-  - title: Organizational Consulting
+  - title: Consulting
     content: |-
-      **Looking for perspective?**
+      **For Organizations**
 
       I can help you develop and refine an intentional, adaptable people strategy that develops with your business.
     cta:
