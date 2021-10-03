@@ -50,29 +50,29 @@ blocks:
 - template: cardblock
   title: Anything is possible.
   cards:
-  - title: 1-1 Coaching
+  - title: Coaching
     content: |-
-      **Looking for a trusted partner?**
+      **For Individuals & Teams**
 
-      I can help you focus on what matters and make a plan to get where you want to go.
+      We'll focus on what matters and make an actionable plan to leverage your unique strengths to get you where you want to go.
     cta:
       text: Find out how
       url: "/coaching"
       primary: false
-  - title: Team Coaching
+  - title: Consulting
     content: |-
-      **Looking for a group guide?**
+      **For Organizations**
 
-      I can help you and your team leverage your unique strengths to get results with less effort.
+      We'll develop intentional people strategies that align and adapt with your business objectives.
     cta:
       text: Find out how
       url: "/teamcoaching"
       primary: false
   - title: Collaboration
     content: |-
-      **Looking for a creative catalyst?**
+      **For Creative Partners**
 
-      I can bring a fresh perspective to new or ongoing projects to help you generate ideas and insights.
+      We'll work together on new or ongoing projects to bring your ideas to life using a balanced approach of both focus and exploration.
     cta:
       text: Find out how
       url: "/collaboration"
