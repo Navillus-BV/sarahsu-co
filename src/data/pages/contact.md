@@ -3,7 +3,7 @@ href: "/contact"
 title: Contact
 description: I help curious and creative people find unique ways to navigate life
   and get where they want to go in the process.
-image: "../assets/images/thumbnail2.png"
+image: images/thumbnail2.png
 blocks:
 - template: formblock
   title: Send me a message!
