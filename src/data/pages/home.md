@@ -50,9 +50,9 @@ blocks:
 - template: cardblock
   title: Anything is possible.
   cards:
-  - title: 1-1 & Team Coaching
+  - title: Coaching
     content: |-
-      **Looking for a trusted partner?**
+      **For Individuals & Teams**
 
       I can help you focus on what matters and make a plan to get where you want to go.
     cta:
