@@ -59,11 +59,11 @@ blocks:
       text: Find out how
       url: "/coaching"
       primary: false
-  - title: Team Coaching
+  - title: Consulting
     content: |-
-      **Looking for a group guide?**
+      **Looking for a strategic perspective?**
 
-      I can help you and your team leverage your unique strengths to get results with less effort.
+      I can help you develop and refine an intentional, adaptable people strategy capable of developing with your business.
     cta:
       text: Find out how
       url: "/teamcoaching"
