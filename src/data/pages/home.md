@@ -11,8 +11,8 @@ blocks:
   title: Looking for a little inspiration?
   content: ''
   image:
-    alt: Sarah Sullivan
-    src: "../assets/images/aurora-borealis.jpg"
+    alt: Aurora borealis
+    src: "/images/aurora-borealis.jpg"
 - template: textblock
   text: see services and pricing
   title: You already have everything you need.
