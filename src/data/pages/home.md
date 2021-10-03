@@ -54,7 +54,7 @@ blocks:
     content: |-
       **For Individuals & Teams**
 
-      We'll focus on what matters and make a customized action plan to get you where you want to go.
+      We'll focus on what matters and make a plan to get you where you want to go.
     cta:
       text: Find out how
       url: "/coaching"
