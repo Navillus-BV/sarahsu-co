@@ -72,7 +72,7 @@ blocks:
     content: |-
       **For Creative Partners**
 
-      I can bring a fresh perspective to new or ongoing projects to help you generate ideas and insights.
+      We'll work together on new or ongoing projects to bring your ideas to life using a balanced approach of both focus and exploration.
     cta:
       text: Find out how
       url: "/collaboration"
