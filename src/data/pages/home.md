@@ -70,7 +70,7 @@ blocks:
       primary: false
   - title: Collaboration
     content: |-
-      **Looking for a creative catalyst?**
+      **For Creative Partners**
 
       I can bring a fresh perspective to new or ongoing projects to help you generate ideas and insights.
     cta:
