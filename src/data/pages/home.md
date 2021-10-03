@@ -2,7 +2,7 @@
 title: Home
 description: I help curious and creative people find unique ways to navigate life
   and get where they want to go in the process.
-image: images/thumbnail2.png
+image: "/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
@@ -12,7 +12,7 @@ blocks:
   content: ''
   image:
     alt: Sarah Sullivan
-    src: images/aurora-borealis.jpg
+    src: "/images/aurora-borealis.jpg"
 - template: textblock
   text: see services and pricing
   title: You already have everything you need.
@@ -31,7 +31,7 @@ blocks:
     url: "/workwithme"
 - template: imageblock
   image:
-    src: images/sarah.jpg
+    src: "/images/sarah.jpg"
     alt: Sarah Sullivan
   title: Getting from here to there.
   muted: false
