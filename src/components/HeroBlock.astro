@@ -16,7 +16,7 @@ const contentHtml = mdToHtml(content)
 
 <section class='full-bleed'>
   {image && image.src && (
-    <img aria-hidden="true" alt={image.alt} src={Astro.resolve(image.src)} />
+    <img aria-hidden="true" alt={image.alt} src={image.src} />
   )}
   
   <div class={`container ${clsx({ dark: !image.src })}`}>

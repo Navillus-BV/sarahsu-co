@@ -15,7 +15,7 @@ const {
   canonicalURL
 } = Astro.props as Props
 
-const imageAbsolute = image ? Astro.resolve(image) : `${site.url}share.png`
+const imageAbsolute = image ? `${site.url}${image}` : `${site.url}share.png`
 const pageTitle = title || site.title
 const fullTitle = [title, site.title]
   .filter(Boolean)

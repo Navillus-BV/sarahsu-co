@@ -32,7 +32,7 @@ const primary = theme === 'primary'
         <BlockTitle title={title} subtitle={subtitle} alt={primary} subtitleIcon={subtitleIcon} class='title' />
       </header>
 
-      <img alt={image.alt} src={Astro.resolve(image.src)} />
+      <img alt={image.alt} src={image.src} />
 
       <main>
         {contentHtml}
