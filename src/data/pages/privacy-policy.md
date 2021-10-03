@@ -2,11 +2,13 @@
 title: Privacy Policy
 description: I help curious and creative people find unique ways to navigate life
   and get where they want to go in the process.
-image: "../assets/images/thumbnail2.png"
+image: "/images/thumbnail2.png"
 blocks: []
 href: "/privacy"
 
 ---
+## Privacy Policy
+
 We want to process as little personal information as possible when you use our website. That's why we've chosen Fathom Analytics for our website analytics, which doesn't use cookies and complies with the GDPR, ePrivacy (including PECR), COPPA and CCPA. Using this privacy-friendly website analytics software, your IP address is only briefly processed, and we (running this website) have no way of identifying you. As per the CCPA, your personal information is de-identified. You can read more about this on [Fathom Analytics' website](https://usefathom.com/compliance "Fathom Analytics' website").
 
 The purpose of us using this software is to understand our website traffic in the most privacy-friendly way possible so that we can continually improve our website and business. The lawful basis as per the GDPR is "f); where our legitimate interests are to improve our website and business continually." As per the explanation, no personal data is stored over time.
