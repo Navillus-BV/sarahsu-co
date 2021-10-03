@@ -54,7 +54,7 @@ blocks:
     content: |-
       **For Individuals & Teams**
 
-      I can help you focus on what matters and make a plan to get where you want to go.
+      We'll focus on what matters and make an actionable plan to leverage your unique strengths to get you where you want to go.
     cta:
       text: Find out how
       url: "/coaching"
