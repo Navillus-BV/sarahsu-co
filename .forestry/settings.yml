@@ -26,8 +26,8 @@ sections:
   - page
 upload_dir: public/images
 public_path: images
-front_matter_path: ''
-use_front_matter_path: 
+front_matter_path: "/images"
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_output_directory: dist
