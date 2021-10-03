@@ -63,7 +63,7 @@ blocks:
     content: |-
       **For Organizations**
 
-      We'll develop and refine an intentional people strategy that aligns and adapts with your business objectives.
+      We'll develop intentional people strategies that align and adapt with your business objectives.
     cta:
       text: Find out how
       url: "/teamcoaching"
