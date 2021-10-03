@@ -3,12 +3,12 @@ href: "/workwithme"
 title: Work with Me
 description: I help curious and creative people find unique ways to navigate life
   and get where they want to go in the process.
-image: "../assets/images/thumbnail2.png"
+image: images/thumbnail2.png
 blocks:
 - template: imageblock
   theme: white
   image:
-    src: "../assets/images/photo-1429743305873-d4065c15f93e.jpeg"
+    src: images/photo-1429743305873-d4065c15f93e.jpeg
     alt: Paths in a forest
   title: Choose Your Adventure
   subtitle: ''
