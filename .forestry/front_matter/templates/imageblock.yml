@@ -45,7 +45,7 @@ fields:
     config:
       maxSize: 64
     label: Image
-    default: "../assets/images/library.jpg"
+    default: "/images/library.jpg"
   - name: alt
     type: text
     config:
