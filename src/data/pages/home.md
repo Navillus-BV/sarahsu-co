@@ -54,7 +54,7 @@ blocks:
     content: |-
       **Looking for a trusted partner?**
 
-      I can help you or your team focus on what matters and make a plan to get where you want to go.
+      I can help you focus on what matters and make a plan to get where you want to go.
     cta:
       text: Find out how
       url: "/coaching"
