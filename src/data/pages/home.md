@@ -63,7 +63,7 @@ blocks:
     content: |-
       **Looking for a strategic perspective?**
 
-      I can help you develop and refine an intentional, adaptable people strategy capable of developing with your business.
+      I can help you develop and refine an intentional, adaptable people strategy that develops with your business.
     cta:
       text: Find out how
       url: "/teamcoaching"
