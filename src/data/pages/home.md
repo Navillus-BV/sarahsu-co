@@ -61,7 +61,7 @@ blocks:
       primary: false
   - title: Consulting
     content: |-
-      **Looking for a strategic perspective?**
+      **Looking for perspective?**
 
       I can help you develop and refine an intentional, adaptable people strategy that develops with your business.
     cta:
