@@ -1,4 +1,6 @@
 ---
+import { v4 as uuid } from '@lukeed/uuid'
+
 interface Props {
   width: string
   height: string
@@ -6,12 +8,14 @@ interface Props {
   theme?: "primary" | "gradient" | "secondary" | "muted"
 }
 
+const filterId = uuid()
+
 const { width, height, opacity = 1, theme = "primary" } = Astro.props as Props
 
 const fill = theme === "primary"
   ? "var(--chisel-primary)"
   : theme === "gradient"
-    ? "url(#linear)"
+    ? `url(#${filterId})`
     : theme === "muted"
       ? "var(--chisel-neutral-900)"
       : "var(--chisel-neutral-50)"
@@ -19,7 +23,7 @@ const fill = theme === "primary"
 
 <svg viewBox="0 0 227 176" width={width} height={height} fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="linear" x1="100%" y1="50%" x2="0%" y2="50%">
+    <linearGradient id={filterId} x1="100%" y1="50%" x2="0%" y2="50%">
       <stop offset="0%" stop-color="rgb(3, 76, 92)" />
       <stop offset="13%" stop-color="rgb(3, 76, 92)" />
       <stop offset="50%" stop-color="rgb(24, 140, 123)" />
