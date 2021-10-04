@@ -7,7 +7,7 @@ image: "/images/thumbnail3.png"
 blocks:
 - template: textblock
   theme: white
-  title: Coming Soon!
+  title: Coming soon!
   content: Until this page is updated, feel free to reach contact me about what you're
     looking for!
   ctas:
