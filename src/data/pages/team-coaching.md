@@ -1,6 +1,6 @@
 ---
-href: "/teamcoaching"
-title: Team Coaching
+href: "/consulting"
+title: Consulting
 description: I help curious and creative people find unique ways to navigate life
   and get where they want to go in the process.
 image: "/images/thumbnail3.png"
