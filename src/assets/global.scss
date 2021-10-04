@@ -113,13 +113,11 @@
 a {
   color: inherit;
 
-  &.nohover:hover,
-  &.nohover:active {
+  &.nohover:hover {
     color: inherit;
   }
 
-  &:not(.button).alt:hover,
-  &:not(.button).alt:active {
+  &:not(.button).alt:hover {
     color: inherit;
     text-decoration: underline;
   }
@@ -131,8 +129,7 @@ button,
   border-color: var(--primary-gradient);
   font-size: var(--chisel-h5);
 
-  &:hover,
-  &:active {
+  &:hover {
     background: var(--chisel-neutral-50);
     color: var(--chisel-primary);
   }
@@ -144,8 +141,7 @@ button.secondary,
   border-color: var(--chisel-primary-dark);
   color: var(--chisel-neutral-50);
 
-  &:hover,
-  &:active {
+  &:hover {
     background: var(--chisel-neutral-50);
     color: var(--chisel-primary-dark);
   }
@@ -157,8 +153,7 @@ button.alt,
   border-color: var(--chisel-neutral-50);
   color: var(--chisel-secondary);
 
-  &:hover,
-  &:active {
+  &:hover {
     background: var(--chisel-primary);
     color: var(--chisel-neutral-50);
   }
@@ -177,8 +172,7 @@ button.icon,
   color: inherit;
   border-radius: 9999px;
 
-  &:hover,
-  &:active {
+  &:hover {
     background: transparent;
     color: inherit;
     border-color: currentColor;
