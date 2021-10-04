@@ -35,6 +35,6 @@ blocks:
       url: "/collaboration"
       primary: false
   title: Anything is Possible.
-  subtitle: Work with Me
+  subtitle: ''
 
 ---
