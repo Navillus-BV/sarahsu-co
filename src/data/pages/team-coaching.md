@@ -20,5 +20,14 @@ blocks:
   subtitle: ''
   subtitleIcon: false
   flipped: false
+- template: textblock
+  theme: white
+  title: Coming Soon!
+  content: Until this page is updated, feel free to reach contact me about what you're
+    looking for!
+  ctas:
+  - text: Message Me
+    url: "/contact"
+  subtitle: ''
 
 ---
