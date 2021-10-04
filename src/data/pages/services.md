@@ -27,37 +27,34 @@ blocks:
   ctas: []
 - template: cardblock
   cards:
-  - content: “The best moments in our lives, are not the passive, receptive, relaxing
-      times—although such experiences can also be enjoyable, if we have worked hard
-      to attain them. The best moments usually occur when a person’s body or mind
-      is stretched to its limits in a voluntary effort to accomplish something difficult
-      and worthwhile."
+  - content: |-
+      **For Individuals & Teams**
+
+      We'll focus on what matters to you and make a plan to get you where you want to go.
     cta:
-      text: Book a Free Intro Call
-      url: https://tidycal.com/sarahsu
+      text: Learn More
+      url: "/coaching"
       primary: false
     title: Coaching
-  - title: Team Coaching
-    content: “The best moments in our lives, are not the passive, receptive, relaxing
-      times—although such experiences can also be enjoyable, if we have worked hard
-      to attain them. The best moments usually occur when a person’s body or mind
-      is stretched to its limits in a voluntary effort to accomplish something difficult
-      and worthwhile."
+  - title: Consulting
+    content: |-
+      **For Organizations**
+
+      We'll develop intentional people strategies that align and adapt with your business objectives.
     cta:
-      text: Book a Free Intro Call
-      url: https://tidycal.com/sarahsu
+      text: Learn More
+      url: "/consulting"
       primary: false
   - title: Collaboration
-    content: “The best moments in our lives, are not the passive, receptive, relaxing
-      times—although such experiences can also be enjoyable, if we have worked hard
-      to attain them. The best moments usually occur when a person’s body or mind
-      is stretched to its limits in a voluntary effort to accomplish something difficult
-      and worthwhile."
+    content: |-
+      **For Creative Partners**
+
+      We'll work together to bring your ideas to life with a dynamic blend of focus and exploration.
     cta:
-      text: Book a Free Intro Call
-      url: https://tidycal.com/sarahsu
+      text: Learn More
+      url: "/collaboration"
       primary: false
-  title: Anything is Possible
+  title: Anything is Possible.
   subtitle: Work with Me
 
 ---
