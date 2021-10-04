@@ -30,6 +30,8 @@ front_matter_path: "/images"
 use_front_matter_path: true
 file_template: ":filename:"
 build:
+  preview_env:
+  - GIT_LFS_SKIP_SMUDGE=1
   preview_output_directory: dist
   install_dependencies_command: yarn install
   preview_docker_image: forestryio/node:12
