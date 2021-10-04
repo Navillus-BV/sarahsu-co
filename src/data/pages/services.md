@@ -32,7 +32,7 @@ blocks:
 
       We'll focus on what matters to you and make a plan to get you where you want to go.
     cta:
-      text: Learn More
+      text: Find Out How
       url: "/coaching"
       primary: false
     title: Coaching
@@ -42,7 +42,7 @@ blocks:
 
       We'll develop intentional people strategies that align and adapt with your business objectives.
     cta:
-      text: Learn More
+      text: Find Out How
       url: "/consulting"
       primary: false
   - title: Collaboration
@@ -51,7 +51,7 @@ blocks:
 
       We'll work together to bring your ideas to life with a dynamic blend of focus and exploration.
     cta:
-      text: Learn More
+      text: Find Out How
       url: "/collaboration"
       primary: false
   title: Anything is Possible.
