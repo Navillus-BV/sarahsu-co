@@ -1,6 +1,6 @@
 ---
 href: "/coaching"
-title: 1-1 Coaching
+title: Coaching
 description: I help curious and creative people find unique ways to navigate life
   and get where they want to go in the process.
 image: "/images/thumbnail3.png"
