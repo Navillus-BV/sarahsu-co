@@ -71,7 +71,7 @@ function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
     max-width: var(--width-prose);
     margin: 0 auto;
 
-    & :global(h1, h2, h3, h4, h5, h6) {
+    & :global(h1), & :global(h2), & :global(h3), & :global(h4), & :global(h5), & :global(h6) {
       font-family: var(--font-family-base);
       text-align: start;
       margin: 1.5em 0 0.5em;

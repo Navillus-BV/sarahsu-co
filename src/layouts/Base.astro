@@ -74,6 +74,10 @@ const {
     line-height: 1.5;
   }
 
+  body > .container + .container {
+    padding-top: var(--container-row-gap);
+  }
+
   a[href="#main"].sr-only.sr-only-focusable {
     top: var(--spacer-xs);
     left: var(--spacer-xs);
