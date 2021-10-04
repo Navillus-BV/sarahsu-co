@@ -66,7 +66,7 @@ blocks:
       We'll develop intentional people strategies that align and adapt with your business objectives.
     cta:
       text: Find out how
-      url: "/teamcoaching"
+      url: "/consulting"
       primary: false
   - title: Collaboration
     content: |-
