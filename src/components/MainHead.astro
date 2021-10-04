@@ -1,5 +1,5 @@
 ---
-import path from 'node:path'
+import urljoin from 'url-join'
 import site from '../data/site.json'
 
 interface Props {
@@ -16,7 +16,7 @@ const {
   canonicalURL
 } = Astro.props as Props
 
-const imageAbsolute = path.join(site.url, image || 'share.png')
+const imageAbsolute = urljoin(site.url, image)
 const pageTitle = title || site.title
 const fullTitle = [title, site.title]
   .filter(Boolean)

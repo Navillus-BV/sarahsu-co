@@ -5,6 +5,7 @@
   "domain": "sarahsu.co",
   "author": "Sarah Sullivan",
   "social": {
-    "twitter_card": "summary_large_image"
+    "twitter_card": "summary_large_image",
+    "image": "/images/thumbnail2.png"
   }
 }
