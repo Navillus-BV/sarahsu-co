@@ -33,7 +33,7 @@ const hasFooter = ctas.length > 0
         <BlockTitle title={title} subtitle={subtitle} alt={primary} subtitleIcon={subtitleIcon} class='title' />
       </header>
 
-      <img alt={image.alt} src={image.src} />
+      <img alt={image.alt} src={`${image.src}?nf_resize=smartcrop&w=400&h=400`} />
 
       <main>
         {contentHtml}
