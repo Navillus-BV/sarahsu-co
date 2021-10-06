@@ -17,11 +17,11 @@ const contentHtml = mdToHtml(content)
 <section class='full-bleed'>
   {image && image.src && (
     <picture aria-hidden="true">
-      <source srcset={`${image.src}?nf_resize=smartcrop&w=414`} media="(max-width: 414px)" />
-      <source srcset={`${image.src}?nf_resize=smartcrop&w=979`} media="(max-width: 979px)" />
-      <source srcset={`${image.src}?nf_resize=smarcrop&w=1440`} media="(max-width: 1440px)" />
-      <source srcset={`${image.src}?nf_resize=smarcrop&w=1920`} />
-      <img src={`${image.src}?nf_resize=smartcrop&w=1920`} alt={image.alt} />
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=414&h=233`} media="(max-width: 414px and max-height: 233px)" />
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=979&h=550`} media="(max-width: 979px and max-height: 550px)" />
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=1440&h=810`} media="(max-width: 1440px and max-height: 810px)" />
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=1920&h=1080`} />
+      <img src={`${image.src}?nf_resize=smartcrop&w=1920&h=1080`} alt={image.alt} />
     </picture>
   )}
   
