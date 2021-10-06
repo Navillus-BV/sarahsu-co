@@ -17,7 +17,8 @@ const contentHtml = mdToHtml(content)
 <section class='full-bleed'>
   {image && image.src && (
     <picture aria-hidden="true">
-      <source srcset={`${image.src}?nf_resize=smartcrop&w=1443&h=812`} media="(max-width: 414px)" />
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=1185&h=667`} media="(max-height: 667px)" />
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=1443&h=812`} media="(max-height: 812px)" />
       <source srcset={`${image.src}?nf_resize=smartcrop&w=1920&h=1080`} />
       <img src={`${image.src}?nf_resize=smartcrop&w=1920&h=1080`} alt={image.alt} />
     </picture>
