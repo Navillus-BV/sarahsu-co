@@ -12,41 +12,25 @@
 ---
 
 <section style={`--card-count: ${cards.length || 1}`}>
-  <Icon icon='chevron-right' size={64} alt='' />
-
   <BlockTitle title={title} subtitle={subtitle} />
 
   <main>
-    {cards.map((card) => (<Card data={card} />))}
-  </main>
+    <Icon icon='chevron-right' size={64} alt='' />
 
-  <Icon icon='chevron-left' size={64} alt='' />
+    {cards.map((card) => (<Card data={card} />))}
+
+    <Icon icon='chevron-left' size={64} alt='' />
+  </main>
 </section>
 
 <style lang="scss">
   section {
     display: flex;
     flex-direction: column;
-    position: relative;
-
-    & > :global(svg) {
-      display: none;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      color: var(--chisel-secondary);
-
-      &:first-of-type {
-        left: -7rem;
-      }
-
-      &:last-of-type {
-        right: -7rem;
-      }
-    }
   }
 
   main {
+    position: relative;
     order: 3;
     display: grid;
     grid-template-columns: 1fr;
@@ -65,6 +49,22 @@
     & :global(b) {
       color: var(--chisel-secondary);
     }
+
+    & > :global(svg) {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      color: var(--chisel-secondary);
+
+      &:first-of-type {
+        left: -7rem;
+      }
+
+      &:last-of-type {
+        right: -7rem;
+      }
+    }
   }
 
   @media screen and (min-width: 1240px) {
@@ -74,7 +74,7 @@
   }
 
   @media screen and (min-width: 1440px) {
-    section > :global(svg) {
+    main > :global(svg) {
       display: block;
     }
   }

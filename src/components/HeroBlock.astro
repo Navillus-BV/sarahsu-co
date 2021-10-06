@@ -14,9 +14,14 @@ const { title, cta, content, image } = data
 const contentHtml = mdToHtml(content)
 ---
 
-<section class='full-bleed'>
+<section class='full-bleed'  style="height: 100vh; height: --webkit-fill-available; height: moz-available; height: fill-available; max-height: 1080px;">
   {image && image.src && (
-    <img aria-hidden="true" alt={image.alt} src={image.src} />
+    <picture aria-hidden="true">
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=1185&h=667`} media="(max-height: 667px)" />
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=1443&h=812`} media="(max-height: 812px)" />
+      <source srcset={`${image.src}?nf_resize=smartcrop&w=1920&h=1080`} />
+      <img src={`${image.src}?nf_resize=smartcrop&w=1920&h=1080`} alt={image.alt} />
+    </picture>
   )}
   
   <div class={`container ${clsx({ dark: !image.src })}`}>
@@ -46,18 +51,21 @@ const contentHtml = mdToHtml(content)
     position: relative;
     padding: 0 0 var(--spacer-sm);
     color: var(--chisel-neutral-50);
-    height: var(--app-height);
-    max-height: 1080px;
   }
 
-  section > img {
+  section > picture {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover;
     z-index: -1;
+  }
+
+  picture > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .container {
