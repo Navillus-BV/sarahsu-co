@@ -1,0 +1,39 @@
+---
+import CardBlock from '../components/CardBlock.astro'
+import HeroBlock from '../components/HeroBlock.astro'
+import ImageBlock from '../components/ImageBlock.astro'
+import FormBlock from '../components/FormBlock.astro'
+import TextBlock from '../components/TextBlock.astro'
+
+interface Props {
+  block: CMS.Block
+}
+
+const { block } = Astro.props as Props
+
+function isCardBlock(block: CMS.Block): block is CMS.CardBlock {
+  return block.template === "cardblock"
+}
+
+function isFormBlock(block: CMS.Block): block is CMS.FormBlock {
+  return block.template === "formblock"
+}
+
+function isHeroBlock(block: CMS.Block): block is CMS.HeroBlock {
+  return block.template === "heroblock"
+}
+
+function isImageBlock(block: CMS.Block): block is CMS.ImageBlock {
+  return block.template === "imageblock"
+}
+
+function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
+  return block.template === "textblock"
+}
+---
+
+{isCardBlock(block) && (<CardBlock data={block} />)}
+{isHeroBlock(block) && (<HeroBlock data={block} />)}
+{isFormBlock(block) && (<FormBlock data={block} />)}
+{isImageBlock(block) && (<ImageBlock data={block} />)}
+{isTextBlock(block) && (<TextBlock data={block} />)}

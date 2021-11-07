@@ -1,11 +1,7 @@
 ---
 import Layout from './Base.astro'
 
-import CardBlock from '../components/CardBlock.astro'
-import HeroBlock from '../components/HeroBlock.astro'
-import ImageBlock from '../components/ImageBlock.astro'
-import FormBlock from '../components/FormBlock.astro'
-import TextBlock from '../components/TextBlock.astro'
+import Block from '../components/Block.astro'
 
 interface Props {
   content: CMS.Page
@@ -14,27 +10,7 @@ interface Props {
 const { content } = Astro.props as Props
 const { title, description, image, blocks, html } = content
 
-const hasHeroBlock = blocks.some(isHeroBlock)
-
-function isCardBlock(block: CMS.Block): block is CMS.CardBlock {
-  return block.template === "cardblock"
-}
-
-function isFormBlock(block: CMS.Block): block is CMS.FormBlock {
-  return block.template === "formblock"
-}
-
-function isHeroBlock(block: CMS.Block): block is CMS.HeroBlock {
-  return block.template === "heroblock"
-}
-
-function isImageBlock(block: CMS.Block): block is CMS.ImageBlock {
-  return block.template === "imageblock"
-}
-
-function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
-  return block.template === "textblock"
-}
+const hasHeroBlock = blocks.some(block => block.template === 'heroblock')
 ---
 
 <Layout
@@ -45,19 +21,7 @@ function isTextBlock(block: CMS.Block): block is CMS.TextBlock {
   canonicalURL={Astro.request.canonicalURL}
   showHeader={!hasHeroBlock}
 >
-  {blocks.map((block) => {
-    if (isCardBlock(block)) {
-      return (<CardBlock data={block} />);
-    } else if (isHeroBlock(block)) {
-      return (<HeroBlock data={block} />);
-    } else if (isFormBlock(block)) {
-      return (<FormBlock data={block} />);
-    } else if (isImageBlock(block)) {
-      return (<ImageBlock data={block} />);
-    } else if (isTextBlock(block)) {
-      return (<TextBlock data={block} />);
-    }
-  })}
+  {blocks.map((block) => (<Block block={block} />))}
 
   {html && html.length && (
     <section>
