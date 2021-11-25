@@ -104,15 +104,15 @@ const contentHtml = mdToHtml(content)
   footer {
     display: flex;
     justify-content: center;
+  }
 
-    & :global(svg) {
-      animation: bounce 2s infinite;
-      animation-delay: 3s;
+  footer :global(svg) {
+    animation: bounce 2s infinite;
+    animation-delay: 3s;
+  }
 
-      &:not(.mobile) {
-        display: none;
-      }
-    }
+  footer :global(svg:not(.mobile)) {
+    display: none;
   }
 
   @keyframes bounce {
@@ -145,14 +145,12 @@ const contentHtml = mdToHtml(content)
       margin-top: var(--spacer-sm);
     }
 
-    footer :global(svg) {
-      &:not(.mobile) {
-        display: block;
-      }
+    footer :global(svg:not(.mobile)) {
+      display: block;
+    }
 
-      &.mobile {
-        display: none;
-      }
+    footer :global(svg.mobile) {
+      display: none;
     }
   }
 </style>
