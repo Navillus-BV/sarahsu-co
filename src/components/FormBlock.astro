@@ -27,7 +27,7 @@ const footnoteHtml = mdToHtml(footnote)
           <div>
             <label for={field.id}>{field.title}{field.required && ' *'}</label>
             {field.type === 'textarea' ? (
-              <textarea rows='4' name={field.id} id={field.id} />
+              <textarea rows='4' name={field.id} id={field.id}></textarea>
             ) : (
               <input type={field.type} name={field.id} id={field.id} required={field.required} />
             )}

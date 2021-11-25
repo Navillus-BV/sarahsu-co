@@ -19,7 +19,39 @@ const pages = getPages(allPages, menu.pages)
   .map(({ title, href }) => ({ title, href }))
 ---
 
+<header class={clsx({ alt })} id='header'>
+  <a href='/' class='h5 nohover' rel='home'>
+    <Hummingbird width='72' height='72' opacity={0.4} theme={alt ? 'secondary' : 'gradient'} />
+    {site.title}
+  </a>
+
+  <input type="checkbox" id="menubtn" class="sr-only" />
+  <label role="button" for="menubtn" class="button">
+    <div class='sr-only'>Open navigation menu</div>
+    <span></span>
+  </label>
+
+  <div id='backdrop'></div>
+  <nav>
+    <button class='icon'>
+      <Icon icon='close' alt='Close menu' />
+    </button>
+    <ul>
+      {pages.map(({ title, href }) => (
+        <li>
+          <a class='alt' href={href}>{title}</a>
+        </li>
+      ))}
+
+      {menu.cta && (
+        <a class={clsx({ button: true, secondary: alt })} href={menu.cta.url}>{menu.cta.text}</a>
+      )}
+    </ul>
+  </nav>
+</header>
+
 <script hoist>
+  function initHeader() {
   const headerElem = document.getElementById('header')
   const inputElem = document.getElementById('menubtn')
   const navElem = document.querySelector('#header nav')
@@ -66,38 +98,10 @@ const pages = getPages(allPages, menu.pages)
       onClose()
     }
   })
+  }
+
+  window.addEventListener('load', initHeader);
 </script>
-
-<header class={clsx({ alt })} id='header'>
-  <a href='/' class='h5 nohover' rel='home'>
-    <Hummingbird width='72' height='72' opacity={0.4} theme={alt ? 'secondary' : 'gradient'} />
-    {site.title}
-  </a>
-
-  <input type="checkbox" id="menubtn" class="sr-only" />
-  <label role="button" for="menubtn" class="button">
-    <div class='sr-only'>Open navigation menu</div>
-    <span></span>
-  </label>
-
-  <div id='backdrop'></div>
-  <nav>
-    <button class='icon'>
-      <Icon icon='close' alt='Close menu' />
-    </button>
-    <ul>
-      {pages.map(({ title, href }) => (
-        <li>
-          <a class='alt' href={href}>{title}</a>
-        </li>
-      ))}
-
-      {menu.cta && (
-        <a class={clsx({ button: true, secondary: alt })} href={menu.cta.url}>{menu.cta.text}</a>
-      )}
-    </ul>
-  </nav>
-</header>
 
 <style lang='scss'>
   header {

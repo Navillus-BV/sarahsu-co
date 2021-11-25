@@ -70,33 +70,33 @@ const hasFooter = ctas.length > 0
     &.footer {
       grid-template-areas: 'title' 'image' 'content' 'footer';
     }
-
-    & :global(ul) {
-      list-style: none;
-      margin: var(--spacer-md) 0 0;
-      text-align: start;
-    }
-
-    & :global(li) {
-      position: relative;
-      margin-left: 3ch;
-
-      &:not(:last-child) {
-        margin-bottom: var(--spacer-sm);
-      }
-
-      &:before {
-        content: 'X';
-        position: absolute;
-        left: -1.5ch;
-        top: 50%;
-        transform: translate(0, -50%);
-        font-size: var(--chisel-h3);
-        font-family: var(--font-family-display);
-      }
-    }
   }
-  
+
+  article :global(ul) {
+    list-style: none;
+    margin: var(--spacer-md) 0 0;
+    text-align: start;
+  }
+
+  article :global(li) {
+    position: relative;
+    margin-left: 3ch;
+  }
+
+  article :global(li:not(:last-child)) {
+    margin-bottom: var(--spacer-sm);
+  }
+ 
+  article :global(li:before) {
+    content: 'X';
+    position: absolute;
+    left: -1.5ch;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: var(--chisel-h3);
+    font-family: var(--font-family-display);
+  }
+
   header {
     grid-area: title;
   }

@@ -5,5 +5,3 @@
 [dev]
     command = "yarn dev"
 
-[[plugins]]
-    package = "netlify-plugin-a11y"
