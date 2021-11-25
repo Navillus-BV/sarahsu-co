@@ -127,7 +127,9 @@ button,
 .button {
   background: var(--primary-gradient);
   border-color: var(--primary-gradient);
+  color: var(--chisel-neutral-50);
   font-size: var(--chisel-h5);
+  text-decoration: none;
 
   &:hover {
     background: var(--chisel-neutral-50);
