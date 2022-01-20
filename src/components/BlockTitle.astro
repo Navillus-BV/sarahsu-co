@@ -49,4 +49,10 @@ const { title, subtitle, subtitleIcon, alt, class: className = '' } = Astro.prop
   h3 {
     margin: var(--spacer-xs) 0 0;
   }
+
+  @media (min-width: 979px) {
+    h2.h5 {
+      justify-content: flex-start;
+    }
+  }
 </style>
