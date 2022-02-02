@@ -55,7 +55,7 @@ blocks:
   - url: https://tidycal.com/sarahsu
     text: Let's Chat
   content: |-
-    My promise to you is to offer an open space to discuss what matters most to you and discover potential paths forward together.
+    My promise to you is to offer an open space to discuss what matters most to you and discover potential paths forward.
 
     I'm not a coach and you're not a client - We are **creative partners exploring what's possible together** in the pursuit of lives well-lived.
 
