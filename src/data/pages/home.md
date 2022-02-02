@@ -47,6 +47,19 @@ blocks:
   - text: Learn more
     url: "/about"
   theme: primary
+- template: textblock
+  theme: white
+  title: Anything is Possible.
+  subtitle: What to Expect
+  ctas:
+  - url: https://tidycal.com/sarahsu
+    text: Let's Chat
+  content: |-
+    My promise to you is to offer an open space to discuss what matters most to you and together discover potential paths forward.
+
+    I'm not a guide and you're not a follower - We are **creative partners exploring what's possible together** in the pursuit of lives well-lived.
+
+    Every conversation is different - because we are always changing - but you can generally **expect kindness, attention, and genuine interest in you** and your aspirations. Where we go from there is always an adventure!
 - template: cardblock
   title: Anything is possible.
   cards:
