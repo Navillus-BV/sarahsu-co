@@ -52,7 +52,7 @@ blocks:
   title: Anything is Possible.
   subtitle: What to Expect
   ctas:
-  - url: https://tidycal.com/sarahsu
+  - url: https://tidycal.com/sarahsu/intro-chat
     text: Let's Chat
   content: |-
     My promise to you is to offer an open space to discuss what matters most to you and discover potential paths forward.
