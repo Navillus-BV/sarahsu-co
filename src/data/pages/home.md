@@ -6,7 +6,7 @@ image: "/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
-    url: https://tidycal.com/sarahsu
+    url: https://tidycal.com/sarahsu/intro-chat
     text: Let's chat
   title: Looking for a little inspiration?
   content: ''
