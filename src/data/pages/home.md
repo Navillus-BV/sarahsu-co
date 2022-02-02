@@ -60,37 +60,6 @@ blocks:
     I'm not a guide and you're not a follower - We are **creative partners exploring what's possible together** in the pursuit of lives well-lived.
 
     Every conversation is different - because we are always changing - but you can generally **expect kindness, attention, and genuine interest in you** and your aspirations. Where we go from there is always an adventure!
-- template: cardblock
-  title: Anything is possible.
-  cards:
-  - title: Coaching
-    content: |-
-      **For Individuals & Teams**
-
-      We'll focus on what matters to you and make a plan to get you where you want to go.
-    cta:
-      text: Find out how
-      url: "/coaching"
-      primary: false
-  - title: Consulting
-    content: |-
-      **For Organizations**
-
-      We'll develop intentional people strategies that align and adapt with your business objectives.
-    cta:
-      text: Find out how
-      url: "/consulting"
-      primary: false
-  - title: Collaboration
-    content: |-
-      **For Creative Partners**
-
-      We'll work together to bring your ideas to life with a dynamic blend of focus and exploration.
-    cta:
-      text: Find out how
-      url: "/collaboration"
-      primary: false
-  subtitle: Work with Me
 href: "/"
 
 ---
