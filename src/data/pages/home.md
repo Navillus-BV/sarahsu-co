@@ -55,11 +55,11 @@ blocks:
   - url: https://tidycal.com/sarahsu
     text: Let's Chat
   content: |-
-    My promise to you is to offer an open space to discuss what matters most to you and together discover potential paths forward.
+    My promise to you is to offer an open space to discuss what matters most to you and discover potential paths forward together.
 
-    I'm not a guide and you're not a follower - We are **creative partners exploring what's possible together** in the pursuit of lives well-lived.
+    I'm not a coach and you're not a client - We are **creative partners exploring what's possible together** in the pursuit of lives well-lived.
 
-    Every conversation is different - because we are always changing - but you can generally **expect kindness, attention, and genuine interest in you** and your aspirations. Where we go from there is always an adventure!
+    Every conversation is different, because we are always changing - but you can generally **expect kindness, attention, and genuine interest in you** and your aspirations. Where we go from there is always an adventure!
 href: "/"
 
 ---
