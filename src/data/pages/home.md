@@ -28,7 +28,7 @@ blocks:
   theme: white
   ctas:
   - text: Work with me
-    url: "/workwithme"
+    url: https://tidycal.com/sarahsu
 - template: imageblock
   image:
     src: "/images/sarah.jpg"
