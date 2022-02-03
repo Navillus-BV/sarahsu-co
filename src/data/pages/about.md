@@ -20,5 +20,9 @@ blocks:
   subtitleIcon: false
   flipped: false
   ctas: []
+- template: cardblock
+  title: MY JOUNREY SO FAR
+  subtitle: Curious and Curiouser.
+  cards: []
 
 ---
