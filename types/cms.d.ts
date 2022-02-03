@@ -61,6 +61,7 @@ declare namespace CMS {
     title: string;
     subtitle?: string;
     cards: Card[];
+    ctas?: CallToAction[];
   }
 
   interface HeroBlock {

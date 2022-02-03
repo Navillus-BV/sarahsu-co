@@ -1,4 +1,5 @@
 ---
+  import clsx from 'clsx'
   import BlockTitle from './BlockTitle.astro'
   import Card from './Card.astro'
   import Icon from './Icon.astro'
@@ -8,7 +9,7 @@
   }
 
   const { data } = Astro.props as Props
-  const { title, subtitle, cards } = data
+  const { title, subtitle, cards, ctas } = data
 ---
 
 <section style={`--card-count: ${cards.length || 1}`}>
@@ -21,6 +22,14 @@
 
     <Icon icon='chevron-left' size={64} alt='' />
   </div>
+
+  {ctas.length > 0 && (
+    <footer class={clsx({ multi: ctas.length > 1 })}>
+      {ctas.map(({ text, url, primary }) => (
+        <a class={`button ${clsx({ secondary: primary })}`} href={url}>{text}</a>
+      ))}
+    </footer>
+  )}
 </section>
 
 <style lang="scss">
@@ -63,6 +72,31 @@
 
       &:last-of-type {
         right: -7rem;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & :not(:last-child) {
+      margin-bottom: var(--spacer-sm);
+    }
+  }
+
+  @media screen and (min-width: 979px) {
+    footer {
+      flex-direction: row;
+      margin: var(--spacer-md) 0 0;
+
+      & a {
+        &:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: var(--spacer-md);
+        }
       }
     }
   }

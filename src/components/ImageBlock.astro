@@ -41,7 +41,7 @@ const hasFooter = ctas.length > 0
 
       {ctas.length > 0 && (
         <footer class={clsx({ multi: ctas.length > 1 })}>
-          {ctas.map(({ text, url }) => (
+          {ctas.map(({ text, url, primary }) => (
             <a class={`button ${clsx({ secondary: primary })}`} href={url}>{text}</a>
           ))}
         </footer>
