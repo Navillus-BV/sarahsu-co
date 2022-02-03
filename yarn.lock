@@ -350,11 +350,6 @@
   resolved "https://registry.npmjs.org/@emmetio/scanner/-/scanner-1.0.0.tgz"
   integrity sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==
 
-"@fontsource/montserrat@^4.5.3":
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.3.tgz#30e8943df4f9904b7379a27304073837193b53b3"
-  integrity sha512-VT+wPK/PHWwqm7r6UbTjI+oj31obzj9+V9HSUl8tcuKtv4deYuH+OAbMf5RG62uVDT8wiZ8QyCbr5gmfHQ3ykg==
-
 "@ljharb/has-package-exports-patterns@0.0.1":
   version "0.0.1"
   resolved "https://registry.npmjs.org/@ljharb/has-package-exports-patterns/-/has-package-exports-patterns-0.0.1.tgz"
@@ -736,6 +731,11 @@ astring@^1.7.5:
   version "1.8.1"
   resolved "https://registry.npmjs.org/astring/-/astring-1.8.1.tgz"
   integrity sha512-Aj3mbwVzj7Vve4I/v2JYOPFkCGM2YS7OqQTNSxmUR+LECRpokuPgAYghePgr6SALDo5bD5DlfbSaYjOzGJZOLQ==
+
+astro-fonts@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/astro-fonts/-/astro-fonts-0.1.0.tgz#99c5275b112ea848c3b5c7dc561826e539825021"
+  integrity sha512-UWqVuQEE2lTBtpG5JXY+YGhvKhaLwULa6no80kdvCCz51oAqkddVp16zHq61fb2zMUFkcm+vArCgYCTH16xLcQ==
 
 astro@^0.22.20:
   version "0.22.20"

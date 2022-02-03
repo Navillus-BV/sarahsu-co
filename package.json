@@ -3,15 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "postinstall": "cp -r node_modules/@fontsource public/@fontsource",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@fontsource/montserrat": "^4.5.3",
     "@lukeed/uuid": "^2.0.0",
     "astro": "^0.22.20",
+    "astro-fonts": "^0.1.0",
     "chisel.css": "^0.8.1",
     "clsx": "^1.1.1",
     "nano-markdown": "^1.2.1",

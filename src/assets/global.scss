@@ -1,5 +1,4 @@
 @use "chisel.css/dist/chisel.css";
-@use "@fontsource/montserrat/scss/mixins" as Montserrat;
 
 /**
  * @license
@@ -22,18 +21,6 @@
 
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3fd037");
-
-@include Montserrat.fontFace(
-  $weight: 500,
-  $display: fallback,
-  $fontDir: "/@fontsource/montserrat/files"
-);
-
-@include Montserrat.fontFace(
-  $weight: 700,
-  $display: fallback,
-  $fontDir: "/@fontsource/montserrat/files"
-);
 
 @font-face {
   font-family: "ModernLove-Regular";

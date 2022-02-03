@@ -7,5 +7,5 @@ interface PageData extends CMS.Page {
 export function getPages(allPages: PageData[], pagePaths: string[]) {
   return pagePaths.map((pagePath) =>
     allPages.find(({ file }) => file.pathname.endsWith(pagePath))
-  );
+  ).filter(Boolean);
 }

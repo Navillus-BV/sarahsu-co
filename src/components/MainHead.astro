@@ -1,4 +1,5 @@
 ---
+import Font from 'astro-fonts'
 import urljoin from 'url-join'
 import site from '../data/site.json'
 
@@ -55,3 +56,4 @@ const fullTitle = [title, site.title]
 
 <!-- Global Styles -->
 <link rel="stylesheet" href={Astro.resolve('../assets/global.scss')} />
+<Font name="Montserrat" weights={[500, 700]} styles="normal" />
