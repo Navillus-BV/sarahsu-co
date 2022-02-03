@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@astrojs/compiler@^0.8.0":
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.8.2.tgz#4aebb1c75bdfebbdaf920fa5a47bac5a9b406684"
-  integrity sha512-DnEjHlGzLaZDZ/uDdU1cmx8Hvair9fB1SmIj6yQCNIPqfKs/ZyUDyRrIzvHxri8xkaBTynL7cpzENJF99ub4Gg==
+"@astrojs/compiler@^0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.9.2.tgz#aea226472046cb88c0ff20661be34af84d983feb"
+  integrity sha512-8yxdyokSNmTbcDfW75k5NcPKMBnPTfzLHVxhdiUrII7Zqh/OG9SaOZWFCnvFhU8dkQBUU6B1eh/ABAHwnxZWGw==
   dependencies:
     typescript "^4.3.5"
 
@@ -350,10 +350,10 @@
   resolved "https://registry.npmjs.org/@emmetio/scanner/-/scanner-1.0.0.tgz"
   integrity sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==
 
-"@fontsource/montserrat@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.2.tgz#95c38172b134db4ed7d2d728513c0abbef54fdb1"
-  integrity sha512-RRrXoTlHYLg5CA+RaxVVnosU2RDO4NiZgRmgD1o1d6lm07Dvuzsr0JPALcm5I4VqZw5bzx4nIz2u+T5LOR7W7w==
+"@fontsource/montserrat@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.3.tgz#30e8943df4f9904b7379a27304073837193b53b3"
+  integrity sha512-VT+wPK/PHWwqm7r6UbTjI+oj31obzj9+V9HSUl8tcuKtv4deYuH+OAbMf5RG62uVDT8wiZ8QyCbr5gmfHQ3ykg==
 
 "@ljharb/has-package-exports-patterns@0.0.1":
   version "0.0.1"
@@ -737,12 +737,12 @@ astring@^1.7.5:
   resolved "https://registry.npmjs.org/astring/-/astring-1.8.1.tgz"
   integrity sha512-Aj3mbwVzj7Vve4I/v2JYOPFkCGM2YS7OqQTNSxmUR+LECRpokuPgAYghePgr6SALDo5bD5DlfbSaYjOzGJZOLQ==
 
-astro@^0.22.15:
-  version "0.22.15"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-0.22.15.tgz#e2b3681fa8a0f3282f581c3a3fe07fcfefdcb578"
-  integrity sha512-mx1dXxkbzpkZ9ZzK5Yo+jtSdTtcg3T878GL4DOeWA6cR3z2NQoTHTFM+qL18bDh7a+GQLU2aSqckCMNnsewycQ==
+astro@^0.22.20:
+  version "0.22.20"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-0.22.20.tgz#d7ebe747255e5861a8de408ac544786a90226485"
+  integrity sha512-2WaISKXWi8wGzHMM20YSyMLDNI+zKvOO4y/Z8BI7HMSomtGSXkBWdryWjkvHlH9VjW3VGYjpa5pqZ2k72o+aAw==
   dependencies:
-    "@astrojs/compiler" "^0.8.0"
+    "@astrojs/compiler" "^0.9.2"
     "@astrojs/language-server" "^0.8.6"
     "@astrojs/markdown-remark" "^0.6.0"
     "@astrojs/prism" "0.4.0"
@@ -774,7 +774,6 @@ astro@^0.22.15:
     magic-string "^0.25.7"
     mime "^3.0.0"
     morphdom "^2.6.1"
-    node-fetch "^3.0.0"
     parse5 "^6.0.1"
     path-to-regexp "^6.2.0"
     postcss "^8.3.8"
@@ -989,11 +988,6 @@ csstype@^2.6.8:
   version "2.6.17"
   resolved "https://registry.npmjs.org/csstype/-/csstype-2.6.17.tgz"
   integrity sha512-u1wmTI1jJGzCJzWndZo8mk4wnPTZd1eOIYTYvuEyOQGfmDl3TrabCCfKnOC86FZwW/9djqTl933UF/cS425i9A==
-
-data-uri-to-buffer@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-4.0.0.tgz"
-  integrity sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==
 
 debug@2.6.9:
   version "2.6.9"
@@ -1496,13 +1490,6 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-fetch-blob@^3.1.2:
-  version "3.1.3"
-  resolved "https://registry.npmjs.org/fetch-blob/-/fetch-blob-3.1.3.tgz"
-  integrity sha512-ax1Y5I9w+9+JiM+wdHkhBoxew+zG4AJ2SvAD1v1szpddUIiPERVGBxrMcB2ZqW0Y3PP8bOWYv2zqQq1Jp2kqUQ==
-  dependencies:
-    web-streams-polyfill "^3.0.3"
-
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz"
@@ -1527,13 +1514,6 @@ foreach@^2.0.5:
   version "2.0.5"
   resolved "https://registry.npmjs.org/foreach/-/foreach-2.0.5.tgz"
   integrity sha1-C+4AUBiusmDQo6865ljdATbsG5k=
-
-formdata-polyfill@^4.0.10:
-  version "4.0.10"
-  resolved "https://registry.npmjs.org/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz"
-  integrity sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==
-  dependencies:
-    fetch-blob "^3.1.2"
 
 fresh@0.5.2:
   version "0.5.2"
@@ -2671,15 +2651,6 @@ nlcst-to-string@^3.0.0:
   dependencies:
     "@types/nlcst" "^1.0.0"
 
-node-fetch@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-3.1.0.tgz"
-  integrity sha512-QU0WbIfMUjd5+MUzQOYhenAazakV7Irh1SGkWCsRzBwvm4fAhzEUaHMJ6QLP7gWT6WO9/oH2zhKMMGMuIrDyKw==
-  dependencies:
-    data-uri-to-buffer "^4.0.0"
-    fetch-blob "^3.1.2"
-    formdata-polyfill "^4.0.10"
-
 node-releases@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.1.tgz"
@@ -3720,11 +3691,6 @@ web-namespaces@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/web-namespaces/-/web-namespaces-2.0.0.tgz"
   integrity sha512-dE7ELZRVWh0ceQsRgkjLgsAvwTuv3kcjSY/hLjqL0llleUlQBDjE9JkB9FCBY5F2mnFEwiyJoowl8+NVGHe8dw==
-
-web-streams-polyfill@^3.0.3:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/web-streams-polyfill/-/web-streams-polyfill-3.2.0.tgz"
-  integrity sha512-EqPmREeOzttaLRm5HS7io98goBgZ7IVz79aDvqjD0kYXLtFZTc0T/U6wHTPKyIjb+MdN7DFIIX6hgdBEpWmfPA==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
