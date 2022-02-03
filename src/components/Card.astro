@@ -15,9 +15,9 @@ const contentHtml = mdToHtml(content)
 <article>
   <h4>{title}</h4>
 
-  <main>
+  <div>
     {contentHtml}
-  </main>
+  </div>
 
   {cta && (
     <a class={clsx({ button: true, primary: cta.primary, secondary: !cta.primary })} href={cta.url}>{cta.text}</a>
@@ -49,7 +49,7 @@ const contentHtml = mdToHtml(content)
     font-weight: 700;
   }
 
-  main {
+  div {
     margin: var(--spacer-md) 0 var(--spacer-sm);
     flex: 1;
   }

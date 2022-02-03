@@ -30,9 +30,9 @@ const contentHtml = mdToHtml(content)
     <div class='wrapper'>
       <h1 class={clsx({ 'text-gradient': !image?.src })}>{title}</h1>
 
-      <main>
+      <div class='content'>
         {contentHtml}
-      </main>
+      </div>
       
       {cta && cta.url && (
         <a class="button secondary" href={cta.url}>{cta.text}</a>
@@ -74,7 +74,7 @@ const contentHtml = mdToHtml(content)
     grid-template-rows: auto 1fr;
     align-items: center;
 
-    &.dark, &.dark main {
+    &.dark, &.dark .content {
       color: var(--chisel-neutral-900);
     }
   }
@@ -92,7 +92,7 @@ const contentHtml = mdToHtml(content)
     text-align: center;
   }
 
-  main {
+  .content {
     font-size: var(--chisel-h5);
     color: var(--chisel-neutral-50);
   }

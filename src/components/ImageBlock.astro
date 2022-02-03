@@ -35,9 +35,9 @@ const hasFooter = ctas.length > 0
 
       <img alt={image.alt} src={`${image.src}?nf_resize=smartcrop&w=400&h=400`} />
 
-      <main>
+      <div class='content'>
         {contentHtml}
-      </main>
+      </div>
 
       {ctas.length > 0 && (
         <footer class={clsx({ multi: ctas.length > 1 })}>
@@ -111,7 +111,7 @@ const hasFooter = ctas.length > 0
     border-radius: 999px;
   }
 
-  main {
+  .content {
     grid-area: content;
   }
 

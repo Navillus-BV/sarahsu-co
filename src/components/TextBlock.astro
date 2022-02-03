@@ -22,9 +22,9 @@ const primary = theme === 'primary'
 
       <BlockTitle title={title} subtitle={subtitle} alt={primary} />
 
-      <main>
+      <div class='content'>
         {contentHtml}
-      </main>
+      </div>
 
       {ctas.map(({ url, text }) => (
         <a class={clsx({ button: true, secondary: primary })} href={url}>{text}</a>
@@ -71,13 +71,13 @@ const primary = theme === 'primary'
     }
   }
 
-  main {
+  .content {
     order: 3;
     margin-top: var(--spacer-md);
     max-width: var(--width-prose);
   }
 
-  main :global(b) {
+  .content :global(b) {
     color: var(--chisel-secondary);
   }
 

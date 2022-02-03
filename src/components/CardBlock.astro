@@ -12,15 +12,15 @@
 ---
 
 <section style={`--card-count: ${cards.length || 1}`}>
-  <BlockTitle title={title} subtitle={subtitle} />
+  <BlockTitle center title={title} subtitle={subtitle} />
 
-  <main>
+  <div>
     <Icon icon='chevron-right' size={64} alt='' />
 
     {cards.map((card) => (<Card data={card} />))}
 
     <Icon icon='chevron-left' size={64} alt='' />
-  </main>
+  </div>
 </section>
 
 <style lang="scss">
@@ -29,7 +29,7 @@
     flex-direction: column;
   }
 
-  main {
+  div {
     position: relative;
     order: 3;
     display: grid;
@@ -41,7 +41,7 @@
     align-items: center;
     padding-bottom: 12px;
 
-    & > :global(*) {
+    & > :global(*:not(svg)) {
       justify-self: center;
       height: 100%;
     }
@@ -68,13 +68,13 @@
   }
 
   @media screen and (min-width: 1240px) {
-    main {
+    div {
       grid-template-columns: repeat(var(--card-count), 1fr);
     }
   }
 
   @media screen and (min-width: 1440px) {
-    main > :global(svg) {
+    div > :global(svg) {
       display: block;
     }
   }

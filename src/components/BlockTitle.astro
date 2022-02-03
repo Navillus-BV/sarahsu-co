@@ -8,13 +8,14 @@ interface Props {
   subtitleIcon?: boolean
   alt?: boolean
   class?: string
+  center?: boolean
 }
 
-const { title, subtitle, subtitleIcon, alt, class: className = '' } = Astro.props as Props
+const { title, subtitle, subtitleIcon, alt, class: className = '', center = false } = Astro.props as Props
 ---
 
 {(title || subtitle) && (
-  <h2 class={`${className} ${clsx({ 'text-gradient': !alt && !subtitle, h5: subtitle })}`}>
+  <h2 class={`${className} ${clsx({ center, 'text-gradient': !alt && !subtitle, h5: subtitle })}`}>
     {subtitle || title}
     {subtitle && subtitleIcon && (
       <Hummingbird width='48' height='48' opacity={0.5} theme='secondary' />
@@ -26,9 +27,8 @@ const { title, subtitle, subtitleIcon, alt, class: className = '' } = Astro.prop
   <h3 class={`h2 ${className} ${clsx({ 'text-gradient': !alt })}`}>{title}</h3>
 ))}
 
-<style>
+<style lang='scss'>
   h2 {
-
     margin: 0;
   }
 
@@ -51,7 +51,7 @@ const { title, subtitle, subtitleIcon, alt, class: className = '' } = Astro.prop
   }
 
   @media (min-width: 979px) {
-    h2.h5 {
+    h2.h5:not(.center) {
       justify-content: flex-start;
     }
   }

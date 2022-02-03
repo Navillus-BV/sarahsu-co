@@ -21,8 +21,8 @@ blocks:
   flipped: false
   ctas: []
 - template: cardblock
-  title: MY JOUNREY SO FAR
-  subtitle: Curious and Curiouser.
+  title: Curious and Curiouser.
+  subtitle: MY JOURNEY SO FAR
   cards: []
 
 ---
