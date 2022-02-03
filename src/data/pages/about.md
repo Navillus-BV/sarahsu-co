@@ -9,8 +9,8 @@ blocks:
   image:
     src: "/images/sarah.jpg"
     alt: Sarah Sullivan
-  title: ABOUT ME
-  subtitle: Hi, I'm Sarah Sullivan!
+  title: Hi, I'm Sarah Sullivan!
+  subtitle: ABOUT ME  
   content: |-
     My superpower is navigating the "space between" (e.g. ideas, people, behaviors, stages) and co-creating magic in the process.
 
