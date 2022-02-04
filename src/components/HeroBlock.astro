@@ -14,7 +14,7 @@ const { title, cta, content, image } = data
 const contentHtml = mdToHtml(content)
 ---
 
-<section class='full-bleed'  style="height: 100vh; height: --webkit-fill-available; height: moz-available; height: fill-available; max-height: 1080px;">
+<section class='full-bleed'  style="height: 100vh; height: -webkit-fill-available; height: -moz-available; height: fill-available; max-height: 1080px;">
   {image && image.src && (
     <picture aria-hidden="true">
       <source srcset={`${image.src}?nf_resize=smartcrop&w=1185&h=667`} media="(max-height: 667px)" />
