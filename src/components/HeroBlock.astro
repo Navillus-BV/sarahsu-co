@@ -14,7 +14,7 @@ const { title, cta, content, image } = data
 const contentHtml = mdToHtml(content)
 ---
 
-<section class='full-bleed'  style="height: 100vh; height: -webkit-fill-available; height: -moz-available; height: fill-available; max-height: 1080px;">
+<section class='full-bleed'>
   {image && image.src && (
     <picture aria-hidden="true">
       <source srcset={`${image.src}?nf_resize=smartcrop&w=1185&h=667`} media="(max-height: 667px)" />
@@ -46,11 +46,19 @@ const contentHtml = mdToHtml(content)
   </div>
 </section>
 
+<script hoist>
+  (function() {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  })()
+</script>
+
 <style lang='scss'>
   section {
     position: relative;
-    padding: 0 0 var(--spacer-sm);
     color: var(--chisel-neutral-50);
+    height: calc(var(--vh, 1vh) * 100);
+    max-height: 1080px;
   }
 
   section > picture {
@@ -73,9 +81,11 @@ const contentHtml = mdToHtml(content)
     row-gap: 0;
     grid-template-rows: auto 1fr;
     align-items: center;
+    background: var(--chisel-primary);
 
     &.dark, &.dark .content {
       color: var(--chisel-neutral-900);
+      background: var(--chisel-neutral-50);
     }
   }
 
@@ -104,6 +114,7 @@ const contentHtml = mdToHtml(content)
   footer {
     display: flex;
     justify-content: center;
+    padding-bottom: var(--spacer-sm);
   }
 
   footer :global(svg) {
