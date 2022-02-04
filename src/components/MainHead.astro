@@ -12,10 +12,12 @@ interface Props {
 
 const {
   title,
-  description = site.description,
-  image = site.social.image,
-  canonicalURL
+  canonicalURL,
+  ...props
 } = Astro.props as Props
+
+const image = props.image || site.social.image
+const description = props.description || site.description
 
 const imageAbsolute = urljoin(site.url, image)
 const pageTitle = title || site.title
