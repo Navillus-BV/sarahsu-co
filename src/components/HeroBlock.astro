@@ -14,7 +14,7 @@ const { title, cta, content, image } = data
 const contentHtml = mdToHtml(content)
 ---
 
-<section class='full-bleed'>
+<section class={`full-bleed ${clsx({ dark: !image.src })}`}>
   {image && image.src && (
     <picture aria-hidden="true">
       <source srcset={`${image.src}?nf_resize=smartcrop&w=1185&h=667`} media="(max-height: 667px)" />
@@ -48,8 +48,16 @@ const contentHtml = mdToHtml(content)
 
 <script hoist>
   (function() {
-    const vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty('--vh', `${vh}px`)
+    function setVh() {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+
+    setVh()
+
+    window.addEventListener('resize', () => {
+      setVh()
+    })
   })()
 </script>
 
@@ -59,6 +67,11 @@ const contentHtml = mdToHtml(content)
     color: var(--chisel-neutral-50);
     height: calc(var(--vh, 1vh) * 100);
     max-height: 1080px;
+    background: var(--chisel-primary);
+
+    &.dark {
+      background: var(--chisel-neutral-50);
+    }
   }
 
   section > picture {
@@ -67,7 +80,7 @@ const contentHtml = mdToHtml(content)
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
   }
 
   picture > img {
@@ -77,6 +90,8 @@ const contentHtml = mdToHtml(content)
   }
 
   .container {
+    position: relative;
+    z-index: 2;
     height: 100%;
     row-gap: 0;
     grid-template-rows: auto 1fr;
