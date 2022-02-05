@@ -42,24 +42,6 @@ fields:
       maxSize: 64
     label: Icon
     description: The icon shown on the back of the card, above the content
-  - name: cta
-    type: field_group
-    config: {}
-    fields:
-    - name: text
-      type: text
-      config:
-        required: true
-      label: Text
-    - name: url
-      type: text
-      config:
-        required: true
-      label: URL
-    - name: primary
-      type: boolean
-      label: Primary
-    label: Call to action
   config:
     min: 
     max: 
