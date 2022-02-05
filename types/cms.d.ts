@@ -52,8 +52,8 @@ declare namespace CMS {
 
   interface Card {
     title: string;
-    image: Image;
-    icon: Image;
+    image: string;
+    icon: string;
     content: Markdown;
   }
 

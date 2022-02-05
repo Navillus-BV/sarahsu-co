@@ -7,54 +7,108 @@ interface Props {
 }
 
 const { data } = Astro.props as Props
-const { title, content, cta } = data
+const { title, image, content, icon } = data
+console.log(data)
 
 const contentHtml = mdToHtml(content)
 ---
 
 <article>
-  <h4>{title}</h4>
+  <div class='flipper'>
+    <section class='front' style={`background-image: url("${image}");`}>
+      <header>
+        <h4>{title}</h4>
+      </header>
+    </section>
 
-  <div>
-    {contentHtml}
+    <section class='back'>
+      <img src={icon} />
+      {contentHtml}
+    </section>
   </div>
-
-  {cta && (
-    <a class={clsx({ button: true, primary: cta.primary, secondary: !cta.primary })} href={cta.url}>{cta.text}</a>
-  )}
 </article>
 
 <style lang='scss'>
   article {
-    background: var(--chisel-neutral-50);
-    padding: var(--spacer-md);
-    filter: var(--drop-shadow-lg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     border-radius: 0.5rem;
     max-width: 40ch;
+    width: 100%;
+    aspect-ratio: 1;
+    perspective: 1000px;
+  }
+
+  .flipper {
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform-origin: 100% 50%;
+    height: 100%;
+  }
+
+  article:hover .flipper, article:active .flipper {
+    transform: rotateX(180deg);
+  }
+
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .front {
+    z-index: 2;
+    transform: rotateX(0deg);
+    background-color: var(--chisel-neutral-400);
+  }
+
+  .front header {
+    width: 100%;
+    position: relative;
+    line-height: 3;
+    color: var(--chisel-neutral-50);
+  }
+
+  .front header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--chisel-primary);
+    opacity: 0.5;
   }
 
   h4 {
+    width: 100%;
+    position: relative;
+    z-index: 1;
     margin: 0;
     font-family: var(--font-family-base);
-    font-weight: 400;
+    font-weight: 700;
     text-transform: capitalize;
     text-align: center;
   }
 
-  h4, p {
-    font-weight: 700;
+  .back {
+    transform: rotateX(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--chisel-primary);
+    color: var(--chisel-neutral-50);
+    padding: 0 var(--spacer-sm) var(--spacer-sm);
   }
 
-  div {
-    margin: var(--spacer-md) 0 var(--spacer-sm);
-    flex: 1;
-  }
-
-  .button {
-    white-space: break-spaces;
+  .back img {
+    width: var(--spacer-lg);
+    height: var(--spacer-lg);
+    margin-top: var(--spacer-sm);
+    margin: var(--spacer-md) 0;
   }
 </style>
