@@ -52,8 +52,9 @@ declare namespace CMS {
 
   interface Card {
     title: string;
+    image: string;
+    icon: string;
     content: Markdown;
-    cta: CallToAction;
   }
 
   interface CardBlock {
