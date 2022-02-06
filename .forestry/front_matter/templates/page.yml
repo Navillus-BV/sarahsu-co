@@ -46,5 +46,4 @@ fields:
 pages:
 - src/data/pages/contact.md
 - src/data/pages/musings.md
-- src/data/pages/thank-you-for-your-message-copy.md
 - src/data/pages/thank-you-for-your-message.md
