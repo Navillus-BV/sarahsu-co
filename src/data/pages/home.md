@@ -6,7 +6,7 @@ image: "/images/thumbnail2.png"
 blocks:
 - template: heroblock
   cta:
-    url: https://tidycal.com/sarahsu/intro-chat
+    url: /cal/intro-chat
     text: Let's chat
   title: Looking for a little inspiration?
   content: ''
@@ -28,7 +28,7 @@ blocks:
   theme: white
   ctas:
   - text: Work with me
-    url: https://tidycal.com/sarahsu/intro-chat
+    url: /cal/intro-chat
 - template: imageblock
   image:
     src: "/images/sarah.jpg"
@@ -52,7 +52,7 @@ blocks:
   title: Anything is Possible.
   subtitle: What to Expect
   ctas:
-  - url: https://tidycal.com/sarahsu/intro-chat
+  - url: /cal/intro-chat
     text: Let's Chat
   content: "My promise to you is an open space to discuss **what matters most to you**
     and discover potential paths forward - This could be something like... \n\n* Determining
