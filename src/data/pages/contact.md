@@ -10,6 +10,7 @@ blocks:
   description: 'Just fill out the form below or email me here: [hello@sarahsu.co](mailto:hello@sarahsu.co
     "hello@sarahsu.co")'
   submitText: Send
+  successUrl: /thankyou
   rows:
   - title: Name
     fields:

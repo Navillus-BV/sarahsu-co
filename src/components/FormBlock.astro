@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { data } = Astro.props as Props
-const { title, id, description, submitText, footnote, rows } = data
+const { title, id, description, submitText, successUrl, footnote, rows } = data
 
 const descriptionHtml = mdToHtml(description)
 const footnoteHtml = mdToHtml(footnote)
@@ -17,7 +17,7 @@ const footnoteHtml = mdToHtml(footnote)
 
   {descriptionHtml}
 
-  <form name={id} method='POST' netlify-honeypot='bot-field' data-netlify='true'>
+  <form name={id} method='POST' action={successUrl} netlify-honeypot='bot-field' data-netlify='true'>
     <p class='sr-only'>
       <label>Don’t fill this out if you’re human: <input name='bot-field' /></label>
     </p>

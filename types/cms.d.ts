@@ -90,6 +90,7 @@ declare namespace CMS {
     id: string;
     description?: Markdown;
     submitText: string;
+    successUrl?: string;
     footnote?: string;
     rows: {
       title?: string;
