@@ -45,7 +45,7 @@ blocks:
   subtitleIcon: false
   ctas:
   - text: Learn more
-    url: "/about"
+    url: https://www.linkedin.com/in/sarahsu-alwayslearning/
   theme: primary
 - template: textblock
   theme: white
