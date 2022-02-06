@@ -11,6 +11,6 @@
     status = 301
 
 [[redirects]]
-    from = "/"
+    from = "/*"
     to = "/404/"
     status = 404
