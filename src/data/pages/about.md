@@ -2,7 +2,7 @@
 href: "/about"
 title: About
 description: About | sarahsu.co
-image: ''
+image: "/images/thumbnail2.png"
 blocks:
 - template: imageblock
   theme: primary
@@ -19,7 +19,10 @@ blocks:
     I help curious and creative people like you find their own unique ways to navigate these spaces and get where they want to go in the process.
   subtitleIcon: false
   flipped: false
-  ctas: []
+  ctas:
+  - text: Work with Me
+    url: https://tidycal.com/sarahsu/intro-chat
+    primary: false
 - template: cardblock
   title: Curious and Curiouser.
   subtitle: MY JOURNEY SO FAR
