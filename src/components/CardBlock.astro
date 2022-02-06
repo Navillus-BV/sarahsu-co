@@ -48,7 +48,6 @@
     justify-content: center;
     margin-top: var(--spacer-md);
     align-items: center;
-    padding-bottom: 12px;
 
     & > :global(*:not(svg)) {
       justify-self: center;
@@ -77,10 +76,12 @@
   }
 
   footer {
+    order: 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: var(--spacer-md);
 
     & :not(:last-child) {
       margin-bottom: var(--spacer-sm);
@@ -90,7 +91,6 @@
   @media screen and (min-width: 979px) {
     footer {
       flex-direction: row;
-      margin: var(--spacer-md) 0 0;
 
       & a {
         &:not(:last-child) {

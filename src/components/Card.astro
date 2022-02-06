@@ -27,7 +27,7 @@ const contentHtml = mdToHtml(content)
 <style lang='scss'>
   article {
     background: var(--chisel-neutral-50);
-    padding: var(--spacer-md);
+    padding: var(--spacer-md) var(--spacer-sm) var(--spacer-sm);
     filter: var(--drop-shadow-lg);
     display: flex;
     flex-direction: column;
@@ -56,5 +56,11 @@ const contentHtml = mdToHtml(content)
 
   .button {
     white-space: break-spaces;
+  }
+
+  @media screen and (min-width: 1240px) {
+    article {
+      padding: var(--spacer-md);
+    }
   }
 </style>
