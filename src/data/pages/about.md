@@ -23,12 +23,6 @@ blocks:
   - text: Work with Me
     url: https://tidycal.com/sarahsu/intro-chat
     primary: false
-- template: textblock
-  theme: white
-  title: Curious and Curiouser.
-  subtitle: My Journey So Far
-  content: In progress...
-  ctas: []
 
 ---
 ![](/images/photo-1580756338357-a0ba1932d879.jpeg)
