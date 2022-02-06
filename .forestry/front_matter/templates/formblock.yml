@@ -34,7 +34,7 @@ fields:
   type: text
   config:
     required: false
-  lable: Success URL
+  label: Success URL
   description: If provided, users will be sent to this URL after submitting the form.
 - name: footnote
   type: textarea
