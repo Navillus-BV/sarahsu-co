@@ -5,3 +5,7 @@
 [dev]
     command = "yarn dev"
 
+[[redirects]]
+    from = "/cal/:slug"
+    to = "https://tidycal.com/sarahsu/:slug"
+    status = 301
