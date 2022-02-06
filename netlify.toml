@@ -9,3 +9,8 @@
     from = "/cal/:slug"
     to = "https://tidycal.com/sarahsu/:slug"
     status = 301
+
+[[redirects]]
+    from = "/"
+    to = "/404/"
+    status = 404
