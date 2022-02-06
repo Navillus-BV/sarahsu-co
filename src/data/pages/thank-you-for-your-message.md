@@ -15,5 +15,4 @@ blocks:
   ctas:
   - text: Go home
     url: "/"
-
 ---
