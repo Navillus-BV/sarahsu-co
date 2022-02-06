@@ -23,28 +23,12 @@ blocks:
   - text: Work with Me
     url: https://tidycal.com/sarahsu/intro-chat
     primary: false
-- template: cardblock
+- template: textblock
+  theme: white
   title: Curious and Curiouser.
-  subtitle: MY JOURNEY SO FAR
-  cards:
-  - title: Education & Experience
-    content: |-
-      My superpower is navigating the "space between" (e.g. ideas, people, behaviors, stages) and co-creating magic in the process.
-
-      Life happens at the edges - between what we know and what we don't, between where we are and where we want to be.
-  - title: Key Skills
-    content: |-
-      My superpower is navigating the "space between" (e.g. ideas, people, behaviors, stages) and co-creating magic in the process.
-
-      Life happens at the edges - between what we know and what we don't, between where we are and where we want to be.
-  - title: Interests & Inspiration
-    content: |-
-      My superpower is navigating the "space between" (e.g. ideas, people, behaviors, stages) and co-creating magic in the process.
-
-      Life happens at the edges - between what we know and what we don't, between where we are and where we want to be.
-  ctas:
-  - text: WORK WITH ME
-    url: https://tidycal.com/sarahsu/intro-chat
-    primary: true
+  subtitle: My Journey So Far
+  content: In progress...
+  ctas: []
 
 ---
+![](/images/photo-1580756338357-a0ba1932d879.jpeg)
