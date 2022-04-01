@@ -9,11 +9,12 @@
   },
   "devDependencies": {
     "@lukeed/uuid": "^2.0.0",
-    "astro": "^0.22.20",
-    "astro-fonts": "^0.1.0",
+    "astro": "^0.25.4",
+    "astro-fonts": "^0.2.6",
     "chisel.css": "^0.8.1",
     "clsx": "^1.1.1",
     "nano-markdown": "^1.2.1",
-    "url-join": "^4.0.1"
+    "sass": "^1.49.10",
+    "url-join": "^5.0.0"
   }
 }

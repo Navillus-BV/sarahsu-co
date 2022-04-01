@@ -1,6 +1,6 @@
 ---
-import Font from 'astro-fonts'
 import urljoin from 'url-join'
+import '../assets/global.scss'
 import site from '../data/site.json'
 
 interface Props {
@@ -56,6 +56,5 @@ const fullTitle = [title, site.title]
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap.xml" />
 
-<!-- Global Styles -->
-<link rel="stylesheet" href={Astro.resolve('../assets/global.scss')} />
-<Font name="Montserrat" weights={[500, 700]} styles="normal" />
+<!-- Fonts -->
+<link rel="stylesheet" href="/fonts/Montserrat/montserrat.css">

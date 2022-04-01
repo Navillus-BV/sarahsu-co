@@ -15,5 +15,5 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   devOptions: {
     port: 8080,
   },
-  renderers: [],
+  integrations: [],
 });
