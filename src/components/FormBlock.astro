@@ -15,7 +15,7 @@ const footnoteHtml = mdToHtml(footnote)
 <section>
   <h2>{title}</h2>
 
-  {descriptionHtml}
+  <Fragment set:html={descriptionHtml} />
 
   <form name={id} method='POST' action={successUrl} netlify-honeypot='bot-field' data-netlify='true'>
     <p class='sr-only'>
@@ -40,7 +40,7 @@ const footnoteHtml = mdToHtml(footnote)
   </form>
 
   {footnoteHtml && (
-    <small>{footnoteHtml}</small>
+    <small set:html={footnoteHtml}></small>
   )}
 </section>
 

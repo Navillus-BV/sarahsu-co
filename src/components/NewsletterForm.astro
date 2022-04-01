@@ -23,7 +23,7 @@ const footnoteHtml = mdToHtml(footnote)
   <button type='submit'>{submitText}</button>
 </form>
 
-<small>{footnoteHtml}</small>
+<small set:html={footnoteHtml}></small>
 
 <style lang='scss'>
   form {

@@ -30,9 +30,7 @@ const contentHtml = mdToHtml(content)
     <div class='wrapper'>
       <h1 class={clsx({ 'text-gradient': !image?.src })}>{title}</h1>
 
-      <div class='content'>
-        {contentHtml}
-      </div>
+      <div class='content' set:html={contentHtml}></div>
       
       {cta && cta.url && (
         <a class="button secondary" href={cta.url}>{cta.text}</a>

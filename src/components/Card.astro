@@ -15,9 +15,7 @@ const contentHtml = mdToHtml(content)
 <article>
   <h4>{title}</h4>
 
-  <div>
-    {contentHtml}
-  </div>
+  <div set:html={contentHtml}></div>
 
   {cta && (
     <a class={clsx({ button: true, primary: cta.primary, secondary: !cta.primary })} href={cta.url}>{cta.text}</a>

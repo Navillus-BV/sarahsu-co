@@ -22,9 +22,7 @@ const primary = theme === 'primary'
 
       <BlockTitle title={title} subtitle={subtitle} alt={primary} />
 
-      <div class='content'>
-        {contentHtml}
-      </div>
+      <div class='content' set:html={contentHtml}></div>
 
       {ctas.map(({ url, text }) => (
         <a class={clsx({ button: true, secondary: primary })} href={url}>{text}</a>

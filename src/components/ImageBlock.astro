@@ -35,9 +35,7 @@ const hasFooter = ctas.length > 0
 
       <img alt={image.alt} src={`${image.src}?nf_resize=smartcrop&w=400&h=400`} />
 
-      <div class='content'>
-        {contentHtml}
-      </div>
+      <div class='content' set:html={contentHtml}></div>
 
       {ctas.length > 0 && (
         <footer class={clsx({ multi: ctas.length > 1 })}>
