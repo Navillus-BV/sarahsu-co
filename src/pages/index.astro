@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Page.astro'
 
-const page = Astro
-    .fetchContent('../data/pages/*.md')
-    .map(({ astro, url, file, ...page }) => page)
+const data = await Astro.glob<CMS.Page>('../data/pages/*.md')
+
+const page = data.map(({ frontmatter }) => frontmatter)
     .find(({ href }) => href === '/')
 ---
 
-<Layout content={page} />
+<Layout content={page!} />

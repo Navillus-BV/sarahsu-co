@@ -11,14 +11,16 @@ const { content } = Astro.props as Props
 const { title, description, image, blocks, html } = content
 
 const hasHeroBlock = blocks.some(block => block.template === 'heroblock')
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <Layout
   title={title}
   description={description}
   image={image}
-  pathname={Astro.request.url.pathname}
-  canonicalURL={Astro.request.canonicalURL}
+  pathname={Astro.url.pathname}
+  canonicalURL={canonicalURL}
   showHeader={!hasHeroBlock}
 >
   {blocks.map((block) => (<Block block={block} />))}

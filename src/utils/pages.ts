@@ -1,11 +1,7 @@
-interface PageData extends CMS.Page {
-  title: string;
-  href: string;
-  file: URL;
-}
+import type { MarkdownInstance } from 'astro';
 
-export function getPages(allPages: PageData[], pagePaths: string[]) {
+export function getPages(allPages: MarkdownInstance<CMS.Page>[], pagePaths: string[]) {
   return pagePaths.map((pagePath) =>
-    allPages.find(({ file }) => file.pathname.endsWith(pagePath))
+    allPages.find(({ file }) => file.endsWith(pagePath))
   ).filter(Boolean);
 }

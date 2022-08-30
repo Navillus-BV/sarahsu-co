@@ -13,10 +13,10 @@ interface Props {
 
 const { alt } = Astro.props as Props
 
-const allPages = Astro.fetchContent('../data/pages/*.md')
+const allPages = await Astro.glob<CMS.Page>('../data/pages/*.md')
 
 const pages = getPages(allPages, menu.pages)
-  .map(({ title, href }) => ({ title, href }))
+  .map(({ frontmatter: { title, href } }) => ({ title, href }))
 ---
 
 <header class={clsx({ alt })} id='header'>
@@ -50,10 +50,10 @@ const pages = getPages(allPages, menu.pages)
   </nav>
 </header>
 
-<script hoist>
+<script>
   function initHeader() {
   const headerElem = document.getElementById('header')
-  const inputElem = document.getElementById('menubtn')
+  const inputElem = document.getElementById('menubtn') as HTMLInputElement
   const navElem = document.querySelector('#header nav')
   const closeElem = document.querySelector('#header nav button.icon')
   const ctaElem = document.querySelector('#header nav a.button')
@@ -92,7 +92,8 @@ const pages = getPages(allPages, menu.pages)
   }
 
   inputElem.addEventListener('change', (event) => {
-    if (event.target.checked) {
+    const target = event.target as HTMLInputElement
+    if (target.checked) {
       onOpen()
     } else {
       onClose()

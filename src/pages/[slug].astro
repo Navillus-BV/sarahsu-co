@@ -2,24 +2,21 @@
 import Layout from '../layouts/Page.astro'
 
 export async function getStaticPaths() {
-  const allPages = Astro.fetchContent('../data/pages/*.md')
+  const data  = await Astro.glob<CMS.Page>('../data/pages/*.md')
 
-  const paths = allPages.map(( { title, href, image, blocks, content }) => {
-    return {
-      params: {
-        slug: href.slice(1)
-      },
-      props: {
-        page: {
-          title,
-          href,
-          image,
-          blocks,
-          html: content.html
+    const paths = data.map(({ frontmatter }) => {
+      console.log(frontmatter);
+      return {
+        params: {
+          slug: frontmatter.href.slice(1),
+        },
+        props: {
+          page: frontmatter
         }
       }
-    }
-  })
+    })
+
+  console.log(paths);
 
   return paths.filter(({ params }) => !!params.slug)
 }
