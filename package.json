@@ -8,13 +8,14 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^1.0.0",
     "@lukeed/uuid": "^2.0.0",
-    "astro": "^0.25.4",
+    "astro": "^1.1.1",
     "astro-fonts": "^0.2.6",
     "chisel.css": "^0.8.1",
-    "clsx": "^1.1.1",
+    "clsx": "^1.2.1",
     "nano-markdown": "^1.2.1",
-    "sass": "^1.49.10",
+    "sass": "^1.54.6",
     "url-join": "^5.0.0"
   }
 }

@@ -120,6 +120,7 @@ declare namespace CMS {
     description: string;
     image: string;
     blocks: Block[];
+    href: string;
     html?: string;
   }
 

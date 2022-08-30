@@ -7,12 +7,12 @@ import { getPages } from '../utils/pages'
 
 const year = new Date().getFullYear()
 
-const allPages = Astro.fetchContent('../data/pages/*.md')
+const allPages = await Astro.glob<CMS.Page>('../data/pages/*.md')
 
 const pages = getPages(allPages, menu.pages)
-  .map(({ title, href }) => ({ title, href }))
+  .map(({ frontmatter: { title, href } }) => ({ title, href }))
 const legalPages = getPages(allPages, footer.legal_pages)
-  .map(({ title, href }) => ({ title, href }))
+  .map(({ frontmatter: { title, href } }) => ({ title, href }))
 ---
 
 <footer class="container">
@@ -29,7 +29,7 @@ const legalPages = getPages(allPages, footer.legal_pages)
       ))}
     </div>
 
-    <a class='nohover' href='/' alt={site.title} rel="home">
+    <a class='nohover' href='/' rel="home">
       <Hummingbird width="96" height="96" theme="secondary" opacity={0.5} />
       {site.title}
     </a>
